@@ -8,7 +8,7 @@
    
    <select id="selectReview" resultType="co.yedam.dolvomee.review.service.ReviewVO">
       select * from review where users_email = #{users_email}
-      <if test="password != null">
+      <if test=" != null">
       AND users_pwd = #{users_pwd}
       </if>
    </select>

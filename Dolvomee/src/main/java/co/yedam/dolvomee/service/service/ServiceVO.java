@@ -1,40 +1,40 @@
 package co.yedam.dolvomee.service.service;
 
 public class ServiceVO {
-	private int serv_num; 
-	private String dolv_email; 
-	private String serv_list;
-	private String serv_place;
-	private int serv_price;
-	public int getServ_num() {
-		return serv_num;
+	private int servNum; 
+	private String dolvEmail; 
+	private String servList;
+	private String servPlace;
+	private int servPrice;
+	public int getServNum() {
+		return servNum;
 	}
-	public void setServ_num(int serv_num) {
-		this.serv_num = serv_num;
+	public void setServNum(int servNum) {
+		this.servNum = servNum;
 	}
-	public String getDolv_email() {
-		return dolv_email;
+	public String getDolvEmail() {
+		return dolvEmail;
 	}
-	public void setDolv_email(String dolv_email) {
-		this.dolv_email = dolv_email;
+	public void setDolvEmail(String dolvEmail) {
+		this.dolvEmail = dolvEmail;
 	}
-	public String getServ_list() {
-		return serv_list;
+	public String getServList() {
+		return servList;
 	}
-	public void setServ_list(String serv_list) {
-		this.serv_list = serv_list;
+	public void setServList(String servList) {
+		this.servList = servList;
 	}
-	public String getServ_place() {
-		return serv_place;
+	public String getServPlace() {
+		return servPlace;
 	}
-	public void setServ_place(String serv_place) {
-		this.serv_place = serv_place;
+	public void setServPlace(String servPlace) {
+		this.servPlace = servPlace;
 	}
-	public int getServ_price() {
-		return serv_price;
+	public int getServPrice() {
+		return servPrice;
 	}
-	public void setServ_price(int serv_price) {
-		this.serv_price = serv_price;
+	public void setServPrice(int servPrice) {
+		this.servPrice = servPrice;
 	}
 	
 	
