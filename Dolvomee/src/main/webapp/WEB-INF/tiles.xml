@@ -4,10 +4,10 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
   <definition name="layout" template="/WEB-INF/views/layouts/layout.jsp">
-    <put-attribute name="title" value="" />
+    <put-attribute name="title" value="Dolvomee" />
     <put-attribute name="side" value="" />
     <put-attribute name="header" value="/WEB-INF/views/layouts/header.jsp" />
-    <put-attribute name="body" value="/WEB-INF/views/layouts/body.jsp" />
+    <put-attribute name="body" value="" />
     <put-attribute name="footer" value="/WEB-INF/views/layouts/footer.jsp" />
   </definition>
   

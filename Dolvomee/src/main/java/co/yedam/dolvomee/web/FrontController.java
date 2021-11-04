@@ -15,17 +15,17 @@ import co.yedam.dolvomee.comm.Command;
 import co.yedam.dolvomee.command.HomeCommand;
 
 @WebServlet("*.do")
-public class Frontcontroller extends HttpServlet {
+public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private HashMap<String, Command> map = new HashMap<String, Command>();
 
-	public Frontcontroller() {
+	public FrontController() {
 		super();
 
 	}
 
 	public void init(ServletConfig config) throws ServletException {
-		map.put("/home.do", new HomeCommand()); // 첫 페이지 호출
+		map.put("/home.do", new HomeCommand());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
@@ -40,16 +40,16 @@ public class Frontcontroller extends HttpServlet {
 		String viewPage = command.run(request, response);
 		
 		if(viewPage != null && !viewPage.endsWith(".do")) {
-			if(viewPage.startsWith("ajax:")) {	//ajax 리턴 
+			if(viewPage.startsWith("ajax:")) {
 				response.setContentType("text/plain; charset=utf-8");
 				response.getWriter().append(viewPage.substring(5));
 				return;
 			}
 			
-			if(viewPage.endsWith(".jsp"))	//타일즈 적용 안 할때
+			if(viewPage.endsWith(".jsp"))
 				viewPage = "WEB-INF/views/" + viewPage;
 			else
-				viewPage = viewPage + ".tiles"; //타일즈 적용
+				viewPage = viewPage + ".tiles";
 		}
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
