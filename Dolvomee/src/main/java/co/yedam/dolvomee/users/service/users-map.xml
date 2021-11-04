@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yedam.Dolvomee.users.service.UsersMapper">   <!-- MemberMapper 가지고 있는 메소드 명을 사용함  -->
+
+   <select id="userSelectList" resultType="co.yedam.dolvomee.users.service.UsersVO">
+      select * from users
+   </select>
+   
+   <select id="userSelect" resultType="co.yedam.dolvomee.users.service.UsersVO">
+      select * from users where user_email = #{user_email}
+      <if test="password != null">
+      AND user_pwd = #{user_pwd}
+      </if>
+   </select>
+   
+   <insert id="userInsert" parameterType="co.yedam.dolvomee.users.service.UsersVO">
+      insert into users values(#{user_email}, #{user_name}, #{user_pwd}, #{user_phone}, #{user_addr}, #{user_author})
+   </insert>
+   
+   <update id="userUpdate" parameterType="co.yedam.dolvomee.users.service.UsersVO">
+      update users set user_pwd = #{user_pwd}, user_author = #{user_author} where user_email = #{user_email}
+   </update>
+   
+   <delete id="userDelete" parameterType="co.yedam.dolvomee.users.service.UsersVO">
+      delete from users where user_email = #{user_email}
+   </delete>
+
+</mapper>
