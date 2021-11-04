@@ -63,7 +63,7 @@
                 </ul>
                 <span class="nav-item">
                  	 <a class="btn-solid-sm" href="#contact">펫시터 지원</a>
-                    <a class="btn-solid-sm" href="memberLoginForm.do">로그인</a>
+                    <a class="btn-solid-sm" href="usersLoginForm.do">로그인</a>
                 </span>
             </div> <!-- end of navbar-collapse -->
         </div> <!-- end of container -->

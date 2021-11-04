@@ -7,7 +7,7 @@
     <put-attribute name="title" value="" />
     <put-attribute name="side" value="" />
     <put-attribute name="header" value="/WEB-INF/views/layouts/header.jsp" />
-    <put-attribute name="body" value="/WEB-INF/views/layouts/body.jsp" />
+    <put-attribute name="body" value="" />
     <put-attribute name="footer" value="/WEB-INF/views/layouts/footer.jsp" />
   </definition>
   

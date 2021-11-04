@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.yedam.dolvomee.comm.Command;
 import co.yedam.dolvomee.command.HomeCommand;
+import co.yedam.dolvomee.command.users.UsersLoginForm;
+import co.yedam.dolvomee.command.users.registerForm;
+import co.yedam.dolvomee.command.users.usersLogin;
 
 @WebServlet("*.do")
 public class Frontcontroller extends HttpServlet {
@@ -26,6 +29,9 @@ public class Frontcontroller extends HttpServlet {
 
 	public void init(ServletConfig config) throws ServletException {
 		map.put("/home.do", new HomeCommand()); // 첫 페이지 호출
+		map.put("/usersLoginForm.do", new UsersLoginForm()); //로그인 폼 호출
+		map.put("/usersLogin.do", new usersLogin()); //로그인 처리
+		map.put("/registerForm.do", new registerForm()); //회원가입 폼 호출
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
