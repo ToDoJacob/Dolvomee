@@ -1,4 +1,4 @@
-package co.yedam.dolvomee.qna.sevice;
+package co.yedam.dolvomee.qna.service;
 
 import java.util.Date;
 
