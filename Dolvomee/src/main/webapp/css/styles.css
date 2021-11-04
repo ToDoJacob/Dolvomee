@@ -369,7 +369,7 @@ select {
 
 .navbar .logo-image img {
     width: 150px;
-	height: 65px;
+	height: 60px;
 }
 
 .navbar .logo-text {
@@ -1009,7 +1009,6 @@ select {
 .footer {
 	position: relative;
 	padding-top: 8.75rem;
-	padding-bottom: 7.5rem;
 	text-align: center;
 }
 
@@ -1060,7 +1059,6 @@ select {
 /*********************/
 .copyright {
 	padding-top: 1.75rem;
-	border-top: 1px solid #d0dae2;
 	text-align: center;
 }
 
@@ -1328,6 +1326,7 @@ select {
 	
 	/* Details 1 */
 	.basic-1 .image-container {
+		
 		margin-bottom: 0;
 	}
 

@@ -4,36 +4,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title><tiles:getAsString name="title" /></title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your description">
+    <meta name="author" content="Your name">
+
+    <!-- Webpage Title -->
+    <title>Zinc Webpage Title</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+
 </head>
-<body>
-<!-- dkdkdkddfd -->
-<!-- fjkdjfaksjgijijefijdisfj -->
-<!--  asdfasdfasdfasdf -->
-<!--  adasdfasdfasdf -->
-	<!-- Page Wrapper -->
-	<div id="wrapper">
-		<!-- Content Wrapper -->
-		<div id="content-wrapper" class="d-flex flex-column">
-			<!-- Main Content -->
-			<div id="content">
-				<!-- Topbar -->
-				<tiles:insertAttribute name="header" />
-				<!-- End of Topbar -->
+
+<body data-bs-spy="scroll" data-bs-target="#navbarExample">
+    
+    <tiles:insertAttribute name="header"></tiles:insertAttribute>
+				<!-- End Topbar -->
+
 				<!-- Begin Page Content -->
-				<tiles:insertAttribute name="body" />
-			</div>
-			<!-- End of Main Content -->
+			<tiles:insertAttribute name="body"></tiles:insertAttribute>
+			
 			<!-- Footer -->
-			<div>
-				<tiles:insertAttribute name="footer" />
-			</div>
-			<!-- End of Footer -->
-		</div>
-		<!-- End of Content Wrapper -->
-	</div>
-	<!-- End of Page Wrapper -->
-	
+			<tiles:insertAttribute name="footer"></tiles:insertAttribute>
+    	
+	<script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
+    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
 </body>
 </html>
