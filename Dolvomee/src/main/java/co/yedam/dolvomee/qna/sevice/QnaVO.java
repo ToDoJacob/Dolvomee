@@ -3,41 +3,42 @@ package co.yedam.dolvomee.qna.sevice;
 import java.util.Date;
 
 public class QnaVO {
-	private int q_num;
-	private String users_email;
-	private String dolv_email;
-	private String q_contents;
-	private Date q_time;
-	public int getQ_num() {
-		return q_num;
+	private int qNum;
+	private String usersEmail;
+	private String dolvEmail;
+	private String qContents;
+	private Date qTime;
+	public int getqNum() {
+		return qNum;
 	}
-	public void setQ_num(int q_num) {
-		this.q_num = q_num;
+	public void setqNum(int qNum) {
+		this.qNum = qNum;
 	}
-	public String getUsers_email() {
-		return users_email;
+	public String getUsersEmail() {
+		return usersEmail;
 	}
-	public void setUsers_email(String users_email) {
-		this.users_email = users_email;
+	public void setUsersEmail(String usersEmail) {
+		this.usersEmail = usersEmail;
 	}
-	public String getDolv_email() {
-		return dolv_email;
+	public String getDolvEmail() {
+		return dolvEmail;
 	}
-	public void setDolv_email(String dolv_email) {
-		this.dolv_email = dolv_email;
+	public void setDolvEmail(String dolvEmail) {
+		this.dolvEmail = dolvEmail;
 	}
-	public String getQ_contents() {
-		return q_contents;
+	public String getqContents() {
+		return qContents;
 	}
-	public void setQ_contents(String q_contents) {
-		this.q_contents = q_contents;
+	public void setqContents(String qContents) {
+		this.qContents = qContents;
 	}
-	public Date getQ_time() {
-		return q_time;
+	public Date getqTime() {
+		return qTime;
 	}
-	public void setQ_time(Date q_time) {
-		this.q_time = q_time;
+	public void setqTime(Date qTime) {
+		this.qTime = qTime;
 	}
+	
 	
 	
 }

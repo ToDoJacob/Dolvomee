@@ -3,54 +3,54 @@ package co.yedam.dolvomee.schedule.sevice;
 import java.sql.Date;
 
 public class ScheduleVO {
-	private int serv_num;
-	private String users_email;
-	private int schedule_num;
-	private String serv_list;
-	private Date schedule_start_date;
-	private Date schedule_end_date;
-	private String shcedule_status;
-	public int getServ_num() {
-		return serv_num;
+	private int servNum;
+	private String usersEmail;
+	private int scheduleNum;
+	private String servList;
+	private Date scheduleStartSate;
+	private Date scheduleEndDate;
+	private String shceduleStatus;
+	public int getServNum() {
+		return servNum;
 	}
-	public void setServ_num(int serv_num) {
-		this.serv_num = serv_num;
+	public void setServNum(int servNum) {
+		this.servNum = servNum;
 	}
-	public String getUsers_email() {
-		return users_email;
+	public String getUsersEmail() {
+		return usersEmail;
 	}
-	public void setUsers_email(String users_email) {
-		this.users_email = users_email;
+	public void setUsersEmail(String usersEmail) {
+		this.usersEmail = usersEmail;
 	}
-	public int getSchedule_num() {
-		return schedule_num;
+	public int getScheduleNum() {
+		return scheduleNum;
 	}
-	public void setSchedule_num(int schedule_num) {
-		this.schedule_num = schedule_num;
+	public void setScheduleNum(int scheduleNum) {
+		this.scheduleNum = scheduleNum;
 	}
-	public String getServ_list() {
-		return serv_list;
+	public String getServList() {
+		return servList;
 	}
-	public void setServ_list(String serv_list) {
-		this.serv_list = serv_list;
+	public void setServList(String servList) {
+		this.servList = servList;
 	}
-	public Date getSchedule_start_date() {
-		return schedule_start_date;
+	public Date getScheduleStartSate() {
+		return scheduleStartSate;
 	}
-	public void setSchedule_start_date(Date schedule_start_date) {
-		this.schedule_start_date = schedule_start_date;
+	public void setScheduleStartSate(Date scheduleStartSate) {
+		this.scheduleStartSate = scheduleStartSate;
 	}
-	public Date getSchedule_end_date() {
-		return schedule_end_date;
+	public Date getScheduleEndDate() {
+		return scheduleEndDate;
 	}
-	public void setSchedule_end_date(Date schedule_end_date) {
-		this.schedule_end_date = schedule_end_date;
+	public void setScheduleEndDate(Date scheduleEndDate) {
+		this.scheduleEndDate = scheduleEndDate;
 	}
-	public String getShcedule_status() {
-		return shcedule_status;
+	public String getShceduleStatus() {
+		return shceduleStatus;
 	}
-	public void setShcedule_status(String shcedule_status) {
-		this.shcedule_status = shcedule_status;
+	public void setShceduleStatus(String shceduleStatus) {
+		this.shceduleStatus = shceduleStatus;
 	}
 	
 }

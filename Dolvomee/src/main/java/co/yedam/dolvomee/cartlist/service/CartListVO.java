@@ -3,54 +3,55 @@ package co.yedam.dolvomee.cartlist.service;
 import java.util.Date;
 
 public class CartListVO {
-	private int serv_num;
-	private String users_email;
-	private Date cart_start_date;
-	private Date cart_end_date;
-	private	String serv_list;
-	private int cart_prive;
-	private int cart_num;
-	public int getServ_num() {
-		return serv_num;
+	private int servNum;
+	private String usersEmail;
+	private Date cartStartDate;
+	private Date cartEndDate;
+	private	String servList;
+	private int cartPrive;
+	private int cartNum;
+	public int getServNum() {
+		return servNum;
 	}
-	public void setServ_num(int serv_num) {
-		this.serv_num = serv_num;
+	public void setServNum(int servNum) {
+		this.servNum = servNum;
 	}
-	public String getUsers_email() {
-		return users_email;
+	public String getUsersEmail() {
+		return usersEmail;
 	}
-	public void setUsers_email(String users_email) {
-		this.users_email = users_email;
+	public void setUsersEmail(String usersEmail) {
+		this.usersEmail = usersEmail;
 	}
-	public Date getCart_start_date() {
-		return cart_start_date;
+	public Date getCartStartDate() {
+		return cartStartDate;
 	}
-	public void setCart_start_date(Date cart_start_date) {
-		this.cart_start_date = cart_start_date;
+	public void setCartStartDate(Date cartStartDate) {
+		this.cartStartDate = cartStartDate;
 	}
-	public Date getCart_end_date() {
-		return cart_end_date;
+	public Date getCartEndDate() {
+		return cartEndDate;
 	}
-	public void setCart_end_date(Date cart_end_date) {
-		this.cart_end_date = cart_end_date;
+	public void setCartEndDate(Date cartEndDate) {
+		this.cartEndDate = cartEndDate;
 	}
-	public String getServ_list() {
-		return serv_list;
+	public String getServList() {
+		return servList;
 	}
-	public void setServ_list(String serv_list) {
-		this.serv_list = serv_list;
+	public void setServList(String servList) {
+		this.servList = servList;
 	}
-	public int getCart_prive() {
-		return cart_prive;
+	public int getCartPrive() {
+		return cartPrive;
 	}
-	public void setCart_prive(int cart_prive) {
-		this.cart_prive = cart_prive;
+	public void setCartPrive(int cartPrive) {
+		this.cartPrive = cartPrive;
 	}
-	public int getCart_num() {
-		return cart_num;
+	public int getCartNum() {
+		return cartNum;
 	}
-	public void setCart_num(int cart_num) {
-		this.cart_num = cart_num;
+	public void setCartNum(int cartNum) {
+		this.cartNum = cartNum;
 	}
+	
 	
 }
