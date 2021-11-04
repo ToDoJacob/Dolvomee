@@ -15,11 +15,11 @@ import co.yedam.dolvomee.comm.Command;
 import co.yedam.dolvomee.command.HomeCommand;
 
 @WebServlet("*.do")
-public class Frontcontroller extends HttpServlet {
+public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private HashMap<String, Command> map = new HashMap<String, Command>();
 
-	public Frontcontroller() {
+	public FrontController() {
 		super();
 	}
 

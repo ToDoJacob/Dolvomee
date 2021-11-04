@@ -1,4 +1,4 @@
-package co.yedam.dolvomee.notice.sevice;
+package co.yedam.dolvomee.notice.service;
 
 import java.util.Date;
 
