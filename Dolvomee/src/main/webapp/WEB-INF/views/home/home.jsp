@@ -7,6 +7,6 @@
 <title>Home입니다</title>
 </head>
 <body>
-hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+-홈 메인페이지 body 구성 들어갈자리-
 </body>
 </html>
