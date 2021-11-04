@@ -33,7 +33,7 @@
 			<artifactId>mybatis</artifactId>
 			<version>3.5.7</version>
 		</dependency>
-		
+
 		<dependency>
 		    <groupId>org.apache.tiles</groupId>
 		    <artifactId>tiles-servlet</artifactId>
