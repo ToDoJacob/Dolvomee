@@ -21,7 +21,6 @@ public class Frontcontroller extends HttpServlet {
 
 	public Frontcontroller() {
 		super();
-
 	}
 
 	public void init(ServletConfig config) throws ServletException {

@@ -25,8 +25,8 @@
 
 <body data-bs-spy="scroll" data-bs-target="#navbarExample">
     
-    <tiles:insertAttribute name="header"></tiles:insertAttribute>
 				<!-- End Topbar -->
+   			<tiles:insertAttribute name="header"></tiles:insertAttribute>
 
 				<!-- Begin Page Content -->
 			<tiles:insertAttribute name="body"></tiles:insertAttribute>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yedam.dolvomee.review.service.ReviewMapper">
+
+   <select id="selectReviewList" resultType="co.yedam.dolvomee.review.service.ReviewVO">
+      select * from review
+   </select>
+   
+   <select id="selectReview" resultType="co.yedam.dolvomee.review.service.ReviewVO">
+      select * from review where users_email = #{users_email}
+      <if test="password != null">
+      AND users_pwd = #{users_pwd}
+      </if>
+   </select>
+   
+   <insert id="insertReview" parameterType="co.yedam.dolvomee.review.service.ReviewVO">
+      insert into review values(#{users_email}, #{users_name}, #{users_pwd}, #{users_phone}, #{users_addr}, #{users_author})
+   </insert>
+   
+   <update id="updateReview" parameterType="co.yedam.dolvomee.review.service.ReviewVO">
+      update review set users_pwd = #{users_pwd}, users_author = #{users_author} where users_email = #{users_email}
+   </update>
+   
+   <delete id="deleteReview" parameterType="co.yedam.dolvomee.review.service.ReviewVO">
+      delete from review where users_email = #{users_email}
+   </delete>
+
+</mapper>

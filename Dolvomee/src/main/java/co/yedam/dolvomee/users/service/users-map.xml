@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="co.yedam.Dolvomee.users.service.UsersMapper">   <!-- MemberMapper 가지고 있는 메소드 명을 사용함  -->
+<mapper namespace="co.yedam.dolvomee.users.service.UsersMapper">
 
-   <select id="userSelectList" resultType="co.yedam.dolvomee.users.service.UsersVO">
+   <select id="selectUserList" resultType="co.yedam.dolvomee.users.service.UsersVO">
       select * from users
    </select>
    
-   <select id="userSelect" resultType="co.yedam.dolvomee.users.service.UsersVO">
+   <select id="selectUser" resultType="co.yedam.dolvomee.users.service.UsersVO">
       select * from users where users_email = #{users_email}
-      <if test="password != null">
-      AND user_pwd = #{users_pwd}
+      <if test="users_pwd != null">
+      AND users_pwd = #{users_pwd}
       </if>
    </select>
    
-   <insert id="userInsert" parameterType="co.yedam.dolvomee.users.service.UsersVO">
+   <insert id="insertUser" parameterType="co.yedam.dolvomee.users.service.UsersVO">
       insert into users values(#{users_email}, #{users_name}, #{users_pwd}, #{users_phone}, #{users_addr}, #{users_author})
    </insert>
    
-   <update id="userUpdate" parameterType="co.yedam.dolvomee.users.service.UsersVO">
+   <update id="updateUser" parameterType="co.yedam.dolvomee.users.service.UsersVO">
       update users set users_pwd = #{users_pwd}, users_author = #{users_author} where users_email = #{users_email}
    </update>
    
-   <delete id="userDelete" parameterType="co.yedam.dolvomee.users.service.UsersVO">
-      delete from users where user_email = #{users_email}
+   <delete id="deleteUser" parameterType="co.yedam.dolvomee.users.service.UsersVO">
+      delete from users where users_email = #{users_email}
    </delete>
 
 </mapper>
