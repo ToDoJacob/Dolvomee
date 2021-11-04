@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Home~</h1>
 깃허브 열받게하네 ;;
 </body>
 </html>
