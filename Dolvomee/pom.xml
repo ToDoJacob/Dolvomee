@@ -15,7 +15,6 @@
 		<tiles.version>3.0.8</tiles.version>
 	</properties>
 	<dependencies>
-	<!-- 깃허브 열받게하네 ;; -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
