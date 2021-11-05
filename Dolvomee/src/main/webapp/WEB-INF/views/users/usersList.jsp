@@ -22,73 +22,53 @@
 <!-- Template CSS -->
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/components.css">
-<!-- Start GA -->
-<script async
-	src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag() {
-		dataLayer.push(arguments);
+<script type="text/javascript">
+	function CallUsers(n) {
+		console.log(n);
+		frm.usersEmail.value = n;
+		frm.submit();
+		
 	}
-	gtag('js', new Date());
-
-	gtag('config', 'UA-94034622-3');
 </script>
-<!-- /END GA -->
 </head>
-
 <body>
 	<div id="app">
 		<div class="main-wrapper main-wrapper-1">
-			<div class="navbar-bg"></div>
 			<!-- Main Content -->
 			<div class="main-content">
-				<section class="section">
-					<div class="section-body">
-						<div class="row mt-4">
-							<div class="col-12">
-								<div class="card">
-									<div class="card-body">
-										<div class="clearfix mb-3"></div>
-										<div class="table-responsive">
-											<table class="table table-striped">
-												<tr>
-													<th class="text-center pt-2"></th>
-													<th>Title</th>
-													<th>Category</th>
-													<th>Author</th>
-													<th>Created At</th>
-													<th>Status</th>
-												</tr>
-												<tr>
-													<td>
-														<div class="custom-checkbox custom-control">
-															<input type="checkbox" data-checkboxes="mygroup"
-																class="custom-control-input" id="checkbox-2"> <label
-																for="checkbox-2" class="custom-control-label">&nbsp;</label>
-														</div>
-													</td>
-													<td>Laravel 5 Tutorial: Introduction</td>
-													<td><a href="#">Web Developer</a></td>
-													<td><a href="#"> <img alt="image"
-															src="assets/img/avatar/avatar-5.png"
-															class="rounded-circle" width="35" data-toggle="title"
-															title="">
-															<div class="d-inline-block ml-1">Rizal Fakhri</div>
-													</a></td>
-													<td>2018-01-20</td>
-													<td><div class="badge badge-primary">Published</div></td>
-												</tr>
-											</table>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+				<div class="table-responsive">
+					<table class="table table-striped">
+						<tr>
+							<th>이름</th>
+							<th>아이디</th>
+							<th>연락처</th>
+							<th>주소</th>
+							<th>권한</th>
+						</tr>
+						<c:forEach items="${users }" var="user">
+							<tr onmouseover='this.style.background="#EBF5EB";'
+								onmouseleave='this.style.background="#FFFFFF";'
+								onclick="CallUsers('${user.usersEmail }')">
+								<td><img alt="image"
+										src="assets/img/us.png" class="rounded-circle"
+										width="35" data-toggle="title" title="">
+										<div class="d-inline-block ml-1">${user.usersName }</div>
+								</td>
+								<td>${user.usersEmail }</td>
+								<td>${user.usersPhone }</td>
+								<td>${user.usersAddr }</td>
+								<td>${user.usersAuthor }</td>
+							</tr>
+						</c:forEach>
+					</table>
+				</div>
 			</div>
 		</div>
+	</div>
+	<div>
+		<form id="frm" action="usersSelect.do" method="post">
+			<input type="hidden" id="usersEmail" name="usersEmail">
+		</form>
 	</div>
 
 	<!-- General JS Scripts -->

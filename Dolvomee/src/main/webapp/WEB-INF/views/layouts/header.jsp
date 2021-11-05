@@ -51,7 +51,7 @@
                         <a class="nav-link" href="reviewList.do">이용 후기</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#pricing">내 정보</a>
+                        <a class="nav-link" href="usersSelect.do">내 정보</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Drop</a>

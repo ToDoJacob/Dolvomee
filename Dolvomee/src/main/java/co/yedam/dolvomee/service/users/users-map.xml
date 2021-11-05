@@ -10,15 +10,15 @@
       select * from users where usersEmail = #{usersEmail}
    </select>
    
-   <insert id="insertUser">
+   <insert id="insertUser" parameterType="co.yedam.dolvomee.service.users.UsersVO">
       insert into users values(#{usersEmail},#{usersName},#{usersPwd}, #{usersPhone}, #{usersAddr},' ', #{usersAuthor})
    </insert>
    
-   <update id="updateUser">
+   <update id="updateUser" parameterType="co.yedam.dolvomee.service.users.UsersVO">
       update users set usersPwd = #{usersPwd}, usersAuthor = #{usersAuthor} where usersEmail = #{usersEmail}
    </update>
    
-   <delete id="deleteUser">
+   <delete id="deleteUser" parameterType="co.yedam.dolvomee.service.users.UsersVO">
       delete from users where usersEmail = #{usersEmail}
    </delete>
    

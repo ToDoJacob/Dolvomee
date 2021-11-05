@@ -15,7 +15,7 @@ public class UsersList implements Command {
 		UsersService usersDao = new UsersServiceImpl();	
 		request.setAttribute("users", usersDao.selectUserList());
 
-		return "users/usersList.jsp";
+		return "users/usersList";
 	}
 
 }
