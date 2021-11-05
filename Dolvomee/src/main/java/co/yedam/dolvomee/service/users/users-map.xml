@@ -8,7 +8,7 @@
    
    <select id="selectUser" resultType="co.yedam.dolvomee.service.users.UsersVO">
       select * from users where users_email = #{usersEmail}
-      <if test="userPwd != null">
+      <if test="usersPwd != null">
       AND users_pwd = #{usersPwd}
       </if>
    </select>
