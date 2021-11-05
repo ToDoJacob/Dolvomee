@@ -1,15 +1,17 @@
-package co.yedam.dolvomee.cartlist.service;
+package co.yedam.dolvomee.service.cartlist;
 
 import java.util.Date;
 
 public class CartListVO {
+	private int cartNum;
 	private int servNum;
 	private String usersEmail;
 	private Date cartStartDate;
 	private Date cartEndDate;
 	private	String servList;
-	private int cartPrive;
-	private int cartNum;
+	private int cartPrice;
+	
+	
 	public int getServNum() {
 		return servNum;
 	}
@@ -41,10 +43,10 @@ public class CartListVO {
 		this.servList = servList;
 	}
 	public int getCartPrive() {
-		return cartPrive;
+		return cartPrice;
 	}
 	public void setCartPrive(int cartPrive) {
-		this.cartPrive = cartPrive;
+		this.cartPrice = cartPrive;
 	}
 	public int getCartNum() {
 		return cartNum;
