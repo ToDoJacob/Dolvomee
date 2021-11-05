@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yedam.dolvomee.service.dolvomee.DolvomeeMapper">
+
+	<select id="selectDolvomeeLsit" resultType="co.yedam.dolvomee.service.dolvomee.DolvomeeVO">
+		select * from dolvomee
+	</select>
+	
+	<select id="selectDolvomee" resultType="co.yedam.dolvomee.service.dolvomee.DolvomeeVO">
+		select * from dolvomee where dolvEmail = #{dolvEmail}
+	</select>
+	
+	<insert id="insertDolvomee" parameterType="co.yedam.dolvomee.service.dolvomee.DolvomeeVO">
+		 insert into dolvomee values(#{dolvEmail}, #{dolvName}, #{dolvPwd}, #{dolvPhone}, #{dolvAddr}, #{dolvCareer}, #{dolvIntro})
+	</insert>
+	
+	<update id="updateDolvomee" parameterType="co.yedam.dolvomee.service.dolvomee.DolvomeeVO">
+		  update dolvomee set dolvPwd = #{dolvPwd}, dolvAddr = #{dolvAddr}, dolvCareer = #{dolvCareer}, dolvImage = #{dolvImage} where dolvEmail = #{dolvEmail}
+	</update>
+	
+	<delete id="deleteDolvomee" parameterType="co.yedam.dolvomee.service.dolvomee.DolvomeeVO">
+		delete from dolvomee where dolvEmail = #{dolvEmail}
+	</delete>
+
+</mapper>

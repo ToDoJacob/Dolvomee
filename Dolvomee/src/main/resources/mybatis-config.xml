@@ -16,6 +16,6 @@
     </environment>
   </environments>
   <mappers>
-    <mapper resource="co/yedam/dolvomee/users/service/users-map.xml" />
+    <mapper resource="co/yedam/dolvomee/service/users/users-map.xml" />
   </mappers>
 </configuration>
