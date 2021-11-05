@@ -37,8 +37,11 @@ public class FrontController extends HttpServlet {
 		map.put("/usersLogin.do", new UsersLogin()); // 로그인 처리
 		map.put("/usersRegisterForm.do", new UsersRegisterForm()); // 사용자회원가입 폼 호출
 		map.put("/registerUsers.do", new UsersRegister()); // 사용자회원가입 처리
-		map.put("/dolvRegisterForm.do", new DolvRegisterForm()); // 돌보미 회원가입 폼 호출
-		map.put("/qnaList.do", new qnaList());
+		map.put("/dolvRegisterForm.do", new DolvRegisterForm()); // 돌보미 회원가입 폼 호출 
+    map.put("/usersList.do", new UsersList()); //회원 리스트(관리자만)
+		map.put("/dolvomeeList", new DolvomeeList()); //펫시터 리스트(관리자만)
+    map.put("/qnaList.do", new qnaList());
+
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
@@ -72,5 +75,4 @@ public class FrontController extends HttpServlet {
 	}
 		
 }
-
 
