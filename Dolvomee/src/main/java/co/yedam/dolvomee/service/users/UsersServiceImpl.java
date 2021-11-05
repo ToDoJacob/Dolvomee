@@ -13,26 +13,31 @@ public class UsersServiceImpl implements UsersService {
 
 	@Override
 	public List<UsersVO> selectUserList() {
+
 		return map.selectUserList();
 	}
 
 	@Override
 	public UsersVO selectUser(UsersVO vo) {
+
 		return map.selectUser(vo);
 	}
 
 	@Override
 	public int insertUser(UsersVO vo) {
+
 		return map.insertUser(vo);
 	}
 
 	@Override
 	public int updateUser(UsersVO vo) {
+
 		return map.updateUser(vo);
 	}
 
 	@Override
 	public int deleteUser(UsersVO vo) {
+
 		return map.deleteUser(vo);
 	}
 
