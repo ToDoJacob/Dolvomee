@@ -1,20 +1,13 @@
 package co.yedam.dolvomee.service.review;
 
-public class ReviewVO {
+public class ReviewListVO {
 	private int revNum;
 	private int servNum;
 	private String usersEmail;
 	private String revContents;
 	private int revLike;
 	private String usersAddr;
-	private String usersImage;
 	
-	public String getUsersImage() {
-		return usersImage;
-	}
-	public void setUsersImage(String usersImage) {
-		this.usersImage = usersImage;
-	}
 	public int getRevNum() {
 		return revNum;
 	}
@@ -51,7 +44,6 @@ public class ReviewVO {
 	public void setUsersAddr(String usersAddr) {
 		this.usersAddr = usersAddr;
 	}
-	
 	
 	
 	

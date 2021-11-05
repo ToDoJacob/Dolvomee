@@ -2,6 +2,7 @@
 <!DOCTYPE configuration
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
 <configuration>
 <properties resource="/db.properties" />
   <environments default="development">
@@ -18,5 +19,7 @@
   <mappers>
     <mapper resource="co/yedam/dolvomee/service/users/users-map.xml" />
     <mapper resource="co/yedam/dolvomee/service/dolvomee/dolvomee-map.xml"/>
+    <mapper resource="co/yedam/dolvomee/service/review/review-map.xml" />
   </mappers>
+
 </configuration>

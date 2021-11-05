@@ -11,7 +11,7 @@
 	</select>
 	
 	<insert id="insertDolvomee" parameterType="co.yedam.dolvomee.service.dolvomee.DolvomeeVO">
-		 insert into dolvomee values(#{dolvEmail}, #{dolvName}, #{dolvPwd}, #{dolvPhone}, #{dolvAddr}, #{dolvCareer}, #{dolvImage}, #{dolvIntro})
+		 insert into dolvomee values(#{dolvEmail}, #{dolvName}, #{dolvPwd}, #{dolvPhone}, #{dolvAddr}, #{dolvCareer}, #{dolvIntro})
 	</insert>
 	
 	<update id="updateDolvomee" parameterType="co.yedam.dolvomee.service.dolvomee.DolvomeeVO">
