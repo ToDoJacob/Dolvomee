@@ -7,22 +7,23 @@
    </select>
    
    <select id="selectUser" resultType="co.yedam.dolvomee.service.users.UsersVO">
-      select * from users where users_email = #{usersEmail}
-      <if test="userPwd != null">
-      AND users_pwd = #{usersPwd}
-      </if>
+      select * from users where usersEmail = #{usersEmail}
    </select>
    
    <insert id="insertUser">
-      insert into users values(#{usersEmail}, #{usersName}, #{usersPwd}, #{usersPhone}, #{usersAddr}, #{usersAuthor})
+      insert into users values(#{usersEmail},#{usersName},#{usersPwd}, #{usersPhone}, #{usersAddr},' ', #{usersAuthor})
    </insert>
    
    <update id="updateUser">
-      update users set users_pwd = #{usersPwd}, users_author = #{usersAuthor} where users_email = #{usersEmail}
+      update users set usersPwd = #{usersPwd}, usersAuthor = #{usersAuthor} where usersEmail = #{usersEmail}
    </update>
    
    <delete id="deleteUser">
-      delete from users where users_email = #{usersEmail}
+      delete from users where usersEmail = #{usersEmail}
    </delete>
+   
+   <select id="loginUser" resultType="co.yedam.dolvomee.service.users.UsersVO">
+   	  select * from users where usersEmail = #{usersEmail} and usersPwd = #{usersPwd}   	
+   </select>
 
 </mapper>
