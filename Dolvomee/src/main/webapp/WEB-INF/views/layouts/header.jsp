@@ -26,7 +26,7 @@
         <div class="container" style="height: 100px">
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.png"
+            <a class="navbar-brand logo-image" href="home.do"><img src="images/logo.png"
             alt="alternative"></a> 
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
@@ -41,11 +41,14 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#header">Home</a>
                     </li>
+                       <li class="nav-item">
+                        <a class="nav-link" href="usersList.do">회원 리스트</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="serviceList.do">펫시터 찾기</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">이용 후기</a>
+                        <a class="nav-link" href="reviewList.do">이용 후기</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#pricing">내 정보</a>
@@ -62,8 +65,8 @@
                     </li>
                 </ul>
                 <span class="nav-item">
-                 	 <a class="btn-solid-sm" href="#contact">펫시터 지원</a>
-                    <a class="btn-solid-sm" href="memberLoginForm.do">로그인</a>
+                 	 <a class="btn-solid-sm" href="dolvRegisterForm.do">펫시터 지원</a>
+                    <a class="btn-solid-sm" href="usersLoginForm.do">로그인</a>
                 </span>
             </div> <!-- end of navbar-collapse -->
         </div> <!-- end of container -->

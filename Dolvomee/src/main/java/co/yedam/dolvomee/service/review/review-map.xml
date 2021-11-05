@@ -3,23 +3,23 @@
 <mapper namespace="co.yedam.dolvomee.service.review.ReviewMapper">
 
    <select id="selectReviewList" resultType="co.yedam.dolvomee.service.review.ReviewVO">
-      select * from review
+      select * from review order by revnum desc
    </select>
    
    <select id="selectReview" resultType="co.yedam.dolvomee.service.review.ReviewVO">
-      select * from review where users_email = #{users_email}
+      select * from review where usersemail = #{usersEmail}
    </select>
    
    <insert id="insertReview">
-      insert into review values(#{users_email}, #{users_name}, #{users_pwd}, #{users_phone}, #{users_addr}, #{users_author})
+      insert into review values(#{revNum}, #{servNum}, #{usersEmail}, #{usersAddr}, #{usersImage}, #{revContents}, #{revLike})
    </insert>
    
    <update id="updateReview">
-      update review set users_pwd = #{users_pwd}, users_author = #{users_author} where users_email = #{users_email}
+      update review set revcontents = #{revContents}, revlike = #{revLike} where revnum = #{revNum}
    </update>
    
    <delete id="deleteReview">
-      delete from review where users_email = #{users_email}
+      delete from review where revnum = #{revNum}
    </delete>
 
 </mapper>

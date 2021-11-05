@@ -8,4 +8,5 @@ public interface UsersService {
 	int insertUser(UsersVO vo);
 	int updateUser(UsersVO vo);
 	int deleteUser(UsersVO vo);
+	UsersVO loginUser(UsersVO vo);
 }
