@@ -6,6 +6,7 @@ public class ServiceVO {
 	private String servList;
 	private String servPlace;
 	private int servPrice;
+	
 	public int getServNum() {
 		return servNum;
 	}
