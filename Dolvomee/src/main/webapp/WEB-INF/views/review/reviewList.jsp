@@ -7,46 +7,56 @@
 <meta charset="UTF-8">
 <title>이용 후기</title>
 
-<!--  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-   General CSS Files
-  <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+	name="viewport">
+<link rel="stylesheet"
+	href="assets/modules/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
 
-  CSS Libraries
-
-  Template CSS
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-	Start GA
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<!-- 원래 css -->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/components.css">
+ <!-- main css -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+<script async
+	src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
 
-  gtag('config', 'UA-94034622-3');
-  </script>
-  -->
+	gtag('config', 'UA-94034622-3');
+</script>
+
 </head>
 <body>
-	<div class="col-12 col-md-6 col-lg-6">
-		<div class="card">
-			<div class="card-header">
-				<h4>이용 후기</h4>
+	<div class="main-content">
+		<!-- 		<div class="row"> -->
+		<div align="center">
+			<div class="col-12 col-md-6 col-lg-6">
+				<c:forEach items="${reviews }" var="review">
+					<div class="card">
+						<div class="card-body">
+							<div class="media">
+								<img class="mr-3" src="images/logo.png" alt="사진 없음">
+								<div class="media-body">
+									<h3 class="mt-0">${review.usersAddr }</h3>
+									<h5 class="mt-0">평점:${review.revLike }</h5>
+									<p class="mb-0">${review.revContents }</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</c:forEach>
 			</div>
-			<div class="card-body">
-				<ul class="list-unstyled">
-					<c:forEach items="${reviews }" var="review">
-						<li class="media"><img class="mr-3"
-							src="${review.usersImage }"
-							alt="사진 없음">
-							<div class="media-body">
-								<h5 class="mt-0 mb-1">${review.usersAddr }</h5>
-								<p>${review.revContents }</p>
-							</div></li>
-					</c:forEach>
-				</ul>
-			</div>
+
 		</div>
 	</div>
 </body>

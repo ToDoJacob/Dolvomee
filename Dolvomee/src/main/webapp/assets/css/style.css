@@ -2430,7 +2430,7 @@ body.sidebar-mini .main-sidebar {
 body.sidebar-mini .navbar {
   left: 65px; }
 body.sidebar-mini .main-content, body.sidebar-mini .main-footer {
-  padding-left: 90px; }
+  padding-left: 10px; }
 
 body.layout-2 .navbar-bg {
   z-index: 889;
@@ -2683,7 +2683,7 @@ body.layout-3 .main-footer {
         padding-left: 10px; }
 
 .main-content {
-  padding-left: 280px;
+  padding-left: 10px;
   padding-right: 30px;
   padding-top: 80px;
   width: 100%;
