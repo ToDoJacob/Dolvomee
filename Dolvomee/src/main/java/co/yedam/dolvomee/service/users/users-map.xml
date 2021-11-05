@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yedam.dolvomee.service.users.UsersMapper">
+
+   <select id="selectUserList" resultType="co.yedam.dolvomee.service.users.UsersVO">
+      select * from users
+   </select>
+   
+   <select id="selectUser" resultType="co.yedam.dolvomee.service.users.UsersVO">
+      select * from users where users_email = #{usersEmail}
+      <if test="userPwd != null">
+      AND users_pwd = #{usersPwd}
+      </if>
+   </select>
+   
+   <insert id="insertUser">
+      insert into users values(#{usersEmail}, #{usersName}, #{usersPwd}, #{usersPhone}, #{usersAddr}, #{usersAuthor})
+   </insert>
+   
+   <update id="updateUser">
+      update users set users_pwd = #{usersPwd}, users_author = #{usersAuthor} where users_email = #{usersEmail}
+   </update>
+   
+   <delete id="deleteUser">
+      delete from users where users_email = #{usersEmail}
+   </delete>
+
+</mapper>

@@ -1,4 +1,4 @@
-package co.yedam.dolvomee.users.service;
+package co.yedam.dolvomee.service.users;
 
 import java.util.List;
 

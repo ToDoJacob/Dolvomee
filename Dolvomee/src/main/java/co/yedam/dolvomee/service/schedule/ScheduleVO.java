@@ -1,4 +1,4 @@
-package co.yedam.dolvomee.schedule.service;
+package co.yedam.dolvomee.service.schedule;
 
 import java.sql.Date;
 

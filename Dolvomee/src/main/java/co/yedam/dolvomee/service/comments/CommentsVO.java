@@ -1,4 +1,4 @@
-package co.yedam.dolvomee.comments.service;
+package co.yedam.dolvomee.service.comments;
 
 import java.util.Date;
 
