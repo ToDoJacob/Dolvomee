@@ -13,6 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.yedam.dolvomee.comm.Command;
 import co.yedam.dolvomee.command.HomeCommand;
+import co.yedam.dolvomee.command.dolvomee.DolvRegisterForm;
+import co.yedam.dolvomee.command.users.UsersLogin;
+import co.yedam.dolvomee.command.users.UsersLoginForm;
+import co.yedam.dolvomee.command.users.UsersRegister;
+import co.yedam.dolvomee.command.users.UsersRegisterForm;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -25,6 +30,11 @@ public class FrontController extends HttpServlet {
 
 	public void init(ServletConfig config) throws ServletException {
 		map.put("/home.do", new HomeCommand()); // 첫 페이지 호출
+		map.put("/usersLoginForm.do", new UsersLoginForm()); // 로그인 폼 호출
+		map.put("/usersLogin.do", new UsersLogin()); // 로그인 처리
+		map.put("/usersRegisterForm.do", new UsersRegisterForm()); // 사용자회원가입 폼 호출
+		map.put("/registerUsers.do", new UsersRegister()); // 사용자회원가입 처리
+		map.put("/dolvRegisterForm.do", new DolvRegisterForm()); // 돌보미 회원가입 폼 호출 
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
@@ -32,6 +42,7 @@ public class FrontController extends HttpServlet {
 	
 		request.setCharacterEncoding("UTF-8");
 		String uri = request.getRequestURI();
+		System.out.println(uri);
 		String contextPath = request.getContextPath();
 		String page = uri.substring(contextPath.length());
 		
