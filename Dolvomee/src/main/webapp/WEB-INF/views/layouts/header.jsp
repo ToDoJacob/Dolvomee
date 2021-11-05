@@ -41,6 +41,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#header">Home</a>
                     </li>
+                       <li class="nav-item">
+                        <a class="nav-link" href="usersList.do">회원 리스트</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#services">펫시터 찾기</a>
                     </li>

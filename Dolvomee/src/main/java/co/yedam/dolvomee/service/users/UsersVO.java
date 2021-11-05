@@ -7,6 +7,7 @@ public class UsersVO {
 	private String usersPwd;
 	private String usersPhone;
 	private String usersAddr;
+	private String usersImage;
 	private String usersAuthor;
 	
 	public String getUsersEmail() {
@@ -39,16 +40,17 @@ public class UsersVO {
 	public void setUsersAddr(String usersAddr) {
 		this.usersAddr = usersAddr;
 	}
+	public String getUsersImage() {
+		return usersImage;
+	}
+	public void setUsersImage(String usersImage) {
+		this.usersImage = usersImage;
+	}
 	public String getUsersAuthor() {
 		return usersAuthor;
 	}
 	public void setUsersAuthor(String usersAuthor) {
 		this.usersAuthor = usersAuthor;
-	}
-	@Override
-	public String toString() {
-		return "UsersVO [usersEmail=" + usersEmail + ", usersName=" + usersName + ", usersPwd=" + usersPwd
-				+ ", usersPhone=" + usersPhone + ", usersAddr=" + usersAddr + ", usersAuthor=" + usersAuthor + "]";
 	}
 	
 	

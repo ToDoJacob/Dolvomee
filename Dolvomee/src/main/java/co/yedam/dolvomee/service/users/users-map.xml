@@ -3,26 +3,23 @@
 <mapper namespace="co.yedam.dolvomee.service.users.UsersMapper">
 
    <select id="selectUserList" resultType="co.yedam.dolvomee.service.users.UsersVO">
-      select * from users
+     select * from users
    </select>
    
    <select id="selectUser" resultType="co.yedam.dolvomee.service.users.UsersVO">
-      select * from users where users_email = #{usersEmail}
-      <if test="userPwd != null">
-      AND users_pwd = #{usersPwd}
-      </if>
+      select * from users where usersEmail = #{usersEmail}
    </select>
    
-   <insert id="insertUser">
+   <insert id="insertUser" parameterType="co.yedam.dolvomee.service.users.UsersVO">
       insert into users values(#{usersEmail}, #{usersName}, #{usersPwd}, #{usersPhone}, #{usersAddr}, #{usersAuthor})
    </insert>
    
-   <update id="updateUser">
-      update users set users_pwd = #{usersPwd}, users_author = #{usersAuthor} where users_email = #{usersEmail}
+   <update id="updateUser" parameterType="co.yedam.dolvomee.service.users.UsersVO">
+      update users set usersPwd = #{usersPwd}, usersAddr = #{usersAddr}, usersImage = #{usersImage} where usersEmail = #{usersEmail}
    </update>
    
-   <delete id="deleteUser">
-      delete from users where users_email = #{usersEmail}
+   <delete id="deleteUser" parameterType="co.yedam.dolvomee.service.users.UsersVO">
+      delete from users where usersEmail = #{usersEmail}
    </delete>
 
 </mapper>
