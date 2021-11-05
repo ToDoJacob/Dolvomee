@@ -1,10 +1,10 @@
-package co.yedam.dolvomee.review.service;
+package co.yedam.dolvomee.service.review;
 
 import java.util.List;
 
-import co.yedam.dolvomee.users.service.UsersVO;
+import co.yedam.dolvomee.service.users.UsersVO;
 
-public interface ReviewMapper {
+public interface ReviewService {
 	List<UsersVO> selectReviewList();
 	UsersVO selectReview(ReviewVO vo);
 	int insertReview(ReviewVO vo);

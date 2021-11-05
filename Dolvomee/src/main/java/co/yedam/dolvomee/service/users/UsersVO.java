@@ -1,4 +1,4 @@
-package co.yedam.dolvomee.users.service;
+package co.yedam.dolvomee.service.users;
 
 public class UsersVO {
 
@@ -8,6 +8,7 @@ public class UsersVO {
 	private String usersPhone;
 	private String usersAddr;
 	private String usersAuthor;
+	
 	public String getUsersEmail() {
 		return usersEmail;
 	}

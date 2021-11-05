@@ -1,4 +1,4 @@
-package co.yedam.dolvomee.review.service;
+package co.yedam.dolvomee.service.review;
 
 public class ReviewVO {
 	private int revNum;

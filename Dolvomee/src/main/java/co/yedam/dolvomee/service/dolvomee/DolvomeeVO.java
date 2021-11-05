@@ -1,4 +1,4 @@
-package co.yedam.dolvomee.dolvomee.service;
+package co.yedam.dolvomee.service.dolvomee;
 
 public class DolvomeeVO {
 	private String dolvEmail;
