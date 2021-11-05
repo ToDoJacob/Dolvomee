@@ -13,8 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.yedam.dolvomee.comm.Command;
 import co.yedam.dolvomee.command.HomeCommand;
-import co.yedam.dolvomee.command.review.ReviewList;
 import co.yedam.dolvomee.command.dolvomee.DolvRegisterForm;
+import co.yedam.dolvomee.command.dolvomee.DolvomeeList;
+import co.yedam.dolvomee.command.review.ReviewList;
+import co.yedam.dolvomee.command.users.UsersList;
 import co.yedam.dolvomee.command.users.UsersLogin;
 import co.yedam.dolvomee.command.users.UsersLoginForm;
 import co.yedam.dolvomee.command.users.UsersRegister;
@@ -30,6 +32,7 @@ public class FrontController extends HttpServlet {
 	}
 
 	public void init(ServletConfig config) throws ServletException {
+
 		map.put("/home.do", new HomeCommand()); // 첫 페이지 호출
 		map.put("/reviewList.do", new ReviewList()); //리뷰목록
 		map.put("/usersLoginForm.do", new UsersLoginForm()); // 로그인 폼 호출
@@ -37,8 +40,9 @@ public class FrontController extends HttpServlet {
 		map.put("/usersRegisterForm.do", new UsersRegisterForm()); // 사용자회원가입 폼 호출
 		map.put("/registerUsers.do", new UsersRegister()); // 사용자회원가입 처리
 		map.put("/dolvRegisterForm.do", new DolvRegisterForm()); // 돌보미 회원가입 폼 호출 
-    map.put("/usersList.do", new UsersList()); //회원 리스트(관리자만)
+		map.put("/usersList.do", new UsersList()); //회원 리스트(관리자만)
 		map.put("/dolvomeeList", new DolvomeeList()); //펫시터 리스트(관리자만)
+		
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
