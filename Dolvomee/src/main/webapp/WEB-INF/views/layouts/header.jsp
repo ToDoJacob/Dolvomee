@@ -45,7 +45,7 @@
                         <a class="nav-link" href="#services">펫시터 찾기</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">이용 후기</a>
+                        <a class="nav-link" href="reviewList.do">이용 후기</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#pricing">내 정보</a>

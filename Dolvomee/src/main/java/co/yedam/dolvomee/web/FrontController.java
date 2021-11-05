@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.yedam.dolvomee.comm.Command;
 import co.yedam.dolvomee.command.HomeCommand;
+import co.yedam.dolvomee.command.review.ReviewList;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -25,6 +26,7 @@ public class FrontController extends HttpServlet {
 
 	public void init(ServletConfig config) throws ServletException {
 		map.put("/home.do", new HomeCommand()); // 첫 페이지 호출
+		map.put("/reviewList.do", new ReviewList()); //리뷰목록
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
