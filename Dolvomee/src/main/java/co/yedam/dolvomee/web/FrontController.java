@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.yedam.dolvomee.comm.Command;
 import co.yedam.dolvomee.command.HomeCommand;
+import co.yedam.dolvomee.command.review.ReviewList;
 import co.yedam.dolvomee.command.dolvomee.DolvRegisterForm;
 import co.yedam.dolvomee.command.users.UsersLogin;
 import co.yedam.dolvomee.command.users.UsersLoginForm;
@@ -30,6 +31,7 @@ public class FrontController extends HttpServlet {
 
 	public void init(ServletConfig config) throws ServletException {
 		map.put("/home.do", new HomeCommand()); // 첫 페이지 호출
+		map.put("/reviewList.do", new ReviewList()); //리뷰목록
 		map.put("/usersLoginForm.do", new UsersLoginForm()); // 로그인 폼 호출
 		map.put("/usersLogin.do", new UsersLogin()); // 로그인 처리
 		map.put("/usersRegisterForm.do", new UsersRegisterForm()); // 사용자회원가입 폼 호출

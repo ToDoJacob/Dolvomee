@@ -8,6 +8,7 @@ public class CommentsVO {
 	private int commentsNum;
 	private String commentsContents;
 	private Date commentsDate;
+	
 	public int getRevNum() {
 		return revNum;
 	}
