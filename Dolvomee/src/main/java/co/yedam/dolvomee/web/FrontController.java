@@ -15,9 +15,9 @@ import co.yedam.dolvomee.comm.Command;
 import co.yedam.dolvomee.command.HomeCommand;
 import co.yedam.dolvomee.command.dolvomee.DolvRegisterForm;
 import co.yedam.dolvomee.command.dolvomee.DolvomeeList;
-import co.yedam.dolvomee.command.dolvomee.DolvRegisterForm;
 import co.yedam.dolvomee.command.qna.qnaList;
 import co.yedam.dolvomee.command.review.ReviewList;
+import co.yedam.dolvomee.command.service.ServiceList;
 import co.yedam.dolvomee.command.users.UsersList;
 import co.yedam.dolvomee.command.users.UsersLogin;
 import co.yedam.dolvomee.command.users.UsersLoginForm;
@@ -44,6 +44,7 @@ public class FrontController extends HttpServlet {
 		map.put("/dolvRegisterForm.do", new DolvRegisterForm()); // 돌보미 회원가입 폼 호출 
 		map.put("/usersList.do", new UsersList()); //회원 리스트(관리자만)
 		map.put("/dolvomeeList", new DolvomeeList()); //펫시터 리스트(관리자만)
+		map.put("/serviceList.do", new ServiceList()); // 돌보미 서비스 리스트
 		
     map.put("/qnaList.do", new qnaList());
 
