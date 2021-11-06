@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.yedam.dolvomee.comm.Command;
 
-public class qnaList implements Command {
+public class QnaList implements Command {
 
 	@Override
 	public String run(HttpServletRequest request, HttpServletResponse response) {

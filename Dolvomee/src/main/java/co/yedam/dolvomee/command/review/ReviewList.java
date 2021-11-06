@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.yedam.dolvomee.comm.Command;
 import co.yedam.dolvomee.service.review.ReviewService;
+import co.yedam.dolvomee.service.review.ReviewServiceImpl;
 
 public class ReviewList implements Command {
 
@@ -14,8 +15,8 @@ public class ReviewList implements Command {
 		ReviewService reviewDao = new ReviewServiceImpl();
 		
 		request.setAttribute("reviews", reviewDao.selectReviewList());
+		//request.setAttribute("reviewrows", reviewDao.selectReviewRow());
 		
 		return "review/reviewList";
 	}
-
 }
