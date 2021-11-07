@@ -16,6 +16,7 @@ public class ReviewSelect implements Command {
 		ReviewVO vo = new ReviewVO();
 		vo.setRevNum(Integer.parseInt(request.getParameter("revNum")));
 		request.setAttribute("review", reviewDao.selectReview(vo));
+		System.out.println(reviewDao.selectReview(vo).getRevLike());
 		return "review/reviewSelect";
 	}
 
