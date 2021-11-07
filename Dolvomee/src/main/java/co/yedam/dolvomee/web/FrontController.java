@@ -15,10 +15,18 @@ import co.yedam.dolvomee.comm.Command;
 import co.yedam.dolvomee.command.HomeCommand;
 import co.yedam.dolvomee.command.review.ReviewList;
 import co.yedam.dolvomee.command.dolvomee.DolvRegisterForm;
+import co.yedam.dolvomee.command.dolvomee.DolvomeeDelete;
+import co.yedam.dolvomee.command.dolvomee.DolvomeeList;
+import co.yedam.dolvomee.command.dolvomee.DolvomeeSelect;
+import co.yedam.dolvomee.command.users.UsersDelete;
+import co.yedam.dolvomee.command.users.UsersList;
 import co.yedam.dolvomee.command.users.UsersLogin;
 import co.yedam.dolvomee.command.users.UsersLoginForm;
 import co.yedam.dolvomee.command.users.UsersRegister;
 import co.yedam.dolvomee.command.users.UsersRegisterForm;
+import co.yedam.dolvomee.command.users.UsersSelect;
+import co.yedam.dolvomee.command.users.UsersUpdate;
+import co.yedam.dolvomee.command.users.UsersUpdateForm;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -37,8 +45,14 @@ public class FrontController extends HttpServlet {
 		map.put("/usersRegisterForm.do", new UsersRegisterForm()); // 사용자회원가입 폼 호출
 		map.put("/registerUsers.do", new UsersRegister()); // 사용자회원가입 처리
 		map.put("/dolvRegisterForm.do", new DolvRegisterForm()); // 돌보미 회원가입 폼 호출 
-    map.put("/usersList.do", new UsersList()); //회원 리스트(관리자만)
-		map.put("/dolvomeeList", new DolvomeeList()); //펫시터 리스트(관리자만)
+		map.put("/usersList.do", new UsersList()); //회원 리스트(관리자만)
+		map.put("/dolvomeeList.do", new DolvomeeList()); //펫시터 리스트(관리자만)
+		map.put("/dolvomeeSelect.do", new DolvomeeSelect()); //펫시터 정보
+		map.put("/dolvomeeDelete.do", new DolvomeeDelete()); //펫시터 삭제(관리자권한)
+		map.put("/usersSelect.do", new UsersSelect());	//회원 정보 
+		map.put("/usersDelete.do", new UsersDelete()); //회원 삭제(관리자권한) 
+		map.put("/usersUpdate.do", new UsersUpdate());	//회원 수정
+		map.put("/usersUpdateForm.do", new UsersUpdateForm()); //회원수정폼
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)

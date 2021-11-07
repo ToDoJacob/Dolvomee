@@ -6,16 +6,21 @@ import javax.servlet.http.HttpServletResponse;
 import co.yedam.dolvomee.comm.Command;
 import co.yedam.dolvomee.service.users.UsersService;
 import co.yedam.dolvomee.service.users.UsersServiceImpl;
+import co.yedam.dolvomee.service.users.UsersVO;
 
-public class UsersList implements Command {
+public class UsersUpdateForm implements Command {
 
 	@Override
 	public String run(HttpServletRequest request, HttpServletResponse response) {
-		//멤버 목록
-		UsersService usersDao = new UsersServiceImpl();	
-		request.setAttribute("users", usersDao.selectUserList());
+		UsersService usersDao = new UsersServiceImpl();
+		UsersVO vo = new UsersVO();
 
-		return "users/usersList";
+		vo.setUsersEmail(request.getParameter("usersEmail"));
+
+		vo = usersDao.selectUser(vo);
+		request.setAttribute("users", vo);
+
+		return "users/usersUpdateForm";
 	}
 
 }
