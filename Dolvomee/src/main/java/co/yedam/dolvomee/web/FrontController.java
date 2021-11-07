@@ -45,28 +45,32 @@ public class FrontController extends HttpServlet {
 	}
 
 	public void init(ServletConfig config) throws ServletException {
-
+		
+		//준형
 		map.put("/home.do", new HomeCommand()); // 첫 페이지 호출
+		
+		//동관
+		map.put("/reviewList.do", new ReviewList()); //리뷰목록
+		map.put("/reviewForm.do", new ReviewForm()); //리뷰 등록
+		map.put("/reviewSelect.do", new ReviewSelect()); //리뷰 상세페이지
+		map.put("/reviewEdit.do", new ReviewEdit()); //리뷰 수정
+		map.put("/qnaList.do", new QnaList()); //1:1 문의
+		
+		//은진
+		map.put("/usersList.do", new UsersList()); //회원 리스트(관리자만)
+		map.put("/dolvomeeList", new DolvomeeList()); //펫시터 리스트(관리자만)
+		map.put("/serviceList.do", new ServiceList()); // 돌보미 서비스 리스트
+    
+		//선영
 		
 		map.put("/usersLoginForm.do", new UsersLoginForm()); // 로그인 폼 호출
 		map.put("/usersLogin.do", new UsersLogin()); // 사용자로그인 처리
 		map.put("/dolvLogin.do", new DolvLogin()); // 돌보미로그인 처리
-		
 		map.put("/usersRegisterForm.do", new UsersRegisterForm()); // 사용자회원가입 폼 호출
 		map.put("/usersRegister.do", new UsersRegister()); // 사용자회원가입 처리
 		map.put("/dolvRegisterForm.do", new DolvRegisterForm()); // 돌보미 회원가입 폼 호출
 		map.put("/dolvRegister.do", new DolvRegister()); // 돌보미 회원가입 처리
 		map.put("/ajaxDolvoAuthorCheck.do", new AjaxDolvoAuthorCheck()); //돌보미 권한 체크
-		
-		map.put("/usersList.do", new UsersList()); //회원 리스트(관리자만)
-		map.put("/dolvomeeList", new DolvomeeList()); //펫시터 리스트(관리자만)
-		map.put("/qnaList.do", new QnaList()); //1:1 문의
-		
-		map.put("/reviewList.do", new ReviewList()); //리뷰목록
-		map.put("/reviewForm.do", new ReviewForm()); //리뷰 등록
-		map.put("/reviewSelect.do", new ReviewSelect()); //리뷰 상세페이지
-		map.put("/serviceList.do", new ServiceList()); // 돌보미 서비스 리스트
-		
 		map.put("/noticeList.do", new NoticeList()); //게시글 목록
 		map.put("/noticeSelect.do", new NoticeSelect()); //세부내역보기
 		map.put("/noticeForm.do", new NoticeForm()); // 게시글 입력 폼

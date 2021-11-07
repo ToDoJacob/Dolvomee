@@ -53,7 +53,6 @@
 			});
 		});
 	});
-	
 	function CallReview(n){
 		frm.revNum.value = n;
 		frm.action = "reviewSelect.do";
@@ -73,9 +72,9 @@
 					<div class="card" align="left">
 						<div class="card-body" onmouseover="this.style.background='#CBF5CB'"
 						onmouseleave="this.style.background='white'"
-						style="cursor: pointer;" onclick="CallNotice(${review.revNum})">
+						style="cursor: pointer;" onclick="CallReview(${review.revNum})">
 							<div class="media">
-								<img class="mr-3" src="images/puppy.jpg" alt="사진 없음">
+								<img style="max-width: 60px; max-height: 60px; border-color: #3CB371; border-radius: 50%; margin-right:1rem!important" src="images/puppy.jpg" alt="사진 없음">
 								<div class="media-body">
 									<h4 class="mt-0">${review.usersAddr }</h4>
 									<div class="review">
@@ -86,7 +85,9 @@
 											<i class="fas fa-star"></i>
 											<i class="fas fa-star"></i>
 										</div>
+										<div>${review.writeDate }</div>
 									</div>
+									<br>
 									<p class="mb-0">${review.revContents }</p>
 								</div>
 							</div>
