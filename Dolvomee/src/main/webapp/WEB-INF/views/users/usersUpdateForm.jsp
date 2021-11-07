@@ -86,25 +86,28 @@
 												<div class="col-sm-12 col-md-7">
 													<div id="image-preview" class="image-preview">
 														<label for="image-upload" id="image-label">Choose
-															이미지</label> <input type="file" name="image" id="image-upload" />
+															image</label> <input type="file" name="image" id="image-upload" />
 													</div>
 												</div>
 											</div>
-
-											<div class="form-group row mb-4">
-												<label
-													class="col-form-label text-md-right col-12 col-md-3 col-lg-3">권한</label>
-												<div class="col-sm-12 col-md-7">
-													<select class="form-control selectric">
-														<option>admin</option>
-														<option>users</option>
-														<option>대기</option>
-													</select>
+											<c:if test="usersAuthor == admin">
+												<div class="form-group row mb-4">
+													<label
+														class="col-form-label text-md-right col-12 col-md-3 col-lg-3">권한</label>
+													<div class="col-sm-12 col-md-7">
+														<select class="form-control selectric">
+															<option>admin</option>
+															<option>users</option>
+															<option>돌보미</option>
+															<option>대기</option>
+														</select>
+													</div>
 												</div>
-											</div>
-											<span class="nav-item"> 
-											<input type="submit" class="btn-solid-sm" style="color: white;" value="수정">
-											<input type="hidden" id="usersEmail" name="usersEmail" value="${users.usersEmail }">
+											</c:if>
+											<span class="nav-item"> <input type="submit"
+												class="btn-solid-sm" style="color: white;" value="수정">
+												<input type="hidden" id="usersEmail" name="usersEmail"
+												value="${users.usersEmail }">
 											</span>
 										</div>
 									</form>

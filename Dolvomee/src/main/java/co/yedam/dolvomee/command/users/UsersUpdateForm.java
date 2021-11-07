@@ -12,13 +12,15 @@ public class UsersUpdateForm implements Command {
 
 	@Override
 	public String run(HttpServletRequest request, HttpServletResponse response) {
+		
 		UsersService usersDao = new UsersServiceImpl();
 		UsersVO vo = new UsersVO();
 
 		vo.setUsersEmail(request.getParameter("usersEmail"));
-
 		vo = usersDao.selectUser(vo);
+		System.out.println(vo);
 		request.setAttribute("users", vo);
+		
 
 		return "users/usersUpdateForm";
 	}

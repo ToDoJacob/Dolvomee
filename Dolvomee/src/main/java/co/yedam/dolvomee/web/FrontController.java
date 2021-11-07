@@ -18,6 +18,7 @@ import co.yedam.dolvomee.command.dolvomee.DolvRegisterForm;
 import co.yedam.dolvomee.command.dolvomee.DolvomeeDelete;
 import co.yedam.dolvomee.command.dolvomee.DolvomeeList;
 import co.yedam.dolvomee.command.dolvomee.DolvomeeSelect;
+import co.yedam.dolvomee.command.users.UsersCart;
 import co.yedam.dolvomee.command.users.UsersDelete;
 import co.yedam.dolvomee.command.users.UsersList;
 import co.yedam.dolvomee.command.users.UsersLogin;
@@ -53,6 +54,7 @@ public class FrontController extends HttpServlet {
 		map.put("/usersDelete.do", new UsersDelete()); //회원 삭제(관리자권한) 
 		map.put("/usersUpdate.do", new UsersUpdate());	//회원 수정
 		map.put("/usersUpdateForm.do", new UsersUpdateForm()); //회원수정폼
+		map.put("/usersCart.do", new UsersCart()); //회원 카트 폼
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)

@@ -66,6 +66,7 @@
                         </ul>
                     </li>
                 </ul>
+              <a class="fas fa-shopping-cart" href="usersCart.do" style="color: #3cb371;"></a>
                 <span class="nav-item">
                  	 <a class="btn-solid-sm" href="dolvRegisterForm.do">펫시터 지원</a>
                     <a class="btn-solid-sm" href="usersLoginForm.do">로그인</a>

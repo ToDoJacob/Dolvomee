@@ -19,7 +19,7 @@ public class UsersUpdate implements Command {
 		vo.setUsersPwd(request.getParameter("usersPwd"));
 		vo.setUsersPhone(request.getParameter("usersPhone"));
 		vo.setUsersAddr(request.getParameter("usersAddr"));
-		vo.setUsersEmail(request.getParameter("usersImage"));
+		vo.setUsersImage(request.getParameter("usersImage"));
 		vo.setUsersAuthor(request.getParameter("usersAuthor"));
 		vo.setUsersEmail(request.getParameter("usersEmail"));
 	
