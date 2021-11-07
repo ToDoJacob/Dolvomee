@@ -21,6 +21,7 @@
     <mapper resource="co/yedam/dolvomee/service/dolvomee/dolvomee-map.xml"/>
     <mapper resource="co/yedam/dolvomee/service/review/review-map.xml" />
     <mapper resource="co/yedam/dolvomee/service/service/service-map.xml" />
+    <mapper resource="co/yedam/dolvomee/service/cartlist/cartList-map.xml"/>
   </mappers>
 
 </configuration>

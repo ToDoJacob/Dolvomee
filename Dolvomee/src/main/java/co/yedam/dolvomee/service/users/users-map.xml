@@ -15,7 +15,7 @@
    </insert>
    
    <update id="updateUser">
-      update users set usersPwd = #{usersPwd}, usersAuthor = #{usersAuthor} where usersEmail = #{usersEmail}
+      update users set usersPwd = #{usersPwd}, usersPhone = #{usersPhone}, usersAddr = #{usersAddr}, usersImage = #{usersImage}, usersAuthor = #{usersAuthor} where usersEmail = #{usersEmail}
    </update>
    
    <delete id="deleteUser">

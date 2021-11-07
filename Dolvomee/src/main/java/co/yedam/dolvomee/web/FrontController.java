@@ -18,6 +18,11 @@ import co.yedam.dolvomee.command.dolvomee.AjaxDolvoAuthorCheck;
 import co.yedam.dolvomee.command.dolvomee.DolvLogin;
 import co.yedam.dolvomee.command.dolvomee.DolvRegister;
 import co.yedam.dolvomee.command.dolvomee.DolvRegisterForm;
+import co.yedam.dolvomee.command.dolvomee.DolvomeeDelete;
+import co.yedam.dolvomee.command.dolvomee.DolvomeeList;
+import co.yedam.dolvomee.command.dolvomee.DolvomeeSelect;
+import co.yedam.dolvomee.command.users.UsersCart;
+import co.yedam.dolvomee.command.users.UsersDelete;
 import co.yedam.dolvomee.command.dolvomee.DolvomeeList;
 import co.yedam.dolvomee.command.notice.NoticeDelete;
 import co.yedam.dolvomee.command.notice.NoticeForm;
@@ -34,6 +39,9 @@ import co.yedam.dolvomee.command.users.UsersLogin;
 import co.yedam.dolvomee.command.users.UsersLoginForm;
 import co.yedam.dolvomee.command.users.UsersRegister;
 import co.yedam.dolvomee.command.users.UsersRegisterForm;
+import co.yedam.dolvomee.command.users.UsersSelect;
+import co.yedam.dolvomee.command.users.UsersUpdate;
+import co.yedam.dolvomee.command.users.UsersUpdateForm;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -67,6 +75,18 @@ public class FrontController extends HttpServlet {
 		map.put("/usersLogin.do", new UsersLogin()); // 사용자로그인 처리
 		map.put("/dolvLogin.do", new DolvLogin()); // 돌보미로그인 처리
 		map.put("/usersRegisterForm.do", new UsersRegisterForm()); // 사용자회원가입 폼 호출
+    
+    
+    
+		map.put("/usersList.do", new UsersList()); //회원 리스트(관리자만)
+		map.put("/dolvomeeList.do", new DolvomeeList()); //펫시터 리스트(관리자만)
+		map.put("/dolvomeeSelect.do", new DolvomeeSelect()); //펫시터 정보
+		map.put("/dolvomeeDelete.do", new DolvomeeDelete()); //펫시터 삭제(관리자권한)
+		map.put("/usersSelect.do", new UsersSelect());	//회원 정보 
+		map.put("/usersDelete.do", new UsersDelete()); //회원 삭제(관리자권한) 
+		map.put("/usersUpdate.do", new UsersUpdate());	//회원 수정
+		map.put("/usersUpdateForm.do", new UsersUpdateForm()); //회원수정폼
+		map.put("/usersCart.do", new UsersCart()); //회원 카트 폼
 		map.put("/usersRegister.do", new UsersRegister()); // 사용자회원가입 처리
 		map.put("/dolvRegisterForm.do", new DolvRegisterForm()); // 돌보미 회원가입 폼 호출
 		map.put("/dolvRegister.do", new DolvRegister()); // 돌보미 회원가입 처리

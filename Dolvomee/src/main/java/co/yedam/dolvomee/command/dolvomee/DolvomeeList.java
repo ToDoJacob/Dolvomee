@@ -15,7 +15,7 @@ public class DolvomeeList implements Command {
 		DolvomeeService dolvomeeDao = new DolvomeeServiceImpl();
 		request.setAttribute("dolvomees", dolvomeeDao.selectDolvomeeLsit());
 		
-		return "dolvomee/dolvomeeList.jsp";
+		return "dolvomee/dolvomeeList";
 	}
 
 }
