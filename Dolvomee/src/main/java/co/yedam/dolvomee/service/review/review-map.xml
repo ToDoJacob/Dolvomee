@@ -7,7 +7,7 @@
    </select>
    
    <select id="selectReview" resultType="co.yedam.dolvomee.service.review.ReviewVO">
-      select * from review where usersemail = #{usersEmail}
+      select * from review where revnum = #{revNum}
    </select>
    
    <insert id="insertReview">

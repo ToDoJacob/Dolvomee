@@ -603,12 +603,13 @@ select.form-control:not([size]):not([multiple]) {
 
 /* 3.5 Card */
 .card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
-  background-color: #fff;
-  border-radius: 3px;
+  box-shadow: rgb(235 235 235) 0px 3px 18px 0px;
   border: none;
   position: relative;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  border-radius: 30px; 
+}
+
   .card .card-header, .card .card-body, .card .card-footer {
     background-color: transparent;
     padding: 20px 25px; }
@@ -616,7 +617,11 @@ select.form-control:not([size]):not([multiple]) {
     position: static; }
   .card .card-body {
     padding-top: 20px;
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+  border-radius: 30px; 
+
+    
+  }
     .card .card-body .section-title {
       margin: 30px 0 10px 0;
       font-size: 16px; }
