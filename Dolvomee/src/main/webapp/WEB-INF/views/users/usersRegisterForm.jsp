@@ -34,27 +34,30 @@
         <div class="row">
           <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
             <div class="login-brand">
-              <img src="assets/img/stisla-fill.svg" alt="logo" width="100" class="shadow-light rounded-circle">
+				<a href="home.do">
+              		<img src="assets/img/stisla-fill.svg" alt="logo" width="100" class="shadow-light rounded-circle">
+            	</a>            
             </div>
 
             <div class="card card-primary">
               <div class="card-header"><h4>Register</h4></div>
 
               <div class="card-body">
-                <form method="POST" action="registerUsers.do">
+                <form method="POST" action="usersRegister.do">
                 
                   <div class="row">
 	                  <div class="form-group col-6">
-	                    <label for="frist_name">Name</label>
-	                    <input id="frist_name" type="text" class="form-control" name="usersName" autofocus>
-	                  </div>
-	                  
-	                  <div class="form-group col-6">
 	                    <label for="email">Email</label>
-	                    <input id="email" type="email" class="form-control" name="usersEmail">
+	                    <input id="email" type="email" class="form-control" name="usersEmail" autofocus>
 	                    <div class="invalid-feedback">
 	                    </div>
 	                  </div>  
+	                  
+	                  <div class="form-group col-6">
+	                    <label for="frist_name">Name</label>
+	                    <input id="frist_name" type="text" class="form-control" name="usersName">
+	                  </div>
+	                  
                   </div>
 
 
