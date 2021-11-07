@@ -19,6 +19,7 @@ import co.yedam.dolvomee.command.qna.QnaList;
 import co.yedam.dolvomee.command.review.ReviewForm;
 import co.yedam.dolvomee.command.review.ReviewList;
 import co.yedam.dolvomee.command.review.ReviewSelect;
+import co.yedam.dolvomee.command.service.ServiceList;
 import co.yedam.dolvomee.command.users.UsersList;
 import co.yedam.dolvomee.command.users.UsersLogin;
 import co.yedam.dolvomee.command.users.UsersLoginForm;
@@ -48,7 +49,7 @@ public class FrontController extends HttpServlet {
 		map.put("/qnaList.do", new QnaList()); //1:1 문의
 		map.put("/reviewForm.do", new ReviewForm()); //리뷰 등록
 		map.put("/reviewSelect.do", new ReviewSelect()); //리뷰 상세페이지
-
+		map.put("/serviceList.do", new ServiceList()); // 돌보미 서비스 리스트
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
