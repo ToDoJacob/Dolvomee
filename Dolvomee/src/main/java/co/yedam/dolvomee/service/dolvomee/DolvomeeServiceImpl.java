@@ -40,4 +40,9 @@ public class DolvomeeServiceImpl implements DolvomeeService {
 		return map.deleteDolvomee(vo);
 	}
 
+	@Override
+	public DolvomeeVO loginDolv(DolvomeeVO vo) {
+		return map.loginDolv(vo);
+	}
+
 }

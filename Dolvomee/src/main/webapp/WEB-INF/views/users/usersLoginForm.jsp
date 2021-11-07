@@ -19,20 +19,37 @@
   <link rel="stylesheet" href="assets/css/components.css">
 <!-- Start GA -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<script src="js/jquery-3.6.0.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'UA-94034622-3');
   
-  function authorCheck() {
-	  if(dlovAuthor == "대기") {
-		  alert("가입승인이 완료되지 않았습니다");
-		  return false;
-	  } else {
-		  frm.submit();
-	  }
+  function Login() {
+	  var email = $("#email").val();
+	  $.ajax({
+		 url : "ajaxDolvoAuthorCheck.do",
+		 type : "post",
+		 data : { "dolvEmail" : email, "usersEmail" : email},
+		 dataType : "text",
+		 success : function(data){
+			if(data == '1') {
+				frm.action = "usersLogin.do";
+				frm.submit();
+			} else if(data == '2') {
+				alert("가입이 승인되지 않았습니다. 관리자에게 문의하세요.");
+				$("#email").val("");
+				$("#password").val("");
+				$("#email").fource();
+			} else{
+				frm.action = "dolvLogin.do";
+				frm.submit();	
+			} 
+		 }
+	  });
   }
+  
 </script>
 <!-- /END GA -->
 </head>
@@ -43,14 +60,16 @@
         <div class="row">
           <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
             <div class="login-brand">
-              <img src="assets/img/stisla-fill.svg" alt="logo" width="100" class="shadow-light rounded-circle">
+            	<a href="home.do">
+              		<img src="assets/img/stisla-fill.svg" alt="logo" width="100" class="shadow-light rounded-circle">
+            	</a>
             </div>
 
             <div class="card card-primary">
               <div class="card-header"><h4>Login</h4></div>
 
               <div class="card-body">
-                <form method="POST" action="usersLogin.do" class="needs-validation" id="frm">
+                <form method="POST" class="needs-validation" id="frm">
                   <div class="form-group">
                     <label for="email">Email</label>
                     <input id="email" type="email" class="form-control" name="usersEmail" tabindex="1" required autofocus>
@@ -69,11 +88,22 @@
                     </div>
                   </div>
 
-                  <div class="form-group">
-                    <button type="submit" onclick="authorCheck()" class="btn btn-primary btn-lg btn-block" tabindex="4">
-                      Login
+				<!-- 
+                  <div align="center">
+                    <button type="button" onclick="usersLogin()" class="btn btn-primary btn-lg" tabindex="4" style="width:48%">
+                      Users Login
+                    </button>&nbsp;&nbsp;
+                    <button type="button" onclick="dolvomeeLogin()" class="btn btn-primary btn-lg" tabindex="4" style="width:48%">
+                      Dolvomee Login
                     </button>
                   </div>
+                 -->
+                  
+                  <div class="form-group">
+                    <button type="button" onclick="Login()" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                      Login
+                    </button>
+                  </div>               
                 </form>
                 <div class="text-center mt-4 mb-3">
                   <div class="text-job text-muted">Login With Social</div>

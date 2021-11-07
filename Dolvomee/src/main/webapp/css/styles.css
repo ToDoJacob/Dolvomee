@@ -534,7 +534,7 @@ select {
 	padding: 3rem 2rem;
 	border: 1px solid #5e6576;
 	border-radius: 20px;
-	background-color: transparent;
+	background-color: red;
 }
 
 .cards-1 .card-icon {
