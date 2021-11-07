@@ -8,4 +8,5 @@ public interface DolvomeeService {
 	int insertDolvomee(DolvomeeVO vo);
 	int updateDolvomee(DolvomeeVO vo);
 	int deleteDolvomee(DolvomeeVO vo);
+	DolvomeeVO loginDolv(DolvomeeVO vo);
 }
