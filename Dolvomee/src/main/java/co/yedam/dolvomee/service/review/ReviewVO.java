@@ -1,5 +1,6 @@
 package co.yedam.dolvomee.service.review;
 
+
 public class ReviewVO {
 	private int revNum;
 	private int servNum;
@@ -8,7 +9,16 @@ public class ReviewVO {
 	private int revLike;
 	private String usersAddr;
 	private String usersImage;
+	private String writeDate;
 	
+	
+	
+	public String getWriteDate() {
+		return writeDate;
+	}
+	public void setWriteDate(String writeDate) {
+		this.writeDate = writeDate;
+	}
 	public String getUsersImage() {
 		return usersImage;
 	}

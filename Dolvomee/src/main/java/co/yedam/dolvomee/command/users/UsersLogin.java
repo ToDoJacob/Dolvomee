@@ -30,7 +30,8 @@ public class UsersLogin implements Command {
 			session.setAttribute("usersAuthor", vo.getUsersAuthor());
 			viewPage = "home.do";
 		} else {
-			viewPage = "usersLoginForm.do";
+			request.setAttribute("message", "로그인이 정상적으로 처리되지 않았습니다.");
+			viewPage = "users/usersError";
 		}
 		return viewPage;
 	}

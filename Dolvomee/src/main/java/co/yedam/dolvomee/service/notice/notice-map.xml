@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yedam.dolvomee.service.notice.NoticeMapper">
+
+	<select id="selectNoticeList" resultType="co.yedam.dolvomee.service.notice.NoticeVO">
+		select * from notice order by noticeNum desc
+	</select>
+	
+	<select id="selectNotice" resultType="co.yedam.dolvomee.service.notice.NoticeVO">
+		select * from notice where noticeNum = #{noticeNum}
+	</select>
+	
+	<insert id="insertNotice" parameterType="co.yedam.dolvomee.service.notice.NoticeVO">
+		insert into notice values(b_seq.nextval, #{noticeId},#{noticeDate},#{noticeTitle},#{noticeContents},0)
+	</insert>
+	
+	<update id="updatetNotice" parameterType="co.yedam.dolvomee.service.notice.NoticeVO">
+		update notice set noticeTitle = #{noticeTitle}, noticeContents = #{noticeContents}
+		where noticeNum = #{noticeNum}
+	</update>
+	
+	<update id="hitUpdate" parameterType="co.yedam.dolvomee.service.notice.NoticeVO">
+		update notice set hit = hit + 1 where noticeNum = #{noticeNum}
+	</update>
+	
+	<delete id="deleteNotice" parameterType="co.yedam.dolvomee.service.notice.NoticeVO">
+		delete from notice where noticeNum = #{noticeNum}
+	</delete>
+</mapper>

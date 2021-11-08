@@ -5,12 +5,15 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Login</title>
+  <title>Modules &rsaquo; Ion Icons &mdash; Stisla</title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
 
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="assets/modules/ionicons/css/ionicons.min.css">
+  
   <!-- CSS Libraries -->
   <link rel="stylesheet" href="assets/modules/bootstrap-social/bootstrap-social.css">
 
@@ -23,16 +26,34 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'UA-94034622-3');
+
   
-  function authorCheck() {
-	  if(dlovAuthor == "대기") {
-		  alert("가입승인이 완료되지 않았습니다");
-		  return false;
-	  } else {
-		  frm.submit();
-	  }
+  function Login() {
+	  var email = $("#email").val();
+	  $.ajax({
+		 url : "ajaxDolvoAuthorCheck.do",
+		 type : "post",
+		 data : { "dolvEmail" : email, "usersEmail" : email},
+		 dataType : "text",
+		 success : function(data){
+			if(data == '1') {
+				frm.action = "usersLogin.do";
+				frm.submit();
+			} else if(data == '2') {
+				alert("가입이 승인되지 않았습니다. 관리자에게 문의하세요.");
+				$("#email").val("");
+				$("#password").val("");
+				$("#email").fource();
+			} else{
+				frm.action = "dolvLogin.do";
+				frm.submit();	
+			} 
+		 }
+	  });
   }
+  
 </script>
 <!-- /END GA -->
 </head>
@@ -43,14 +64,16 @@
         <div class="row">
           <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
             <div class="login-brand">
-              <img src="assets/img/stisla-fill.svg" alt="logo" width="100" class="shadow-light rounded-circle">
+              <a href="home.do">
+              	<img src="assets/img/stisla-fill.svg" alt="logo" width="100" class="shadow-light rounded-circle">
+              </a>
             </div>
 
             <div class="card card-primary">
               <div class="card-header"><h4>Login</h4></div>
 
               <div class="card-body">
-                <form method="POST" action="usersLogin.do" class="needs-validation" id="frm">
+                <form method="POST" class="needs-validation" id="frm">
                   <div class="form-group">
                     <label for="email">Email</label>
                     <input id="email" type="email" class="form-control" name="usersEmail" tabindex="1" required autofocus>
@@ -68,12 +91,12 @@
                       please fill in your password
                     </div>
                   </div>
-
+                  
                   <div class="form-group">
-                    <button type="submit" onclick="authorCheck()" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                    <button type="button" onclick="Login()" class="btn btn-primary btn-lg btn-block" tabindex="4">
                       Login
                     </button>
-                  </div>
+                  </div>               
                 </form>
                 <div class="text-center mt-4 mb-3">
                   <div class="text-job text-muted">Login With Social</div>
@@ -94,7 +117,7 @@
               </div>
             </div>
             <div class="mt-5 text-muted text-center">
-              Don't have an account? <a href="usersRegisterForm.do">회원가입</a>
+              계정이 없습니까? <a href="usersRegisterForm.do">회원가입</a>
             </div>
             <div class="simple-footer">
               Copyright &copy; Yedam
@@ -113,11 +136,12 @@
   <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
   <script src="assets/modules/moment.min.js"></script>
   <script src="assets/js/stisla.js"></script>
-
+  
   <!-- JS Libraies -->
 
   <!-- Page Specific JS File -->
-
+  <script src="assets/js/page/modules-ion-icons.js"></script>
+  
   <!-- Template JS File -->
   <script src="assets/js/scripts.js"></script>
   <script src="assets/js/custom.js"></script>

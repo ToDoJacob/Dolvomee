@@ -23,7 +23,7 @@
 			<!-- end of col -->
 			<div class="col-lg-6 col-xl-7">
 				<div class="image-container">
-					<img class="img-fluid" src="images/main2.jpg" alt="alternative">
+					<img class="img-fluid" src="images/main2.jpg" alt="alternative" style="width: 630px">
 				</div>
 				<!-- end of image-container -->
 			</div>

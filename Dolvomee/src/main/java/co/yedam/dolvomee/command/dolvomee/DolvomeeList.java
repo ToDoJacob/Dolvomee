@@ -1,4 +1,4 @@
-package co.yedam.dolvomee.command.Dolvomee;
+package co.yedam.dolvomee.command.dolvomee;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,7 +15,7 @@ public class DolvomeeList implements Command {
 		DolvomeeService dolvomeeDao = new DolvomeeServiceImpl();
 		request.setAttribute("dolvomees", dolvomeeDao.selectDolvomeeLsit());
 		
-		return "dolvomee/dolvomeeList.jsp";
+		return "dolvomee/dolvomeeList";
 	}
 
 }
