@@ -36,61 +36,77 @@
 				<section class="section">
 					<div class="section-body">
 						<div class="row">
-							<div class="col-12" style="padding-left: 280px; padding-right: 280px; padding-top: 200px;">
+							<div class="col-12"
+								style="padding-left: 280px; padding-right: 280px; padding-top: 200px;">
 								<div class="card">
 									<div class="card-header">
 										<h4>정보수정</h4>
 									</div>
-									<form id="frm" action="usersUpdate.do" method="post">
+									<form id="frm" action="dolvUpdate.do" method="post">
 										<div class="card-body">
 											<div class="form-group row mb-4">
 												<label
 													class="col-form-label text-md-right col-12 col-md-3 col-lg-3">이름</label>
 												<div class="col-sm-12 col-md-7">
-													<input type="text" class="form-control" name="usersName"
-														value="${users.usersName }">
+													<input type="text" class="form-control" name="dolvName"
+														value="${dolvomee.dolvName }">
 												</div>
 											</div>
+
+
 											<div class="form-group row mb-4">
 												<label
 													class="col-form-label text-md-right col-12 col-md-3 col-lg-3">비밀번호</label>
 												<div class="col-sm-12 col-md-7">
-													<input type="text" class="form-control" name="usersPwd"
-														value="${users.usersPwd }">
+													<input type="text" class="form-control" name="dolvPwd"
+														value="${dolvomee.dolvPwd }">
 												</div>
 											</div>
+
 											<div class="form-group row mb-4">
 												<label
 													class="col-form-label text-md-right col-12 col-md-3 col-lg-3">연락처</label>
 												<div class="col-sm-12 col-md-7">
-													<input type="text" class="form-control" name="usersPhone"
-														value="${users.usersPhone }">
+													<input type="text" class="form-control" name="dolvPhone"
+														value="${dolvomee.dolvPhone }">
 												</div>
 											</div>
+
 											<div class="form-group row mb-4">
 												<label
 													class="col-form-label text-md-right col-12 col-md-3 col-lg-3">주소</label>
 												<div class="col-sm-12 col-md-7">
-													<input type="text" class="form-control" name="usersAddr"
-														value="${users.usersAddr }">
+													<input type="text" class="form-control" name="dolvAddr"
+														value="${dolvomee.dolvAddr }">
 												</div>
 											</div>
+
 											<div class="form-group row mb-4">
 												<label
 													class="col-form-label text-md-right col-12 col-md-3 col-lg-3">사진</label>
 												<div class="col-sm-12 col-md-7">
 													<div id="image-preview" class="image-preview">
 														<label for="image-upload" id="image-label">Choose
-															image</label> <input type="file" name="usersImage"
+															image</label> <input type="file" name="dolvImage"
 															id="image-upload" />
 													</div>
 												</div>
 											</div>
+											
+											<div class="form-group row mb-4">
+												<label
+													class="col-form-label text-md-right col-12 col-md-3 col-lg-3">소개</label>
+												<div class="col-sm-12 col-md-7">
+													<input type="text" class="form-control" name="dolvIntro" 
+														value="${dolvomee.dolvIntro }">
+												</div>
+											</div>
+
 											<div class="form-group row mb-4">
 												<label
 													class="col-form-label text-md-right col-12 col-md-3 col-lg-3">권한</label>
 												<div class="col-sm-12 col-md-7">
-													<select class="form-control selectric" name="usersAuthor">
+													<select class="form-control selectric" name="dolvAuthor">
 														<option>users</option>
 														<option>돌보미</option>
 														<option>대기</option>
@@ -99,11 +115,12 @@
 												</div>
 											</div>
 										</div>
-										<div align="right"  style="padding-bottom: 30px; padding-right: 30px; padding-top: 30px">
+										<div align="right"
+											style="padding-bottom: 30px; padding-right: 30px; padding-top: 30px">
 											<span class="nav-item"> <input type="submit"
-												class="btn-solid-sm" style="color: white;" value="수정">
-												<input type="hidden" id="usersEmail" name="usersEmail"
-												value="${users.usersEmail }">
+												class="btn-solid-sm" value="수정"> <input
+												type="hidden" id="dolvEmail" name="dolvEmail"
+												value="${dolvomee.dolvEmail }">
 											</span>
 										</div>
 									</form>

@@ -17,7 +17,7 @@
 <script type="text/javascript">
 	function CallEdit(str) {
 		if (str == 'E') {
-			frm.action = "dolvomeeUpdate.do";
+			frm.action = "dolvUpdateForm.do";
 		} else {
 			frm.action = "dolvomeeDelete.do";
 		}
@@ -65,11 +65,12 @@
 										<p>주 소 ${dolvomees.dolvAddr }</p>
 										<p>권 한 ${dolvomees.dolvAuthor }</p>
 									</div>
-									<span class="nav-item"> 
-										<a class="btn-solid-sm" onclick="CallEdit('E')" style="color: white;">수정</a>
-										<a class="btn-solid-sm" onclick="CallEdit('D')" style="color: white;">삭제</a>
+									<span class="nav-item" align="right"
+										style="padding-bottom: 20px; padding-right: 30px;"> 
+										<a class="btn-solid-sm" onclick="CallEdit('E')">수정</a>
+										<a class="btn-solid-sm" onclick="CallEdit('D')">삭제</a>
 									</span>
-									<div>
+									<div >
 										<form id="frm" action="" method="post">
 											<input type="hidden" id="dolvEmail" name="dolvEmail"
 												value="${dolvomees.dolvEmail }">
