@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yedam.dolvomee.service.categori.CategoriMapper">
+
+<select id="selectCategoriList" resultType="co.yedam.dolvomee.service.categori.CategoriVO">
+	select * from categori
+</select>
+
+<select id="selectCategori" resultType="co.yedam.dolvomee.service.categori.CategoriVO">
+	select * from categori where detailcode=#{detailCode}
+</select>
+
+<insert id="insertCategori">
+	insert into categori values(categnum.nextval,#{categCode},#{categori},#{detailCode},#{detailCateg},#{detailPrice})
+</insert>
+
+<delete id="deleteCategori">
+	delete from categori where categnum = #{categNum}
+</delete>
+
+<update id="updateCategori">
+	update categori set categcode=#{categCode}, categori=#{categori}, detailcode=#{detailCode}, detailcateg=#{detailCateg}, detailprice=#{detailPrice} where categnum=#{categNum}
+</update>
+
+</mapper>

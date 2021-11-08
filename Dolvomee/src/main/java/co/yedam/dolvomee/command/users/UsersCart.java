@@ -5,9 +5,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import co.yedam.dolvomee.comm.Command;
-import co.yedam.dolvomee.service.cartlist.CartListService;
-import co.yedam.dolvomee.service.cartlist.CartListServiceImpl;
-import co.yedam.dolvomee.service.cartlist.CartListVO;
+import co.yedam.dolvomee.service.schedule.ScheduleService;
+import co.yedam.dolvomee.service.schedule.ScheduleServiceImpl;
+import co.yedam.dolvomee.service.schedule.ScheduleVO;
 
 public class UsersCart implements Command {
 
@@ -15,13 +15,13 @@ public class UsersCart implements Command {
 	public String run(HttpServletRequest request, HttpServletResponse response) {
 		
 		HttpSession session = request.getSession();
-		CartListService CartListDao = new CartListServiceImpl();
-		CartListVO vo = new CartListVO();
+		ScheduleService scheduleDao = new ScheduleServiceImpl();
+		ScheduleVO vo = new ScheduleVO();
 	
 		
 		vo.setUsersEmail((String)session.getAttribute("usersEmail"));
 		
-		vo = CartListDao.selectCart(vo);
+		vo = scheduleDao.selectSchedule(vo);
 		request.setAttribute("cartList", vo);
 		
 		return "users/usersCart";

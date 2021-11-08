@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yedam.dolvomee.service.schedule.ScheduleMapper">
+
+<select id="selectScheduleList" resultType="co.yedam.dolvomee.service.schedule.ScheduleVO">
+	select * from schedule
+</select>
+
+<select id ="selectSchedule" resultType="co.yedam.dolvomee.service.schedule.ScheduleVO">
+	select * from schedule where schedulenum = #{scheduleNum}
+</select>
+
+<insert id="insertSchedule">
+	insert into schedule values(schedulenum.nextval,#{dolvEmail},#{userEmail},#{scheduleStartDate},#{scheduleEndDate},#{scheduleStatus})
+</insert>
+
+<delete id="deleteSchedule">
+	delete from schedule where  schedulenum = #{scheduleNum}
+</delete>
+
+<update id="updateSchedule">
+	UPDATE schedule set schedulestatus=#{scheduleStatus} where schedulenum=#{scheduleNum}
+</update>
+
+</mapper>

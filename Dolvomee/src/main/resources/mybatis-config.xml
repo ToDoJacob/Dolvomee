@@ -20,9 +20,10 @@
     <mapper resource="co/yedam/dolvomee/service/users/users-map.xml" />
     <mapper resource="co/yedam/dolvomee/service/dolvomee/dolvomee-map.xml"/>
     <mapper resource="co/yedam/dolvomee/service/review/review-map.xml" />
-    <mapper resource="co/yedam/dolvomee/service/service/service-map.xml" />
-    <mapper resource="co/yedam/dolvomee/service/cartlist/cartList-map.xml"/>
     <mapper resource="co/yedam/dolvomee/service/notice/notice-map.xml"/>
+    <mapper resource="co/yedam/dolvomee/service/schedule/schedule-map.xml"/>
+    <mapper resource="co/yedam/dolvomee/service/schedulebuf/schedulebuf-map.xml"/>
+    <mapper resource="co/yedam/dolvomee/service/categori/categori-map.xml"/>
   </mappers>
 
 </configuration>

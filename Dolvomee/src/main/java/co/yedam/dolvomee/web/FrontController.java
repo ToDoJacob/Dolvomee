@@ -34,7 +34,8 @@ import co.yedam.dolvomee.command.review.ReviewEdit;
 import co.yedam.dolvomee.command.review.ReviewForm;
 import co.yedam.dolvomee.command.review.ReviewList;
 import co.yedam.dolvomee.command.review.ReviewSelect;
-import co.yedam.dolvomee.command.service.ServiceList;
+import co.yedam.dolvomee.command.schedule.ScheduleList;
+
 
 import co.yedam.dolvomee.command.users.Logout;
 
@@ -64,7 +65,7 @@ public class FrontController extends HttpServlet {
 		
 		//준형
 		map.put("/home.do", new HomeCommand()); // 첫 페이지 호출
-		map.put("/serviceList.do", new ServiceList()); // 돌보미 서비스 리스트
+		map.put("/scheduleList.do", new ScheduleList()); // 돌보미 서비스 리스트
 		
 		//동관
 		map.put("/reviewList.do", new ReviewList()); //리뷰목록
@@ -80,7 +81,7 @@ public class FrontController extends HttpServlet {
 		map.put("/dolvLogin.do", new DolvLogin()); // 돌보미로그인 처리
 		map.put("/logout.do", new Logout()); //로그아웃 처리
 		map.put("/usersRegisterForm.do", new UsersRegisterForm()); // 사용자회원가입 폼 호출
-    map.put("/usersRegister.do", new UsersRegister()); // 사용자회원가입 처리
+  	 map.put("/usersRegister.do", new UsersRegister()); // 사용자회원가입 처리
 		map.put("/dolvRegisterForm.do", new DolvRegisterForm()); // 돌보미 회원가입 폼 호출
 		map.put("/dolvRegister.do", new DolvRegister()); // 돌보미 회원가입 처리
 		map.put("/ajaxDolvoAuthorCheck.do", new AjaxDolvoAuthorCheck()); //돌보미 권한 체크
