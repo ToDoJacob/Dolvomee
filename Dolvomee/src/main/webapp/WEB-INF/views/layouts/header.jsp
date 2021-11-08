@@ -50,7 +50,7 @@
                     </li>
                     <c:if test="${not empty usersEmail || not empty dolvEmail }">
                     <li class="nav-item">
-                        <a class="nav-link" href="usersSelect.do">내 정보</a>
+                        <a class="nav-link" href="usersDetail.do">내 정보</a>
                     </li>
                     </c:if>
                        <li class="nav-item">

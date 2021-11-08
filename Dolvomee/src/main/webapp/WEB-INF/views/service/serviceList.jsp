@@ -8,13 +8,14 @@
 
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
+<script src="assets/modules/jquery.min.js"></script>
 <meta
 	content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
 	name="viewport">
 <link rel="stylesheet"
 	href="assets/modules/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
+
 
 <!-- 부트스트랩 스타일 css -->
 <link rel="stylesheet" href="assets/css/style.css">
@@ -38,6 +39,45 @@
 <link href="css/fontawesome-all.min.css" rel="stylesheet">
 <link href="css/swiper.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
+
+<!-- datepicker 추가 -->
+<link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap-datepicker.css">
+<script src="assets/modules/bootstrap/js/bootstrap-datepicker.js"></script>
+
+<script>
+	$(function() {	
+		$('#datePicker').datepicker({
+		    format: "yyyy-mm-dd",	//데이터 포맷 형식(yyyy : 년 mm : 월 dd : 일 )
+		    startDate: '-10d',	//달력에서 선택 할 수 있는 가장 빠른 날짜. 이전으로는 선택 불가능 ( d : 일 m : 달 y : 년 w : 주)
+		    endDate: '+10d',	//달력에서 선택 할 수 있는 가장 느린 날짜. 이후로 선택 불가 ( d : 일 m : 달 y : 년 w : 주)
+		    autoclose : true,	//사용자가 날짜를 클릭하면 자동 캘린더가 닫히는 옵션
+		    calendarWeeks : false, //캘린더 옆에 몇 주차인지 보여주는 옵션 기본값 false 보여주려면 true
+		    clearBtn : false, //날짜 선택한 값 초기화 해주는 버튼 보여주는 옵션 기본값 false 보여주려면 true
+		    datesDisabled : ['2021-11-10','2021-11-13'],//선택 불가능한 일 설정 하는 배열 위에 있는 format 과 형식이 같아야함.
+		    daysOfWeekDisabled : false,	//선택 불가능한 요일 설정 0 : 일요일 ~ 6 : 토요일
+		    daysOfWeekHighlighted : false, //강조 되어야 하는 요일 설정
+		    disableTouchKeyboard : false,	//모바일에서 플러그인 작동 여부 기본값 false 가 작동 true가 작동 안함.
+		    immediateUpdates: false,	//사용자가 보는 화면으로 바로바로 날짜를 변경할지 여부 기본값 :false 
+		    multidate : false, //여러 날짜 선택할 수 있게 하는 옵션 기본값 :false 
+		    multidateSeparator :",", //여러 날짜를 선택했을 때 사이에 나타나는 글짜 2019-05-01,2019-06-01
+		    templates : {
+		        leftArrow: '&laquo;',
+		        rightArrow: '&raquo;'
+		    }, //다음달 이전달로 넘어가는 화살표 모양 커스텀 마이징 
+		    showWeekDays : true ,// 위에 요일 보여주는 옵션 기본값 : true
+		    title: "돌보미이름 님 의 스케쥴",	//캘린더 상단에 보여주는 타이틀
+		    todayHighlight : true ,	//오늘 날짜에 하이라이팅 기능 기본값 :false 
+		    toggleActive : true,	//이미 선택된 날짜 선택하면 기본값 : false인경우 그대로 유지 true인 경우 날짜 삭제
+		    weekStart : 0 ,//달력 시작 요일 선택하는 것 기본값은 0인 일요일 
+		    language : "ko"	//달력의 언어 선택, 그에 맞는 js로 교체해줘야한다.
+		    
+		});//datepicker end
+	});//ready end
+</script>
+
+
+
+
 
 <!-- 부트스트랩 적용을 위한 레이어처리 -->
 <script async
@@ -103,7 +143,7 @@
 						</div>
 						<div class="card card-danger">
 							<div class="card-header">
-								<h4>Users</h4>
+								<h4>돌보미</h4>
 								<div class="card-header-action">
 									<a href="#" class="btn btn-danger btn-icon icon-right">View
 										All <i class="fas fa-chevron-right"></i>
@@ -115,27 +155,21 @@
 
 									<!--  아이템 들어갈 자리 -->
 									<c:forEach items="${services }" var="service">
-									<div class="user-item-flat" style="display: inline-block"
-										align="center">
-										<div class="user-item">
-											<img alt="image" src="#"
-												class="img-fluid">
-											<div class="user-details">
-												<div class="user-name">${service.dolvEmail }</div>
-												<div class="text-job text-muted">돌보미 전문분야</div>
-												<div class="user-cta">
-													<button class="btn btn-primary follow-btn"
-														data-follow-action="alert('user1 followed');"
-														data-unfollow-action="alert('user1 unfollowed');">Follow</button>
+										<div class="user-item-flat" style="display: inline-block"
+											align="center">
+											<div class="user-item">
+												<img alt="image" src="#" class="img-fluid">
+												<div class="user-details">
+													<div class="user-name">${service.dolvEmail }</div>
+													<div class="text-job text-muted">돌보미 전문분야</div>
+													<div class="user-cta">
+														<button class="btn btn-primary">정보보기</button>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
 									</c:forEach>
 									<!--  아이템 들어갈 자리 -->
-
-
-
 
 								</div>
 							</div>
@@ -146,46 +180,55 @@
 							<div class="profile-widget-header">
 								<div class="profile-widget-items">
 									<div class="profile-widget-item">
-										<div class="profile-widget-item-label">Posts</div>
+										<div class="profile-widget-item-label">돌본횟수</div>
 										<div class="profile-widget-item-value">187</div>
 									</div>
 									<div class="profile-widget-item">
-										<div class="profile-widget-item-label">Followers</div>
+										<div class="profile-widget-item-label">좋아요</div>
 										<div class="profile-widget-item-value">6,8K</div>
 									</div>
-									<div class="profile-widget-item">
-										<div class="profile-widget-item-label">Following</div>
-										<div class="profile-widget-item-value">2,1K</div>
-									</div>
 								</div>
 							</div>
-							<div class="profile-widget-description pb-0">
-								<div class="profile-widget-name">
-									Hasan Basri
-									<div class="text-muted d-inline font-weight-normal">
-										<div class="slash"></div>
-										Web Developer
-									</div>
+							<div class="profile-widget-description pb-0" align="center" style="margin:25px;">
+								<!-- 돌보미 스케쥴 달력 들어갈자리 -->
+								<input type="text" id="datePicker" class=form-control" value="2021-11-08">
+								<!-- 돌보미 스케쥴 달력 들어갈자리 -->
+							</div>
+							<form>
+							<div>
+								<div class="form-group" style="display: flex;">
+									<label>시작일</label> <input type="date" id="startdate"
+										name="startdate" class="form-control"
+										style="width: 240px; margin-left: 3.5%;"> <label>종료일</label>
+									<input type="date" id="enddate" name="enddate"
+										class="form-control" style="width: 240px; margin-left: 3.5%;">
 								</div>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-									sed do eiusmod tempor incididunt ut labore et dolore magna
-									aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-									ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+								<div class=form-group>
+								<label style="margin-right: 127px;">반려동물 종류를 선택해주세요</label>
+								<label>요청하실 서비스의 종류를 선택해주세요</label>
+								</div>
+								<div class="form-group" style="display: flex;">
+									<select class="form-control" style="width: 242px; margin-left: 9.5%;">
+										<option>소형견</option>
+										<option>중형견</option>
+										<option>대형견</option>
+									</select>
+									<select class="form-control" style="width: 242px; margin-left: 9.5%;">
+										<option>산책</option>
+										<option>돌봄</option>
+										<option>미용</option>
+										<option>병원</option>
+									</select>
+								</div>
+								<div align="center">
+								<button class="btn btn-primary" type="button">예약 신청하기</button>
+								<div class="addblank" style="height:15px"></div>
+									</div>
 							</div>
-							<div class="card-footer text-center pt-0">
-								<div class="font-weight-bold mb-2 text-small">Follow Hasan
-									On</div>
-								<a href="#" class="btn btn-social-icon mr-1 btn-facebook"> <i
-									class="fab fa-facebook-f"></i>
-								</a> <a href="#" class="btn btn-social-icon mr-1 btn-twitter"> <i
-									class="fab fa-twitter"></i>
-								</a> <a href="#" class="btn btn-social-icon mr-1 btn-github"> <i
-									class="fab fa-github"></i>
-								</a> <a href="#" class="btn btn-social-icon mr-1 btn-instagram">
-									<i class="fab fa-instagram"></i>
-								</a>
-							</div>
+							</form>
 						</div>
+						
+						
 					</div>
 				</div>
 			</div>
@@ -194,7 +237,7 @@
 
 
 	<!-- General JS Scripts -->
-	<script src="assets/modules/jquery.min.js"></script>
+	
 	<script src="assets/modules/popper.js"></script>
 	<script src="assets/modules/tooltip.js"></script>
 	<script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>

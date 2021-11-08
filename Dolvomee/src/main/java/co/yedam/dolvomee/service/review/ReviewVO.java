@@ -1,6 +1,5 @@
 package co.yedam.dolvomee.service.review;
 
-import java.util.Date;
 
 public class ReviewVO {
 	private int revNum;

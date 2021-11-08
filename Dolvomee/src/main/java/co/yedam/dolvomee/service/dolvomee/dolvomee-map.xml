@@ -15,7 +15,7 @@
 	</insert>
 	
 	<update id="updateDolvomee" parameterType="co.yedam.dolvomee.service.dolvomee.DolvomeeVO">
-		  update dolvomee set dolvPwd = #{dolvPwd}, dolvAddr = #{dolvAddr}, dolvCareer = #{dolvCareer}, dolvImage = #{dolvImage} where dolvEmail = #{dolvEmail}
+		  update dolvomee set dolvPwd = #{dolvPwd}, dolvPhone = #{dolvPhone}, dolvAddr = #{dolvAddr}, dolvIntro = #{dolvIntro}, dolvAuthor = #{dolvAuthor} where dolvEmail = #{dolvEmail}
 	</update>
 	
 	<delete id="deleteDolvomee" parameterType="co.yedam.dolvomee.service.dolvomee.DolvomeeVO">

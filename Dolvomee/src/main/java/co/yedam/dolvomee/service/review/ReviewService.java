@@ -2,7 +2,6 @@ package co.yedam.dolvomee.service.review;
 
 import java.util.List;
 
-import co.yedam.dolvomee.service.users.UsersVO;
 
 public interface ReviewService {
 	List<ReviewVO> selectReviewList();
