@@ -35,6 +35,7 @@
 				<section class="section">
 					<div class="section-body">
 						<div>
+
 							<div class="col-12 col-sm-12 col-lg-5">
 								<div class="card profile-widget">
 									<div class="profile-widget-header">
@@ -60,26 +61,27 @@
 											<div class="text-muted d-inline font-weight-normal">
 												<div class="slash"></div>${users.usersEmail }</div>
 										</div>
-										<p>비밀번호 : ${users.usersPwd }</p>
-										<p>전화번호 : ${users.usersPhone }</p>
-										<p>주 소 : ${users.usersAddr }</p>
-										<p>권 한 : ${users.usersAuthor }</p>
+										<p>비밀번호 ${users.usersPwd }</p>
+										<p>전화번호 ${users.usersPhone }</p>
+										<p>주 소 ${users.usersAddr }</p>
+										<p>권 한 ${users.usersAuthor }</p>
 									</div>
-									<div align="right"
-										style="padding-bottom: 20px; padding-right: 30px;">
+									<div align="right" style="padding-bottom: 20px; padding-right: 30px;" >
 										<span class="nav-item"> <a class="btn-solid-sm"
 											onclick="CallEdit('E')">수정</a> <a
 											class="btn-solid-sm" onclick="CallEdit('D')">삭제</a>
 										</span>
 									</div>
 									<div>
-										<form id="frm" action="" method="post">
+										<form id="frm" action="usersDetail.do" method="post">
 											<input type="hidden" id="usersEmail" name="usersEmail"
 												value="${users.usersEmail }">
 										</form>
+
 									</div>
 								</div>
 							</div>
+
 						</div>
 					</div>
 				</section>
