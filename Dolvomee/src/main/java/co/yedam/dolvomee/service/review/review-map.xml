@@ -3,11 +3,11 @@
 <mapper namespace="co.yedam.dolvomee.service.review.ReviewMapper">
 
    <select id="selectReviewList" resultType="co.yedam.dolvomee.service.review.ReviewVO">
-      select revnum, servnum, usersemail, usersaddr, usersimage, revcontents , revlike, to_char(writedate, 'YY-MM-DD HH24:MI:SS') as writedate from review order by writedate desc
+      select revnum, schedulenum, usersemail, usersaddr, usersimage, revcontents , revlike, to_char(writedate, 'YY-MM-DD HH24:MI:SS') as writedate from review order by writedate desc
    </select>
    
    <select id="selectReview" resultType="co.yedam.dolvomee.service.review.ReviewVO">
-      select revnum, servnum, usersemail, usersaddr, usersimage, revcontents, revlike, to_char(writedate, '""YYYY"년 "MM"월 "DD"일"') as writedate from review where revnum = #{revNum}
+      select revnum, schedulenum, usersemail, usersaddr, usersimage, revcontents, revlike, to_char(writedate, '""YYYY"년 "MM"월 "DD"일"') as writedate from review where revnum = #{revNum}
    </select>
    
    <insert id="insertReview">

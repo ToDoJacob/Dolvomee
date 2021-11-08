@@ -21,6 +21,12 @@ public class DolvomeeServiceImpl implements DolvomeeService {
 		
 		return map.selectDolvomee(vo);
 	}
+	
+	@Override
+	public DolvomeeVO selectDolvomeeName(DolvomeeVO vo) {
+		// TODO Auto-generated method stub
+		return map.selectDolvomeeName(vo);
+	}
 
 	@Override
 	public int insertDolvomee(DolvomeeVO vo) {
@@ -44,5 +50,6 @@ public class DolvomeeServiceImpl implements DolvomeeService {
 	public DolvomeeVO loginDolv(DolvomeeVO vo) {
 		return map.loginDolv(vo);
 	}
+
 
 }

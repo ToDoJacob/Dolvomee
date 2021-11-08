@@ -10,6 +10,10 @@
 		select * from dolvomee where dolvEmail = #{dolvEmail}
 	</select>
 	
+	<select id="selectDolvomeeName" resultType="co.yedam.dolvomee.service.dolvomee.DolvomeeVO">
+		select * from dolvomee where dolvName = #{dolvName}
+	</select>
+	
 	<insert id="insertDolvomee" parameterType="co.yedam.dolvomee.service.dolvomee.DolvomeeVO">
 		 insert into dolvomee values(#{dolvEmail}, #{dolvName}, #{dolvPwd}, #{dolvPhone}, #{dolvAddr}, #{dolvCareer},' ', #{dolvIntro}, #{dolvAuthor},0,0)
 	</insert>
