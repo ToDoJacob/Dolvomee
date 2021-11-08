@@ -30,8 +30,10 @@ import co.yedam.dolvomee.command.notice.NoticeInsert;
 import co.yedam.dolvomee.command.notice.NoticeList;
 import co.yedam.dolvomee.command.notice.NoticeSelect;
 import co.yedam.dolvomee.command.qna.QnaList;
+import co.yedam.dolvomee.command.review.ReviewDelete;
 import co.yedam.dolvomee.command.review.ReviewEdit;
 import co.yedam.dolvomee.command.review.ReviewForm;
+import co.yedam.dolvomee.command.review.ReviewInsert;
 import co.yedam.dolvomee.command.review.ReviewList;
 import co.yedam.dolvomee.command.review.ReviewSelect;
 import co.yedam.dolvomee.command.schedule.ScheduleList;
@@ -69,9 +71,11 @@ public class FrontController extends HttpServlet {
 		
 		//동관
 		map.put("/reviewList.do", new ReviewList()); //리뷰목록
-		map.put("/reviewForm.do", new ReviewForm()); //리뷰 등록
+		map.put("/reviewForm.do", new ReviewForm()); //리뷰 등록 폼
+		map.put("/reviewInsert.do", new ReviewInsert()); //리뷰 등록 처리
 		map.put("/reviewSelect.do", new ReviewSelect()); //리뷰 상세페이지
 		map.put("/reviewEdit.do", new ReviewEdit()); //리뷰 수정
+		map.put("/reviewDelete.do", new ReviewDelete()); //리뷰 삭제
 		map.put("/qnaList.do", new QnaList()); //1:1 문의
     
 		//선영

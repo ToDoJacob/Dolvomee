@@ -57,10 +57,13 @@
 <body>
 	<div class="main-content">
 		<!-- 		<div class="row"> -->
-		<div align="center">
+		<div align="center" style="padding-top:100px;">
 			<div class="col-12 col-md-6 col-lg-6">
 				<div>
-					<h1>이용 후기</h1>
+					<h1 style="padding-bottom:20px;">이용 후기</h1>
+				</div>
+				<div align="right" style="margin-bottom:10px;">
+					<button class="btn-solid-sm" type="button" onclick="location.href='reviewForm.do'">후기작성</button>
 				</div>
 				<c:forEach items="${reviews }" var="review">
 					<div class="card" align="left">
@@ -86,21 +89,21 @@
 						</div>
 					</div>
 				</c:forEach>
-				<div align="center">
-					<nav aria-label="...">
-						<ul class="pagination">
-							<li class="page-item disabled"><a class="page-link" href="#"
-								tabindex="-1">Previous</a></li>
-							<li class="page-item"><a class="page-link" href="#">1</a></li>
-							<li class="page-item active"><a class="page-link" href="#">2<span
-									class="sr-only">(current)</span>
-							</a></li>
-							<li class="page-item"><a class="page-link" href="#">3</a></li>
-							<li class="page-item"><a class="page-link" href="#">Next</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
+<!-- 				<div align="center"> -->
+<!-- 					<nav aria-label="..."> -->
+<!-- 						<ul class="pagination"> -->
+<!-- 							<li class="page-item disabled"><a class="page-link" href="#" -->
+<!-- 								tabindex="-1">Previous</a></li> -->
+<!-- 							<li class="page-item"><a class="page-link" href="#">1</a></li> -->
+<!-- 							<li class="page-item active"><a class="page-link" href="#">2<span -->
+<!-- 									class="sr-only">(current)</span> -->
+<!-- 							</a></li> -->
+<!-- 							<li class="page-item"><a class="page-link" href="#">3</a></li> -->
+<!-- 							<li class="page-item"><a class="page-link" href="#">Next</a> -->
+<!-- 							</li> -->
+<!-- 						</ul> -->
+<!-- 					</nav> -->
+<!-- 				</div> -->
 				<div>
 				<form id="frm" action="" method="post">
 				<input type="hidden" id="revNum" name="revNum">
