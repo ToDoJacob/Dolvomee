@@ -36,7 +36,6 @@
 
 <script>
 	$(function() {
-		console.log(11111)
 		var rating = $('.review .rating');
 
 		rating.each(function() {
