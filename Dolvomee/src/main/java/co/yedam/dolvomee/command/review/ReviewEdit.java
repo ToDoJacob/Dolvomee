@@ -16,7 +16,7 @@ public class ReviewEdit implements Command {
 		ReviewVO vo = new ReviewVO();
 		vo.setRevNum(Integer.parseInt(request.getParameter("revNum")));
 		vo.setRevLike(Integer.parseInt(request.getParameter("modRevLike")));
-		vo.setRevContents(request.getParameter("modContents"));
+		vo.setRevContents((String)request.getParameter("modContents"));
 		
 		int n = reviewDao.updateReview(vo);
 		if(n == 1) {
