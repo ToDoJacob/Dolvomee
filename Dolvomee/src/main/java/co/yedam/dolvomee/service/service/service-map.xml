@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yedam.dolvomee.service.service.ServiceMapper">
+
+<select id="selectServiceList" resultType="co.yedam.dolvomee.service.service.ServiceVO">
+	select * from service
+</select>
+
+<select id ="selectService" resultType="co.yedam.dolvomee.service.service.ServiceVO">
+	select * from service where servnum = #{servNum}
+</select>
+
+<select id="insertService">
+	insert into SERVICE VALUES(#{servNum},#{dolvEmail},#{servList},#{servPlace},#{servPrice})
+</select>
+
+<select id="deleteService">
+	delete from service where servnum = #{servNum}
+</select>
+
+<select id="updateService">
+	UPDATE service set dolvemail=#{dolvEmail} , servlist=#{servList}, servplace=#{servPlace}, servprice=#{servPrice} WHERE SERVNUM=#{servNum}
+</select>
+
+</mapper>

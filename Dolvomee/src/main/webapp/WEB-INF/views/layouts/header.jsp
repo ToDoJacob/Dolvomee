@@ -40,18 +40,20 @@
                 <ul class="navbar-nav ms-auto navbar-nav-scroll">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#header">Home</a>
-                    </li>
-                       <li class="nav-item">
-                        <a class="nav-link" href="usersList.do">회원 리스트</a>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">펫시터 찾기</a>
+                        <a class="nav-link" href="serviceList.do">펫시터 찾기</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="reviewList.do">이용 후기</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#pricing">내 정보</a>
+                        <a class="nav-link" href="usersSelect.do">내 정보</a>
+                    </li>
+                       <li class="nav-item">
+                        <a class="nav-link" href="usersList.do">회원 리스트</a>
+                    </li>
+                       <li class="nav-item">
+                        <a class="nav-link" href="dolvomeeList.do">펫시터 리스트</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Drop</a>
@@ -64,6 +66,7 @@
                         </ul>
                     </li>
                 </ul>
+              <a class="fas fa-shopping-cart" href="usersCart.do" style="color: #3cb371;"></a>
                 <span class="nav-item">
                  	 <a class="btn-solid-sm" href="dolvRegisterForm.do">펫시터 지원</a>
                     <a class="btn-solid-sm" href="usersLoginForm.do">로그인</a>
