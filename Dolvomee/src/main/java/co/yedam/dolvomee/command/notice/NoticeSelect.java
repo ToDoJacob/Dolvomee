@@ -16,6 +16,7 @@ public class NoticeSelect implements Command {
 		NoticeService noticeDao = new NoticeServiceImpl();
 		NoticeVO vo = new NoticeVO();
 		vo.setNoticeNum(Integer.valueOf(request.getParameter("noticeNum")));
+		noticeDao.hitUpdate(vo);
 		vo = noticeDao.selectNotice(vo);
 		request.setAttribute("notice", vo);
 		return "notice/noticeSelect";

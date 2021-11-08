@@ -27,8 +27,70 @@
 </script>
 </head>
 <body>
-	<!-- 게시글쓰기 넣을만한 템플릿 넣기  -->
+<div id="app">
+		<div class="main-wrapper main-wrapper-1">
+			<div class="main-content">
+				<section class="section">
+					<div class="section-body">
+						<div class="row">
+							<div class="col-12" style="padding-left: 320px; padding-right: 320px; padding-top: 100px; padding-bottom: 200px;">
+								<div class="card">
+									<div class="card-header">
+										<h4>게시글 작성</h4>
+									</div>
+									<form id="frm" action="noticeInsert.do" method="post">
+										<div class="card-body">
+									
+											
+											<div class="form-group row mb-4">
+												<label
+													class="col-form-label text-md-right col-12 col-md-3 col-lg-3">작성자</label>
+												<div class="col-sm-12 col-md-7">
+													<input type="text" class="form-control" id="noticeId" name="noticeId"
+														value="${notice.noticeId }">
+												</div>
+											</div>
+											
+											<div class="form-group row mb-4">
+												<label
+													class="col-form-label text-md-right col-12 col-md-3 col-lg-3">작성일자</label>
+												<div class="col-sm-12 col-md-7">
+													<input type="date" class="form-control" id="noticeDate" name="noticeDate">
+												</div>
+											</div>
 
+
+											<div class="form-group row mb-4">
+												<label
+													class="col-form-label text-md-right col-12 col-md-3 col-lg-3">제목</label>
+												<div class="col-sm-12 col-md-7">
+													<input type="text" class="form-control" id="noticeTitle" name="noticeTitle">
+												</div>
+											</div>
+
+											<div class="form-group row mb-4">
+												<label
+													class="col-form-label text-md-right col-12 col-md-3 col-lg-3">내용</label>
+												<div class="col-sm-12 col-md-7">
+													<input type="text"  style="height: 150px" class="form-control" id="noticeContents" name="noticeContents">
+												</div>
+											</div>
+					                      <div align="right">
+					                        <input class="btn-solid-sm" type="submit" value="저 장">&nbsp;&nbsp;&nbsp;
+					                        <input class="btn-solid-sm" type="reset" value="취 소">&nbsp;&nbsp;&nbsp;
+					                        <input class="btn-solid-sm" type="button" value="목 록" onclick="location.href='noticeList.do'">
+					                      </div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	
   <!-- General JS Scripts -->
   <script src="assets/modules/jquery.min.js"></script>
   <script src="assets/modules/popper.js"></script>

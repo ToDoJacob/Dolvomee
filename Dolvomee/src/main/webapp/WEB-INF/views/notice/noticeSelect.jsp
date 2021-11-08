@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Bootstrap Components &rsaquo; Table &mdash; Stisla</title>
+  <title>공지사항 세부내용</title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
@@ -24,10 +24,58 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-94034622-3');
+  
+  function CallEdit(str) {
+		if(str == 'E') {
+			frm.action = "noticeEditForm.do";
+		} else {
+			frm.action = "noticeDelete.do";
+		}
+		frm.submit();
+	}
 </script>
 </head>
 <body>
-	<!-- 게시글 넣을만한 템플릿 고르기.. -->
+	<div style="padding-left: 280px; padding-right: 280px; padding-top: 200px; padding-bottom: 200px">
+		<div class="table-responsive">
+			<table class="table table-borderless">
+				<thead>
+					<tr>
+						<th scope="col">작성자</th>
+						<td>${notice.noticeId }</td>
+						<th scope="col">작성일자</th>
+						<td>${notice.noticeDate }</td>
+						<th scope="col">조회수</th>
+						<td>${notice.hit }</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">제목</th>
+						<td colspan="7">${notice.noticeTitle }</td>
+					</tr>
+					<tr>
+						<th scope="row">내용</th>
+						<td colspan="7">
+							${notice.noticeContents }
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div><br>
+		<div align="center">
+			<button type="button" onclick="location.href='noticeList.do'" class="btn-solid-sm">목록</button>&nbsp;&nbsp;&nbsp;
+			<c:if test="${author =='ADMIN' || noticeId == notice.noticeId }">
+				<button type="button" class="btn-solid-sm" onclick="CallEdit('E')">수정</button>&nbsp;&nbsp;&nbsp;
+				<button type="button" class="btn-solid-sm" onclick="CallEdit('D')">삭제</button>
+			</c:if>
+		</div>
+		<div>
+		<form id="frm" action="" method="post">
+			<input type="hidden" id="noticeNum" name="noticeNum" value="${notice.noticeNum }">
+		</form>
+	</div>
+	</div>
 
   <!-- General JS Scripts -->
   <script src="assets/modules/jquery.min.js"></script>

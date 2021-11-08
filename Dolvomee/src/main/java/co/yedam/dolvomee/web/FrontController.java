@@ -24,6 +24,7 @@ import co.yedam.dolvomee.command.dolvomee.DolvomeeDelete;
 import co.yedam.dolvomee.command.dolvomee.DolvomeeList;
 import co.yedam.dolvomee.command.dolvomee.DolvomeeSelect;
 import co.yedam.dolvomee.command.notice.NoticeDelete;
+import co.yedam.dolvomee.command.notice.NoticeEditForm;
 import co.yedam.dolvomee.command.notice.NoticeForm;
 import co.yedam.dolvomee.command.notice.NoticeInsert;
 import co.yedam.dolvomee.command.notice.NoticeList;
@@ -34,9 +35,13 @@ import co.yedam.dolvomee.command.review.ReviewForm;
 import co.yedam.dolvomee.command.review.ReviewList;
 import co.yedam.dolvomee.command.review.ReviewSelect;
 import co.yedam.dolvomee.command.service.ServiceList;
+
+import co.yedam.dolvomee.command.users.Logout;
+
 import co.yedam.dolvomee.command.users.UsersCart;
 import co.yedam.dolvomee.command.users.UsersDelete;
 import co.yedam.dolvomee.command.users.UsersDetail;
+
 import co.yedam.dolvomee.command.users.UsersList;
 import co.yedam.dolvomee.command.users.UsersLogin;
 import co.yedam.dolvomee.command.users.UsersLoginForm;
@@ -67,9 +72,30 @@ public class FrontController extends HttpServlet {
 		map.put("/reviewSelect.do", new ReviewSelect()); //리뷰 상세페이지
 		map.put("/reviewEdit.do", new ReviewEdit()); //리뷰 수정
 		map.put("/qnaList.do", new QnaList()); //1:1 문의
+    
+		//선영
 		
-		//은진
-		map.put("/usersList.do", new UsersList()); //회원 리스트(관리자만)
+		map.put("/usersLoginForm.do", new UsersLoginForm()); // 로그인 폼 호출
+		map.put("/usersLogin.do", new UsersLogin()); // 사용자로그인 처리
+		map.put("/dolvLogin.do", new DolvLogin()); // 돌보미로그인 처리
+		map.put("/logout.do", new Logout()); //로그아웃 처리
+		map.put("/usersRegisterForm.do", new UsersRegisterForm()); // 사용자회원가입 폼 호출
+    map.put("/usersRegister.do", new UsersRegister()); // 사용자회원가입 처리
+		map.put("/dolvRegisterForm.do", new DolvRegisterForm()); // 돌보미 회원가입 폼 호출
+		map.put("/dolvRegister.do", new DolvRegister()); // 돌보미 회원가입 처리
+		map.put("/ajaxDolvoAuthorCheck.do", new AjaxDolvoAuthorCheck()); //돌보미 권한 체크
+		map.put("/noticeList.do", new NoticeList()); //게시글 목록
+		map.put("/noticeSelect.do", new NoticeSelect()); //세부내역보기
+		map.put("/noticeForm.do", new NoticeForm()); // 게시글 입력 폼
+		map.put("/noticeInsert.do", new NoticeInsert()); // 게시글 저장
+		map.put("/noticeDelete.do", new NoticeDelete()); // 게시글 삭제
+		map.put("/noticeEditForm.do", new NoticeEditForm()); // 게시글 수정 폼 호출
+		map.put("/noticeEdit.do", new NoticeEdit()); // 게시글 수정
+		
+
+    
+    //은진
+    map.put("/usersList.do", new UsersList()); //회원 리스트(관리자만)
 		map.put("/usersSelect.do", new UsersSelect());	//회원 정보(관리자만)
 		map.put("/usersDelete.do", new UsersDelete()); //회원 삭제(관리자권한) 
 		map.put("/usersUpdateForm.do", new UsersUpdateForm()); //회원 수정 폼
@@ -83,25 +109,8 @@ public class FrontController extends HttpServlet {
 		map.put("/usersCart.do", new UsersCart()); //회원 카트 폼
 		map.put("/fileUpLoad.do", new FileUpLoad()); //파일 업로드
     
-		
-		//선영
-		map.put("/usersLoginForm.do", new UsersLoginForm()); // 로그인 폼 호출
-		map.put("/usersLogin.do", new UsersLogin()); // 사용자로그인 처리
-		map.put("/dolvLogin.do", new DolvLogin()); // 돌보미로그인 처리
-		map.put("/usersRegisterForm.do", new UsersRegisterForm()); // 사용자회원가입 폼 호출
-    
-    
-		map.put("/usersRegister.do", new UsersRegister()); // 사용자회원가입 처리
-		map.put("/dolvRegisterForm.do", new DolvRegisterForm()); // 돌보미 회원가입 폼 호출
-		map.put("/dolvRegister.do", new DolvRegister()); // 돌보미 회원가입 처리
-		map.put("/ajaxDolvoAuthorCheck.do", new AjaxDolvoAuthorCheck()); //돌보미 권한 체크
-		map.put("/noticeList.do", new NoticeList()); //게시글 목록
-		map.put("/noticeSelect.do", new NoticeSelect()); //세부내역보기
-		map.put("/noticeForm.do", new NoticeForm()); // 게시글 입력 폼
-		map.put("/noticeInsert.do", new NoticeInsert()); // 게시글 저장
-		map.put("/noticeDelete.do", new NoticeDelete()); // 게시글 삭제
-		map.put("/noticeEdit.do", new NoticeEdit()); // 게시글 수정
-		
+
+
 		
 	}
 
