@@ -22,6 +22,7 @@ public class NoticeInsert implements Command {
 		vo.setNoticeTitle(request.getParameter("noticeTitle"));
 		vo.setNoticeContents(request.getParameter("noticeContents"));
 		
+		System.out.println(vo);
 		int n = noticeDao.insertNotice(vo);
 		String viewPage = null;
 		if(n != 0) {

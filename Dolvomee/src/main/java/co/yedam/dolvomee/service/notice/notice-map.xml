@@ -19,6 +19,10 @@
 		where noticeNum = #{noticeNum}
 	</update>
 	
+	<update id="hitUpdate" parameterType="co.yedam.dolvomee.service.notice.NoticeVO">
+		update notice set hit = hit + 1 where noticeNum = #{noticeNum}
+	</update>
+	
 	<delete id="deleteNotice" parameterType="co.yedam.dolvomee.service.notice.NoticeVO">
 		delete from notice where noticeNum = #{noticeNum}
 	</delete>

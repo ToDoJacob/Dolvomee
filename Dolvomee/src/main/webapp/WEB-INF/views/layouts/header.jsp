@@ -19,6 +19,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
 </head>
+<script type="text/javascript">
+	
+</script>
 <body data-bs-spy="scroll" data-bs-target="#navbarExample">
     
     <!-- Navigation -->
@@ -38,43 +41,65 @@
 
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ms-auto navbar-nav-scroll">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#header">Home</a>
+
                     <li class="nav-item">
                         <a class="nav-link" href="serviceList.do">펫시터 찾기</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="reviewList.do">이용 후기</a>
                     </li>
+                    <c:if test="${not empty usersEmail || not empty dolvEmail }">
                     <li class="nav-item">
                         <a class="nav-link" href="usersSelect.do">내 정보</a>
                     </li>
+                    </c:if>
                        <li class="nav-item">
-                        <a class="nav-link" href="usersList.do">회원 리스트</a>
+                        <a class="nav-link" href="noticeList.do">공지사항</a>
                     </li>
-                       <li class="nav-item">
-                        <a class="nav-link" href="dolvomeeList.do">펫시터 리스트</a>
-                    </li>
+                    
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Drop</a>
+					<c:if test="${usersAuthor == 'admin'}">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">List</a>
                         <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                            <li><a class="dropdown-item" href="article.html">Article Details</a></li>
+                            <li><a class="dropdown-item" href="usersList.do">회원 리스트</a></li>
                             <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="terms.html">Terms Conditions</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
+                            <li><a class="dropdown-item" href="dolvomeeList.do">펫시터 리스트</a></li>
                         </ul>
+                    </c:if>
                     </li>
+
                 </ul>
               <a class="fas fa-shopping-cart" href="usersCart.do" style="color: #3cb371;"></a>
                 <span class="nav-item">
                  	 <a class="btn-solid-sm" href="dolvRegisterForm.do">펫시터 지원</a>
-                    <a class="btn-solid-sm" href="usersLoginForm.do">로그인</a>
+                    <c:if test="${empty usersEmail && empty dolvEmail}">
+                   		<a class="btn-solid-sm" href="usersLoginForm.do">로그인</a>
+                    </c:if>
+                    <c:if test="${not empty usersEmail || not empty dolvEmail}">
+                   		<a class="btn-solid-sm" href="logout.do">로그아웃</a>
+                    </c:if>
                 </span>
             </div> <!-- end of navbar-collapse -->
         </div> <!-- end of container -->
     </nav> <!-- end of navbar -->
     <!-- end of navigation -->
 
+
+<!-- General JS Scripts -->
+  <script src="assets/modules/jquery.min.js"></script>
+  <script src="assets/modules/popper.js"></script>
+  <script src="assets/modules/tooltip.js"></script>
+  <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="assets/modules/moment.min.js"></script>
+  <script src="assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+
+  <!-- Page Specific JS File -->
+
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/custom.js"></script>
 </body>
 </html>

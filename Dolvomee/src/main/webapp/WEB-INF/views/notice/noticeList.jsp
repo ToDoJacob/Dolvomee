@@ -21,7 +21,7 @@
 <script async src="http://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
 <script type="text/javascript">
 	function CallNotice(n) {
-		frm.nid.value=n;
+		frm.noticeNum.value=n;
 		frm.submit();
 	}
 	
@@ -33,22 +33,29 @@
 </script>
 </head>
 <body>
-	<div class="card">
-		<div class="card-body">
-			<div class="section-title mt-0">Light</div>
-			<table class="table table-hover">
+	<div style="padding-left: 280px; padding-right: 280px; padding-top: 200px; padding-bottom: 200px;">
+		<div class="table-responsive">
+			<div align="right">
+				<span class="nav-item">
+					<button class="btn-solid-sm" type="button" onclick="location.href='noticeForm.do'">글쓰기</button>
+				</span>
+			</div>
+			<br>
+			<table class="table">
 				<thead>
 					<tr>
-						<th scope="col">글번호</th>
-						<th scope="col">아이디</th>
-						<th scope="col">작성일자</th>
-						<th scope="col">글제목</th>
-						<th scope="col">조회수</th>
+						<th>글번호</th>
+						<th>아이디</th>
+						<th>글제목</th>
+						<th>작성일자</th>
+						<th>조회수</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach items="${notices }" var="notice">
-						<tr	onclick="CallNotice(${notice.noticeNum })">
+						<tr	onmouseover='this.style.background="#EBF5EB";'
+							onmouseleave='this.style.background="#FFFFFF";'
+							onclick="CallNotice(${notice.noticeNum })">
 							<td>${notice.noticeNum }</td>
 							<td>${notice.noticeId }</td>
 							<td>${notice.noticeTitle }</td>
@@ -58,9 +65,6 @@
 					</c:forEach>
 				</tbody>
 			</table>
-		</div>
-		<div>
-			<button type="button" onclick="location.href='noticeForm.do'">글쓰기</button>
 		</div>
 		<div> <!-- 숨겨져 있는 폼 -->
 			<form id ="frm" action="noticeSelect.do" method="post">
