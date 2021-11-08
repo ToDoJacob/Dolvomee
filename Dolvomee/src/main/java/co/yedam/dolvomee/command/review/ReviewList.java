@@ -37,13 +37,6 @@ public class ReviewList implements Command {
 			currentSec = "0" + currentSec;
 		}
 //		System.out.println("curruntSec" +currentSec);
-		System.out.println("여기다1" + list.get(0).getWriteDate());
-		System.out.println("여기다1" + list.get(1).getWriteDate());
-		System.out.println("여기다2" + list.get(2).getWriteDate());
-		System.out.println("여기다3" + list.get(3).getWriteDate());
-		System.out.println("여기다4" + list.get(4).getWriteDate());
-		System.out.println("여기다5" + list.get(5).getWriteDate());
-		System.out.println(list.size());
 		for(int i=0; i<list.size(); i++) {
 			String reviewDate = list.get(i).getWriteDate().substring(0,8);
 //			System.out.println("리뷰작성날짜" + reviewDate);
@@ -87,7 +80,6 @@ public class ReviewList implements Command {
 			}
 		}
 		request.setAttribute("reviews", reviewDao.selectReviewList());
-		System.out.println(request.getAttribute("message"));
 		return "review/reviewList";
 	}
 }

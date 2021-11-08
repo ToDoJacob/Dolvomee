@@ -20,13 +20,11 @@ public class ReviewEdit implements Command {
 		
 		int n = reviewDao.updateReview(vo);
 		if(n == 1) {
-			request.setAttribute("message", n+"건 성공");
+			request.setAttribute("message", "수정이 완료되었습니다.");
 		} else {
-			request.setAttribute("message", "실패");
+			request.setAttribute("message", "수정에 실패하였습니다.");
 		}
 		
-		System.out.println(request.getAttribute("message"));
-		return "reviewList.do";
+		return "review/reviewError.jsp";
 	}
-
 }

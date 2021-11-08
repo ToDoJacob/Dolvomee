@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import co.yedam.dolvomee.comm.DataSource;
+import co.yedam.dolvomee.service.users.UsersVO;
 
 public class ReviewServiceImpl implements ReviewService {
 	private SqlSession sqlSession = DataSource.getInstance().openSession(true);
@@ -38,6 +39,12 @@ public class ReviewServiceImpl implements ReviewService {
 	public int deleteReview(ReviewVO vo) {
 		// TODO Auto-generated method stub
 		return map.deleteReview(vo);
+	}
+
+	@Override
+	public UsersVO selectImage(String session) {
+		// TODO Auto-generated method stub
+		return map.selectImage(session);
 	}
 
 }

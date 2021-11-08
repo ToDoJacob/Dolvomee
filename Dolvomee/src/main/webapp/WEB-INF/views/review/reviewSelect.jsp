@@ -81,6 +81,7 @@
 		
 </script>
 <script type="text/javascript">
+
 	function CallEdit(str) {
 		document.frm.modContents.value = document.frm.revContents.value;
 		document.frm.modRevLike.value = targetScore;
@@ -91,29 +92,26 @@
 		}
 		frm.submit();
 }
+	
 </script>
 </head>
 <body>
 <div class="main-content">
 		<!-- 		<div class="row"> -->
-	<div align="center">
+	<div align="center" style="padding-top:100px;">
 		<div>
 			<h1>상세 후기</h1>
 		</div>
-		<div>
+		<div style="padding-top:20px;">
 			<form id="frm" name="frm" action="" method="post">
 				<table>
 					<tr>
 						<div class="review">
-							<div><img style="max-width: 60px; max-height: 60px; border-color: #3CB371; border-radius: 50%;" src="images/puppy.jpg" alt="사진 없음"></div>
+							<div><img style="max-width: 60px; max-height: 60px; border-color: #3CB371; border-radius: 50%;" src="upload/${users.usersEmail }" alt="사진 없음"></div>
 							<div class="rating" id="rating" data-rate="${review.revLike }">
 							<c:forTokens var="item" items="1,2,3,4,5" delims=",">
 								<i class="fas fa-star" onclick="ratingEdit(${item})" style="cursor: pointer;"></i>
 							</c:forTokens>
-<!-- 								<i class="fas fa-star" onclick="ratingEdit(2)" style="cursor: pointer;"></i> -->
-<!-- 								<i class="fas fa-star" onclick="ratingEdit(3)" style="cursor: pointer;"></i> -->
-<!-- 								<i class="fas fa-star" onclick="ratingEdit(4)" style="cursor: pointer;"></i> -->
-<!-- 								<i class="fas fa-star" onclick="ratingEdit(5)" style="cursor: pointer;"></i> -->
 							</div>
 						</div>
 						<th width="200">${review.usersAddr }
@@ -121,7 +119,7 @@
 						<td width="100" align="right">${review.writeDate }</td>
 					</tr>
 					<tr>
-						<td colspan="5"><textarea rows="12" cols="92" name="revContents">${review.revContents }</textarea>
+						<td colspan="5"><textarea rows="8" cols="80" name="revContents">${review.revContents }</textarea>
 						</td>
 					</tr>
 				</table>
@@ -131,8 +129,7 @@
 			</form>
 		</div>
 		<br>
-		<div class="buttons">
-           <!--            <a href="#" class="btn btn-primary">Primary</a> -->
+		<div class="buttons" style="padding-bottom:80px;">
 			<button class="btn-solid-sm" type="button" onclick="location.href='reviewList.do'">목록으로</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<c:if
 				test="${(sessionScope.usersEmail eq review.usersEmail) or (sessionScope.author eq 'admin') }">
