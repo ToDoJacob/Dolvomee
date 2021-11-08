@@ -3,36 +3,30 @@ package co.yedam.dolvomee.service.schedule;
 import java.sql.Date;
 
 public class ScheduleVO {
-	private int servNum;
-	private String usersEmail;
 	private int scheduleNum;
-	private String servList;
+	private String dolvEmail;
+	private String usersEmail;	
 	private Date scheduleStartSate;
 	private Date scheduleEndDate;
 	private String shceduleStatus;
-	public int getServNum() {
-		return servNum;
-	}
-	public void setServNum(int servNum) {
-		this.servNum = servNum;
-	}
-	public String getUsersEmail() {
-		return usersEmail;
-	}
-	public void setUsersEmail(String usersEmail) {
-		this.usersEmail = usersEmail;
-	}
+	
 	public int getScheduleNum() {
 		return scheduleNum;
 	}
 	public void setScheduleNum(int scheduleNum) {
 		this.scheduleNum = scheduleNum;
 	}
-	public String getServList() {
-		return servList;
+	public String getDolvEmail() {
+		return dolvEmail;
 	}
-	public void setServList(String servList) {
-		this.servList = servList;
+	public void setDolvEmail(String dolvEmail) {
+		this.dolvEmail = dolvEmail;
+	}
+	public String getUsersEmail() {
+		return usersEmail;
+	}
+	public void setUsersEmail(String usersEmail) {
+		this.usersEmail = usersEmail;
 	}
 	public Date getScheduleStartSate() {
 		return scheduleStartSate;
@@ -53,4 +47,13 @@ public class ScheduleVO {
 		this.shceduleStatus = shceduleStatus;
 	}
 	
+	@Override
+	public String toString() {
+		return "ScheduleVO [scheduleNum=" + scheduleNum + ", dolvEmail=" + dolvEmail + ", usersEmail=" + usersEmail
+				+ ", scheduleStartSate=" + scheduleStartSate + ", scheduleEndDate=" + scheduleEndDate
+				+ ", shceduleStatus=" + shceduleStatus + "]";
+	}
+	
+	
+		
 }

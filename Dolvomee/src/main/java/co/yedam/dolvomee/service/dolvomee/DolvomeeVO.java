@@ -12,6 +12,7 @@ public class DolvomeeVO {
 	private String dolvAuthor;
 	private int dolvLiketotal;
 	private int dolvLikecnt;
+	
 	public String getDolvEmail() {
 		return dolvEmail;
 	}
