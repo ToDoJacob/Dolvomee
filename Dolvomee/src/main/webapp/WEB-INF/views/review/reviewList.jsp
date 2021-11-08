@@ -35,15 +35,8 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
 
 <script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag() {
-		dataLayer.push(arguments);
-	}
-	gtag('js', new Date());
-
-	gtag('config', 'UA-94034622-3');
-
 	$(function() {
+		console.log(11111)
 		var rating = $('.review .rating');
 
 		rating.each(function() {
@@ -53,6 +46,8 @@
 			});
 		});
 	});
+</script>
+<script type="text/javascript">
 	function CallReview(n){
 		frm.revNum.value = n;
 		frm.action = "reviewSelect.do";
@@ -79,11 +74,9 @@
 									<h4 class="mt-0">${review.usersAddr }</h4>
 									<div class="review">
 										<div class="rating" data-rate="${review.revLike }">
-											<i class="fas fa-star"></i>
-											<i class="fas fa-star"></i>
-											<i class="fas fa-star"></i>
-											<i class="fas fa-star"></i>
-											<i class="fas fa-star"></i>
+											<c:forTokens var="item" items="1,2,3,4,5" delims=",">
+											<i class="fas fa-star" onclick="ratingEdit(${item})" style="cursor: pointer;"></i>
+											</c:forTokens>
 										</div>
 										<div>${review.writeDate }</div>
 									</div>

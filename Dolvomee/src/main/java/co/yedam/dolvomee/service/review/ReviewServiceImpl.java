@@ -5,7 +5,6 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import co.yedam.dolvomee.comm.DataSource;
-import co.yedam.dolvomee.service.users.UsersVO;
 
 public class ReviewServiceImpl implements ReviewService {
 	private SqlSession sqlSession = DataSource.getInstance().openSession(true);

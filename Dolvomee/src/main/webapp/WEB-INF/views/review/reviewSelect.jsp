@@ -44,24 +44,12 @@
 		});
 	});
 	
-	function CallEdit(str) {
-		document.frm.modContents.value = document.frm.contents.value;
-		document.frm.modRevLike.value = document.frm.title.value;
-		if (str == 'E') {
-			frm.action = "reviewEdit.do";
-		} else {
-			frm.action = "reviewDelete.do";
-		}
-		frm.submit();
-	}
-	
-	
-	
+	let targetScore = 0;
 	function ratingEdit(a){
 		let rating = $('.review .rating');
-		$('#rating').attr('data-rate', a);
+		console.log($('#rating').attr('data-rate', a))
 		rating.each(function() {
-			let targetScore = $(this).attr('data-rate');
+			targetScore = $(this).attr('data-rate');
 			
 			let stars = document.getElementsByClassName('fa-star')
 			
@@ -90,8 +78,19 @@
 // 			});
 // 		});
 // 	};
-	
-	
+		
+</script>
+<script type="text/javascript">
+	function CallEdit(str) {
+		document.frm.modContents.value = document.frm.revContents.value;
+		document.frm.modRevLike.value = targetScore;
+		if (str == 'E') {
+			frm.action = "reviewEdit.do";
+		} else {
+			frm.action = "reviewDelete.do";
+		}
+		frm.submit();
+}
 </script>
 </head>
 <body>
