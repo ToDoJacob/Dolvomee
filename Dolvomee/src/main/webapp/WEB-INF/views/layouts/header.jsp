@@ -47,7 +47,7 @@
                         <a class="nav-link" href="reviewList.do">이용 후기</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="usersSelect.do">내 정보</a>
+                        <a class="nav-link" href="usersDetail.do">내 정보</a>
                     </li>
                        <li class="nav-item">
                         <a class="nav-link" href="usersList.do">회원 리스트</a>
