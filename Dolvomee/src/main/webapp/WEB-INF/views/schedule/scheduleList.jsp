@@ -41,14 +41,15 @@
 <link href="css/styles.css" rel="stylesheet">
 
 <!-- datepicker 추가 -->
-<link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap-datepicker.css">
+<link rel="stylesheet"
+	href="assets/modules/bootstrap/css/bootstrap-datepicker.css">
 <script src="assets/modules/bootstrap/js/bootstrap-datepicker.js"></script>
 
 <script>
 	$(function() {	
 		$('#datePicker').datepicker({
 		    format: "yyyy-mm-dd",	//데이터 포맷 형식(yyyy : 년 mm : 월 dd : 일 )
-		    startDate: '-10d',	//달력에서 선택 할 수 있는 가장 빠른 날짜. 이전으로는 선택 불가능 ( d : 일 m : 달 y : 년 w : 주)
+		    startDate: 'd',	//달력에서 선택 할 수 있는 가장 빠른 날짜. 이전으로는 선택 불가능 ( d : 일 m : 달 y : 년 w : 주)
 		    endDate: '+10d',	//달력에서 선택 할 수 있는 가장 느린 날짜. 이후로 선택 불가 ( d : 일 m : 달 y : 년 w : 주)
 		    autoclose : true,	//사용자가 날짜를 클릭하면 자동 캘린더가 닫히는 옵션
 		    calendarWeeks : false, //캘린더 옆에 몇 주차인지 보여주는 옵션 기본값 false 보여주려면 true
@@ -75,7 +76,32 @@
 	});//ready end
 </script>
 
-
+<script>
+function displayDolv(dolvName){
+	
+	let xhtp = new XMLHttpRequest();
+	
+	console.log(dolvName);
+	let name = document.getElementById('selectDolvName');
+	let image = document.getElementById('selectDolvImage');
+	let intro = document.getElementById('selectDolvIntro');
+	
+	name.innerText = "fdfdfdf";
+	
+   	$.ajax({
+		url : "scheduleDolvomeeSelect.do",
+		type : "post",
+		data : {"dolvName" : dolvName},
+		dataType : "text",
+		success : function(result){
+			console.log(result);			
+		},
+		error : function(result){
+			console.log(result);
+		}
+	});
+}
+</script>
 
 
 
@@ -95,7 +121,7 @@
 
 </head>
 <body>
-	<div class="liveplese" style="height: 15px"></div>
+	<div class="liveplese" style="height: 55px"></div>
 	<div class="main-content">
 		<section class="section">
 			<div class="section-body">
@@ -107,21 +133,21 @@
 						<div class="card author-box card-primary">
 							<div class="card-body">
 								<div class="author-box-left">
-									<img alt="image" src="#"
+									<img id="selectDolvImage" alt="image" src="${dolvSelect.dolvImage }"
 										class="rounded-circle author-box-picture">
 									<div class="clearfix"></div>
 								</div>
 								<div class="author-box-details">
 									<div class="author-box-name">
-										<a href="#">돌보미 이름 들어갈자리</a>
+										<a id="selectDolvName">${dolvSelect.dolvName }</a>
 									</div>
-									<div class="author-box-job">대중소 애완견, 혹은 고양이등 전문분야 정보</div>
 									<div class="author-box-description">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-											elit, sed do eiusmod tempor incididunt ut labore et dolore
-											magna aliqua. Ut enim ad minim veniam, quis nostrud
-											exercitation ullamco laboris nisi ut aliquip ex ea commodo
-											consequat.</p>
+										<p id="selectDolvIntro">${dolvSelect.dolvIntro } 
+											Lorem ipsum dolor sit amet,
+											consectetur adipisicing elit, sed do eiusmod tempor
+											incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+											veniam, quis nostrud exercitation ullamco laboris nisi ut
+											aliquip ex ea commodo consequat.</p>
 									</div>
 									<div class="mb-2 mt-3"></div>
 									<a href="#" class="btn btn-social-icon mr-1 btn-facebook">
@@ -154,21 +180,26 @@
 								<div class="owl-carousel owl-theme" id="users-carousel">
 
 									<!--  아이템 들어갈 자리 -->
-									<c:forEach items="${services }" var="service">
-										<div class="user-item-flat" style="display: inline-block"
-											align="center">
-											<div class="user-item">
-												<img alt="image" src="#" class="img-fluid">
-												<div class="user-details">
-													<div class="user-name">${service.dolvEmail }</div>
-													<div class="text-job text-muted">돌보미 전문분야</div>
-													<div class="user-cta">
-														<button class="btn btn-primary">정보보기</button>
+									<c:forEach items="${dolvs }" var="dolv">
+										<form>
+											<div class="user-item-flat" style="display: inline-block"
+												align="center">
+												<div class="user-item">
+													<img alt="image" src="#" class="img-fluid">
+													<div class="user-details">
+														<div class="user-name">${dolv.dolvName }</div>
+														<div class="text-job text-muted">돌보미 전문분야</div>
+														<div class="user-cta">
+															<input type="button" class="btn btn-primary"
+																onclick="displayDolv('${dolv.dolvName}')">정보보기
+															</button>
+														</div>
 													</div>
 												</div>
 											</div>
-										</div>
+										</form>
 									</c:forEach>
+
 									<!--  아이템 들어갈 자리 -->
 
 								</div>
@@ -189,46 +220,49 @@
 									</div>
 								</div>
 							</div>
-							<div class="profile-widget-description pb-0" align="center" style="margin:25px;">
+							<div class="profile-widget-description pb-0" align="center"
+								style="margin: 25px;">
 								<!-- 돌보미 스케쥴 달력 들어갈자리 -->
-								<input type="text" id="datePicker" class=form-control" value="2021-11-08">
+								<input type="text" id="datePicker" class=form-control
+									" value="2021-11-08">
 								<!-- 돌보미 스케쥴 달력 들어갈자리 -->
 							</div>
 							<form>
-							<div>
-								<div class="form-group" style="display: flex;">
-									<label>시작일</label> <input type="date" id="startdate"
-										name="startdate" class="form-control"
-										style="width: 240px; margin-left: 3.5%;"> <label>종료일</label>
-									<input type="date" id="enddate" name="enddate"
-										class="form-control" style="width: 240px; margin-left: 3.5%;">
-								</div>
-								<div class=form-group>
-								<label style="margin-right: 127px;">반려동물 종류를 선택해주세요</label>
-								<label>요청하실 서비스의 종류를 선택해주세요</label>
-								</div>
-								<div class="form-group" style="display: flex;">
-									<select class="form-control" style="width: 242px; margin-left: 9.5%;">
-										<option>소형견</option>
-										<option>중형견</option>
-										<option>대형견</option>
-									</select>
-									<select class="form-control" style="width: 242px; margin-left: 9.5%;">
-										<option>산책</option>
-										<option>돌봄</option>
-										<option>미용</option>
-										<option>병원</option>
-									</select>
-								</div>
-								<div align="center">
-								<button class="btn btn-primary" type="button">예약 신청하기</button>
-								<div class="addblank" style="height:15px"></div>
+								<div>
+									<div class="form-group" style="display: flex;">
+										<label>시작일</label> <input type="date" id="startdate"
+											name="startdate" class="form-control"
+											style="width: 240px; margin-left: 3.5%;"> <label>종료일</label>
+										<input type="date" id="enddate" name="enddate"
+											class="form-control" style="width: 240px; margin-left: 3.5%;">
 									</div>
-							</div>
+									<div class=form-group>
+										<label style="margin-right: 127px;">반려동물 종류를 선택해주세요</label> <label>요청하실
+											서비스의 종류를 선택해주세요</label>
+									</div>
+									<div class="form-group" style="display: flex;">
+										<select class="form-control"
+											style="width: 242px; margin-left: 9.5%;">
+											<option>소형견</option>
+											<option>중형견</option>
+											<option>대형견</option>
+										</select> <select class="form-control"
+											style="width: 242px; margin-left: 9.5%;">
+											<option>산책</option>
+											<option>돌봄</option>
+											<option>미용</option>
+											<option>병원</option>
+										</select>
+									</div>
+									<div align="center">
+										<button class="btn btn-primary" type="button">예약 신청하기</button>
+										<div class="addblank" style="height: 15px"></div>
+									</div>
+								</div>
 							</form>
 						</div>
-						
-						
+
+
 					</div>
 				</div>
 			</div>
@@ -237,7 +271,7 @@
 
 
 	<!-- General JS Scripts -->
-	
+
 	<script src="assets/modules/popper.js"></script>
 	<script src="assets/modules/tooltip.js"></script>
 	<script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>

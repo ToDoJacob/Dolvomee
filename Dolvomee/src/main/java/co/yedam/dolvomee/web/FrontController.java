@@ -36,6 +36,7 @@ import co.yedam.dolvomee.command.review.ReviewForm;
 import co.yedam.dolvomee.command.review.ReviewInsert;
 import co.yedam.dolvomee.command.review.ReviewList;
 import co.yedam.dolvomee.command.review.ReviewSelect;
+import co.yedam.dolvomee.command.schedule.ScheduleDolvomeeSelect;
 import co.yedam.dolvomee.command.schedule.ScheduleList;
 
 
@@ -68,6 +69,7 @@ public class FrontController extends HttpServlet {
 		//준형
 		map.put("/home.do", new HomeCommand()); // 첫 페이지 호출
 		map.put("/scheduleList.do", new ScheduleList()); // 돌보미 서비스 리스트
+		map.put("/scheduleDolvomeeSelect.do", new ScheduleDolvomeeSelect());
 		
 		//동관
 		map.put("/reviewList.do", new ReviewList()); //리뷰목록

@@ -43,7 +43,7 @@
                 <ul class="navbar-nav ms-auto navbar-nav-scroll">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="serviceList.do">펫시터 찾기</a>
+                        <a class="nav-link" href="scheduleList.do">펫시터 찾기</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="reviewList.do">이용 후기</a>

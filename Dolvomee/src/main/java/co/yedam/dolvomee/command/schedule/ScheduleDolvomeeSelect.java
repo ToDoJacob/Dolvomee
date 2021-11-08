@@ -7,24 +7,23 @@ import co.yedam.dolvomee.comm.Command;
 import co.yedam.dolvomee.service.dolvomee.DolvomeeService;
 import co.yedam.dolvomee.service.dolvomee.DolvomeeServiceImpl;
 import co.yedam.dolvomee.service.dolvomee.DolvomeeVO;
-import co.yedam.dolvomee.service.schedule.ScheduleService;
-import co.yedam.dolvomee.service.schedule.ScheduleServiceImpl;
 
-public class ScheduleList implements Command {
+public class ScheduleDolvomeeSelect implements Command {
 
 	@Override
 	public String run(HttpServletRequest request, HttpServletResponse response) {
-		// 
+		// 하단에서 돌보미를 선택해서 상단 카드에 돌보미의 정보를 출력해주는 용도
 		DolvomeeService dolvomeeDao = new DolvomeeServiceImpl();
 		DolvomeeVO vo = new DolvomeeVO();
 		
-		request.setAttribute("dolvs", dolvomeeDao.selectDolvomeeLsit());
+		vo.setDolvName(request.getParameter("dolvName"));
 		
-		//vo.setDolvEmail(request.getParameter(""));
-		//request.setAttribute("displaydolv", dolvomeeDao.selectDolvomee(null));
+		vo = dolvomeeDao.selectDolvomeeName(vo);
+		request.setAttribute("dolvSelect", vo);
 		
+		System.out.println(vo);
 		
-		return "schedule/scheduleList";
+		return "ajax:1";
 	}
 
 }
