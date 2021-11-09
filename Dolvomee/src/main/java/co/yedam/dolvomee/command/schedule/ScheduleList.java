@@ -7,8 +7,6 @@ import co.yedam.dolvomee.comm.Command;
 import co.yedam.dolvomee.service.dolvomee.DolvomeeService;
 import co.yedam.dolvomee.service.dolvomee.DolvomeeServiceImpl;
 import co.yedam.dolvomee.service.dolvomee.DolvomeeVO;
-import co.yedam.dolvomee.service.schedule.ScheduleService;
-import co.yedam.dolvomee.service.schedule.ScheduleServiceImpl;
 
 public class ScheduleList implements Command {
 

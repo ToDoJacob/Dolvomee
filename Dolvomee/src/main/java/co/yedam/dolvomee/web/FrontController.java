@@ -87,7 +87,7 @@ public class FrontController extends HttpServlet {
 		map.put("/dolvLogin.do", new DolvLogin()); // 돌보미로그인 처리
 		map.put("/logout.do", new Logout()); //로그아웃 처리
 		map.put("/usersRegisterForm.do", new UsersRegisterForm()); // 사용자회원가입 폼 호출
-  	 map.put("/usersRegister.do", new UsersRegister()); // 사용자회원가입 처리
+		map.put("/usersRegister.do", new UsersRegister()); // 사용자회원가입 처리
 		map.put("/dolvRegisterForm.do", new DolvRegisterForm()); // 돌보미 회원가입 폼 호출
 		map.put("/dolvRegister.do", new DolvRegister()); // 돌보미 회원가입 처리
 		map.put("/ajaxDolvoAuthorCheck.do", new AjaxDolvoAuthorCheck()); //돌보미 권한 체크

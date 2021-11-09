@@ -3,11 +3,11 @@
 <mapper namespace="co.yedam.dolvomee.service.review.ReviewMapper">
 
    <select id="selectReviewList" resultType="co.yedam.dolvomee.service.review.ReviewVO">
-      select revnum, schedulenum, usersemail, usersaddr, usersimage, revcontents , revlike, to_char(writedate, 'YY-MM-DD HH24:MI:SS') as writedate from review order by writedate desc
+      select revnum, usersemail, schedulenum, usersaddr, usersimage, revcontents , to_char(writedate, 'YY-MM-DD HH24:MI:SS') as writedate, revlike from review order by writedate desc
    </select>
    
    <select id="selectReview" resultType="co.yedam.dolvomee.service.review.ReviewVO">
-      select revnum, schedulenum, usersemail, usersaddr, usersimage, revcontents, revlike, to_char(writedate, '""YYYY"년 "MM"월 "DD"일"') as writedate from review where revnum = #{revNum}
+      select revnum, usersemail, schedulenum, usersaddr, usersimage, revcontents , to_char(writedate, 'YY-MM-DD HH24:MI:SS') as writedate, revlike from review where revnum = #{revNum}
    </select>
    
    <select id="selectImage" resultType="co.yedam.dolvomee.service.users.UsersVO">
@@ -15,7 +15,7 @@
    </select>
    
    <insert id="insertReview">
-      insert into review values((select nvl(max(revnum)+1, 0) from review), 0, #{usersEmail}, #{usersAddr}, #{usersImage}, #{revContents}, #{revLike}, sysdate)
+      insert into review values((select nvl(max(revnum)+1, 0) from review), #{usersEmail}, 0, '?', #{usersAddr}, #{usersImage}, #{revContents}, sysdate, #{revLike})
    </insert>
    
    <update id="updateReview">
