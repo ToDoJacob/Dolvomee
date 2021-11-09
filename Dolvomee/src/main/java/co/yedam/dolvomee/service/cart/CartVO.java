@@ -6,9 +6,9 @@ public class CartVO {
 	private int scheduleNum;
 	private String dolvEmail;
 	private String usersEmail;	
-	private Date scheduleStartSate;
+	private Date scheduleStartdate;
 	private Date scheduleEndDate;
-	private String shceduleStatus;
+	private String scheduleStatus; 
 	private int scheBufNum;
 	private String categCode;
 	private String detailCode;
@@ -32,11 +32,11 @@ public class CartVO {
 	public void setUsersEmail(String usersEmail) {
 		this.usersEmail = usersEmail;
 	}
-	public Date getScheduleStartSate() {
-		return scheduleStartSate;
+	public Date getScheduleStartdate() {
+		return scheduleStartdate;
 	}
-	public void setScheduleStartSate(Date scheduleStartSate) {
-		this.scheduleStartSate = scheduleStartSate;
+	public void setScheduleStartdate(Date scheduleStartdate) {
+		this.scheduleStartdate = scheduleStartdate;
 	}
 	public Date getScheduleEndDate() {
 		return scheduleEndDate;
@@ -44,11 +44,11 @@ public class CartVO {
 	public void setScheduleEndDate(Date scheduleEndDate) {
 		this.scheduleEndDate = scheduleEndDate;
 	}
-	public String getShceduleStatus() {
-		return shceduleStatus;
+	public String getScheduleStatus() {
+		return scheduleStatus;
 	}
-	public void setShceduleStatus(String shceduleStatus) {
-		this.shceduleStatus = shceduleStatus;
+	public void setScheduleStatus(String scheduleStatus) {
+		this.scheduleStatus = scheduleStatus;
 	}
 	public int getScheBufNum() {
 		return scheBufNum;
@@ -80,6 +80,6 @@ public class CartVO {
 	public void setDetailPrice(String detailPrice) {
 		this.detailPrice = detailPrice;
 	}
-	
+
 	
 }

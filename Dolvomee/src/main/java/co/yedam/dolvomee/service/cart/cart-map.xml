@@ -6,5 +6,8 @@
 		select schedule.*, schedulebuf.* from schedule INNER JOIN schedulebuf on schedule.schedulenum = schedulebuf.schedulenum
 	</select>
 
+	<select id="selectCart"	resultType="co.yedam.dolvomee.service.cart.CartVO">
+		select schedule.*, schedulebuf.* from schedule INNER JOIN schedulebuf on schedule.schedulenum = schedulebuf.schedulenum WHERE schedule.usersemail = #{usersEmail}
+	</select>
 
 </mapper>
