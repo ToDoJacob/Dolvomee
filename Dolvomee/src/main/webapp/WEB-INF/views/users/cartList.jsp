@@ -38,13 +38,15 @@
 							<th>가격</th>
 						</tr>
 						<c:forEach items="${cart }" var="carts">
+						<tr>
 							<td>${carts.scheduleNum }</td>
 							<td>${carts.usersEmail }</td>
 							<td>${carts.dolvEmail }</td>
-							<td>${carts.scheduleStartSate }</td>
+							<td>${carts.scheduleStartdate }</td>
 							<td>${carts.scheduleEndDate }</td>
-							<td>${carts.shceduleStatus }</td>
+							<td>${carts.scheduleStatus }</td>
 							<td>${carts.detailPrice }</td>
+							</tr>
 						</c:forEach>
 					</table>
 				</div>

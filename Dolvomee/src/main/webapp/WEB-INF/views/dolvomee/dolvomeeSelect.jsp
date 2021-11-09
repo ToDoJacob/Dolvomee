@@ -38,7 +38,7 @@
 							<div class="col-12 col-sm-12 col-lg-5">
 								<div class="card profile-widget">
 									<div class="profile-widget-header">
-										<img alt="image" src="assets/img/us.png"
+										<img alt="image" src="upload/${dolvomees.dolvImage }"
 											class="rounded-circle profile-widget-picture">
 										<div class="profile-widget-items">
 											<div class="profile-widget-item">

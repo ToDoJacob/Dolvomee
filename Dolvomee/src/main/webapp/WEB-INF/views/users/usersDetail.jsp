@@ -43,11 +43,11 @@
 										<div class="profile-widget-items">
 											<div class="profile-widget-item">
 												<div class="profile-widget-item-label">내역</div>
-												<div class="profile-widget-item-value">187</div>
+												<div class="profile-widget-item-value">13</div>
 											</div>
 											<div class="profile-widget-item">
 												<div class="profile-widget-item-label">후기</div>
-												<div class="profile-widget-item-value">6,8K</div>
+												<div class="profile-widget-item-value">9</div>
 											</div>
 										</div>
 									</div>
@@ -61,10 +61,11 @@
 										<p>주 소 ${users.usersAddr }</p>
 										<p>권 한 ${users.usersAuthor }</p>
 									</div>
-									<div align="right" style="padding-bottom: 20px; padding-right: 30px;" >
+									<div align="right"
+										style="padding-bottom: 20px; padding-right: 30px;">
 										<span class="nav-item"> <a class="btn-solid-sm"
-											onclick="CallEdit('E')">수정</a> <a
-											class="btn-solid-sm" onclick="CallEdit('D')">삭제</a>
+											onclick="CallEdit('E')">수정</a> <a class="btn-solid-sm"
+											onclick="CallEdit('D')">삭제</a>
 										</span>
 									</div>
 									<div>
@@ -72,11 +73,9 @@
 											<input type="hidden" id="usersEmail" name="usersEmail"
 												value="${users.usersEmail }">
 										</form>
-
 									</div>
 								</div>
 							</div>
-
 						</div>
 					</div>
 				</section>

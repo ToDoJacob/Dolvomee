@@ -20,7 +20,7 @@
 	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
     <!-- Webpage Title -->
-    <title>Zinc Webpage Title</title>
+    <title>dolvomee</title>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
 					<h1 class="h1-large">Zinc creates stylish and efficient sites</h1>
 					<p class="p-large">Lorem ipsum dolor sit amet, consectetur
 						adipiscing elit. Ut dignissim, neque ut ultrices sollicitudin</p>
-					<a class="btn-solid-lg" href="#services">내 주변 펫시터 찾기</a>
+					<a class="btn-solid-lg" href="scheduleList.do">내 주변 펫시터 찾기  <i class="fas fa-paw"></i></a>
 				</div>
 				<!-- end of text-container -->
 			</div>

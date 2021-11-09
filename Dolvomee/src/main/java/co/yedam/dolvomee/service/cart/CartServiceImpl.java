@@ -18,9 +18,15 @@ public class CartServiceImpl implements CartService {
 	}
 
 	@Override
-	public CartVO selectCart(CartVO vo) {
+	public List<CartVO> selectCart(CartVO vo) {
 		
 		return map.selectCart(vo);
+	}
+	
+	@Override
+	public List<CartVO> selectCart2(CartVO vo) {
+		
+		return map.selectCart2(vo);
 	}
 
 	@Override
@@ -40,5 +46,12 @@ public class CartServiceImpl implements CartService {
 		
 		return map.updateCart(vo);
 	}
+
+	@Override
+	public CartVO selectCart3(CartVO vo) {
+		
+		return map.selectCart3(vo);
+	}
+
 
 }
