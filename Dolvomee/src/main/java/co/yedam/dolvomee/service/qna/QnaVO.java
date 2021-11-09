@@ -7,6 +7,39 @@ public class QnaVO {
 	private String dolvEmail;
 	private String qnaContents;
 	private String qnaTime;
+	private String userName;
+	private String dolvName;
+	
+	public String getDolvName() {
+		return dolvName;
+	}
+	public void setDolvName(String dolvName) {
+		this.dolvName = dolvName;
+	}
+	public int getQnaNum() {
+		return qnaNum;
+	}
+	public void setQnaNum(int qnaNum) {
+		this.qnaNum = qnaNum;
+	}
+	public String getQnaContents() {
+		return qnaContents;
+	}
+	public void setQnaContents(String qnaContents) {
+		this.qnaContents = qnaContents;
+	}
+	public String getQnaTime() {
+		return qnaTime;
+	}
+	public void setQnaTime(String qnaTime) {
+		this.qnaTime = qnaTime;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 	public int getqnaNum() {
 		return qnaNum;
 	}
