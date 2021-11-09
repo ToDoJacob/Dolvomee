@@ -19,11 +19,10 @@ public class ScheduleDolvomeeSelect implements Command {
 		vo.setDolvName(request.getParameter("dolvName"));
 		
 		vo = dolvomeeDao.selectDolvomeeName(vo);
-		request.setAttribute("dolvSelect", vo);
 		
-		System.out.println(vo);
+		vo.toString();
 		
-		return "ajax:1";
+		return "ajax:";
 	}
 
 }
