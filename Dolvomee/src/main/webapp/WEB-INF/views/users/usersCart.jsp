@@ -58,27 +58,30 @@
 			<div class="main-content">
 				<section class="section">
 					<div class="section-body">
-						<div class="invoice" style="padding-left: 280px; padding-right: 280px; padding-top: 200px;">
+						<div class="invoice"
+							style="padding-left: 280px; padding-right: 280px; padding-top: 200px;">
 							<div class="row mt-4">
-								<div class="col-md-12" >
+								<div class="col-md-12">
 									<div class="section-title">
 										장바구니 <i class="fas fa-paw"></i>
 									</div>
 									<div class="table-responsive">
 										<table class="table table-striped table-hover table-md">
 											<tr>
-												<th data-width="40">#</th>
-												<th>Item</th>
-												<th class="text-center">Price</th>
-												<th class="text-center">Quantity</th>
-												<th class="text-right">Totals</th>
+												<th class="text-center">NO</th>
+												<th class="text-center">펫시터 정보</th>
+												<th class="text-center">서비스 종류</th>
+												<th class="text-center">서비스 시작일</th>
+												<th class="text-center">서비스 종료일</th>
+												<th class="text-right">금액</th>
 											</tr>
 											<tr>
-												<td>1</td>
-												<td>Mouse Wireless</td>
-												<td class="text-center">${cartList.userEmail }</td>
-												<td class="text-center">1</td>
-												<td class="text-right">$10.99</td>
+												<td class="text-center">${cart.scheduleNum }</td>
+												<td class="text-center">${cart.dolvEmail }</td>
+												<td class="text-center">${cart.scheBufNum }</td>
+												<td class="text-center">${cart.scheduleStartdate }</td>
+												<td class="text-center">${cart.scheduleEndDate }</td>
+												<td class="text-right">${cart.detailPrice }</td>
 											</tr>
 										</table>
 									</div>
@@ -112,9 +115,38 @@
 											class="btn-solid-sm">
 											<i class="fas fa-paw"></i> 결제
 										</button>
-									<button class="btn-solid-sm">
-										<i class="fas fa-times"></i> 취소
-									</button>
+										<button class="btn-solid-sm">
+											<i class="fas fa-times"></i> 삭제
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="row mt-4">
+								<div class="col-md-12">
+									<div class="section-title">
+										이용 내역 <i class="fas fa-paw"></i>
+									</div>
+									<div class="table-responsive">
+										<table class="table table-striped table-hover table-md">
+											<tr>
+												<th class="text-center">NO</th>
+												<th class="text-center">펫시터 정보</th>
+												<th class="text-center">서비스 종류</th>
+												<th class="text-center">서비스 시작일</th>
+												<th class="text-center">서비스 종료일</th>
+												<th class="text-center">서비스 상태</th>
+												<th class="text-right">금액</th>
+											</tr>
+											<tr>
+												<td class="text-center">${cart.scheduleNum }</td>
+												<td class="text-center">${cart.dolvEmail }</td>
+												<td class="text-center">${cart.scheBufNum }</td>
+												<td class="text-center">${cart.scheduleStartdate }</td>
+												<td class="text-center">${cart.scheduleEndDate }</td>
+												<td class="text-center">${cart.scheduleStatus }</td>
+												<td class="text-right">${cart.detailPrice }</td>
+											</tr>
+										</table>
 									</div>
 								</div>
 							</div>

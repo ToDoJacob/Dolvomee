@@ -21,14 +21,15 @@ public class UsersCart implements Command {
 		
 		vo.setUsersEmail((String)session.getAttribute("usersEmail"));
 		
-		System.out.println((String)session.getAttribute("usersEmail"));
+		System.out.println((String)session.getAttribute("usersEmail")); //로그인한 이메일이 나옴 
 		
-		vo = cartDao.selectCart(vo);
-		request.setAttribute("users", vo);
-		
+		vo = cartDao.selectCart(vo); 
+	
 		System.out.println(vo);
 		
+		request.setAttribute("cart", vo);
 		
+	
 		return "users/usersCart";
 	}
 
