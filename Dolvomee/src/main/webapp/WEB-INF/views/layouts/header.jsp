@@ -17,12 +17,16 @@
     
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- 지정 폰트 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gowun+Batang:wght@700&family=Jua&display=swap" rel="stylesheet">
 
 </head>
 <script type="text/javascript">
 	
 </script>
-<body data-bs-spy="scroll" data-bs-target="#navbarExample">
+<body data-bs-spy="scroll" data-bs-target="#navbarExample" style="font-family: 'Gowun Batang', serif;">
     
     <!-- Navigation -->
     <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-light" aria-label="Main navigation">

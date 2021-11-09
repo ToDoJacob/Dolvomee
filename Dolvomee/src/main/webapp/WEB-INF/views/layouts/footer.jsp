@@ -5,6 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<!-- 지정 폰트 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gowun+Batang:wght@700&family=Jua&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- Footer -->
@@ -13,7 +17,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h4>Pellentesque aliquet mi eu tortor dictum, non imperdiet ante viverra. Phasellus eget enim orci ut pellentes troc</h4>
+                    <h4 style="font-family: 'Dongle', sans-serif; font-size: 2.5rem;">믿고 맡길수 있는 펫시터, Dolvomee</h4>
                     <div class="social-container">
                         <span class="fa-stack">
                             <a href="#your-link">
