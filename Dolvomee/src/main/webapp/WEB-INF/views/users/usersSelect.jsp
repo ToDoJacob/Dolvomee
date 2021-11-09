@@ -38,20 +38,16 @@
 							<div class="col-12 col-sm-12 col-lg-5">
 								<div class="card profile-widget">
 									<div class="profile-widget-header">
-										<img alt="image" src="assets/img/us.png"
+										<img alt="image" src="upload/${users.usersImage }"
 											class="rounded-circle profile-widget-picture">
 										<div class="profile-widget-items">
 											<div class="profile-widget-item">
 												<div class="profile-widget-item-label">내역</div>
-												<div class="profile-widget-item-value">187</div>
+												<div class="profile-widget-item-value">4</div>
 											</div>
 											<div class="profile-widget-item">
 												<div class="profile-widget-item-label">후기</div>
-												<div class="profile-widget-item-value">6,8K</div>
-											</div>
-											<div class="profile-widget-item">
-												<div class="profile-widget-item-label">Following</div>
-												<div class="profile-widget-item-value">2,1K</div>
+												<div class="profile-widget-item-value">3</div>
 											</div>
 										</div>
 									</div>

@@ -25,6 +25,7 @@
     <mapper resource="co/yedam/dolvomee/service/schedulebuf/schedulebuf-map.xml"/>
     <mapper resource="co/yedam/dolvomee/service/categori/categori-map.xml"/>
     <mapper resource="co/yedam/dolvomee/service/qna/qna-map.xml"/>
+    <mapper resource="co/yedam/dolvomee/service/cart/cart-map.xml" />
   </mappers>
 
 </configuration>

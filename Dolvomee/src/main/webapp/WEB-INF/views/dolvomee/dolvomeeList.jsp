@@ -8,7 +8,7 @@
 <meta
 	content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
 	name="viewport">
-<title>Posts &mdash; Stisla</title>
+<title>돌보미 리스트</title>
 
 <!-- Styles -->
 <link rel="stylesheet" href="assets/css/style.css">
