@@ -52,6 +52,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="usersDetail.do">내 정보</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="qnaList.do">1:1 문의</a>
+                    </li>
                     </c:if>
                        <li class="nav-item">
                         <a class="nav-link" href="noticeList.do">공지사항</a>

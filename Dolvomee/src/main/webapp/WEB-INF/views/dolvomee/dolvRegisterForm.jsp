@@ -20,10 +20,20 @@
 <!-- Start GA -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-94034622-3');
+  function CheckPassword() {
+		var password = frm.dolvPwd.value;
+		var repeatPassword = frm.password2.value;
+		
+		if(password != "" && password == repeatPassword) {
+			frm.submit();
+		} else {
+			alert("패스워드가 일치하지 않습니다.");
+			frm.password.value = "";
+			frm.repeatPassword.value ="";
+			frm.password.fource();
+			return false;
+		}
+	}
 </script>
 <!-- /END GA -->
 </head>
@@ -63,7 +73,7 @@
                   <div class="row">
                     <div class="form-group col-6">
                       <label for="password" class="d-block">Password</label>
-                      <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="dolvPwd">
+                      <input id="dolvPwd" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="dolvPwd">
                       <div id="pwindicator" class="pwindicator">
                         <div class="bar"></div>
                         <div class="label"></div>
@@ -102,7 +112,7 @@
                   </div>
 
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="CheckPassword();">
                       회원가입
                     </button>
                   </div>
