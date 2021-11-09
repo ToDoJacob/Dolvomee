@@ -4,8 +4,8 @@
 
 	<select id="selectQnaList"
 		resultType="co.yedam.dolvomee.service.qna.QnaVO">
-		select qnanum, usersemail, dolvemail, qnacontents, to_char(qnatime, '""YYYY"년 "MM"월 "DD"일"+AM HH:MI') as qnatime, from
-		qna where usersemail = #{usersEmail} and dolvemail = #{dolvEmail} order by qnatime
+		select qnanum, usersemail, dolvemail, qnacontents, to_char(qnatime, '""YYYY"년 "fmMM"월 "DD"일" AM HH:MI') as qnatime from
+		qna where usersemail = 'users1@users.com' and dolvemail = 'dolv@dolv.com' order by qnatime;
 	</select>
 
 	<insert id="insertQna">
