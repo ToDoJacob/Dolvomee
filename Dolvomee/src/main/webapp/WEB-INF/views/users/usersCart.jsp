@@ -22,36 +22,6 @@
 </head>
 
 <body>
-	<script type="text/javascript">
-		function requestPay() {
-			IMP.init('imp42439175');
-			IMP.request_pay({ // param
-				pg : "html5_inicis",
-				pay_method : "card",
-				merchant_uid : "ORD20180131-0000011",
-				name : "노르웨이 회전 의자",
-				amount : 64900,
-				buyer_email : "gildong@gmail.com",
-				buyer_name : ${users.usersName },
-				buyer_tel : "010-4242-4242",
-				buyer_addr : "서울특별시 강남구 신사동",
-				buyer_postcode : "01181"
-			}, function(rsp) { // callback
-				 if ( rsp.success ) {
-				        var msg = '결제가 완료되었습니다.';
-				        msg += '고유ID : ' + rsp.imp_uid;
-				        msg += '상점 거래ID : ' + rsp.merchant_uid;
-				        msg += '결제 금액 : ' + rsp.paid_amount;
-				        msg += '카드 승인번호 : ' + rsp.apply_num;
-				    } else {
-				        var msg = '결제에 실패하였습니다.';
-				        msg += '에러내용 : ' + rsp.error_msg;
-				    }
-				    alert(msg);
-				});
-		}
-	</script>
-
 	<div id="app">
 		<div class="main-wrapper main-wrapper-1">
 			<!-- Main Content -->
@@ -70,36 +40,33 @@
 											<tr>
 												<th class="text-center">NO</th>
 												<th class="text-center">펫시터 정보</th>
-												<th class="text-center">서비스 종류</th>
+												<th class="text-center">견종</th>
+												<th class="text-center">서비스</th>
 												<th class="text-center">서비스 시작일</th>
 												<th class="text-center">서비스 종료일</th>
 												<th class="text-right">금액</th>
 											</tr>
-											<tr>
-												<td class="text-center">${cart.scheduleNum }</td>
-												<td class="text-center">${cart.dolvEmail }</td>
-												<td class="text-center">${cart.scheBufNum }</td>
-												<td class="text-center">${cart.scheduleStartdate }</td>
-												<td class="text-center">${cart.scheduleEndDate }</td>
-												<td class="text-right">${cart.detailPrice }</td>
-											</tr>
+											<c:forEach items="${carts }" var="cart">
+												<tr>
+													<td class="text-center">${cart.scheduleNum }</td>
+													<td class="text-center">${cart.dolvEmail }</td>
+													<td class="text-center">${cart.categCode }</td>
+													<td class="text-center">${cart.detailCode }</td>
+													<td class="text-center">${cart.scheduleStartdate }</td>
+													<td class="text-center">${cart.scheduleEndDate }</td>
+													<td class="text-right">${cart.detailPrice }</td>
+												</tr>
+											</c:forEach>
 										</table>
 									</div>
 									<div class="row mt-4">
 										<div class="col-lg-8"></div>
-										<div class="col-lg-4 text-right">
-											<div class="invoice-detail-item">
-												<div class="invoice-detail-name">Subtotal</div>
-												<div class="invoice-detail-value">$670.99</div>
-											</div>
-											<div class="invoice-detail-item">
-												<div class="invoice-detail-name">Shipping</div>
-												<div class="invoice-detail-value">$15</div>
-											</div>
+										<div>
 											<hr class="mt-2 mb-2">
-											<div class="invoice-detail-item">
+											<div class="invoice-detail-item" align="right"
+												style="padding-right: 50px; padding-top: 10px">
 												<div class="invoice-detail-name">Total</div>
-												<div class="invoice-detail-value invoice-detail-value-lg">$685.99</div>
+												<div class="invoice-detail-value invoice-detail-value-lg">${cart3.detailPrice }원</div>
 											</div>
 										</div>
 									</div>
@@ -131,21 +98,25 @@
 											<tr>
 												<th class="text-center">NO</th>
 												<th class="text-center">펫시터 정보</th>
-												<th class="text-center">서비스 종류</th>
+												<th class="text-center">견종</th>
+												<th class="text-center">서비스</th>
 												<th class="text-center">서비스 시작일</th>
 												<th class="text-center">서비스 종료일</th>
 												<th class="text-center">서비스 상태</th>
 												<th class="text-right">금액</th>
 											</tr>
-											<tr>
-												<td class="text-center">${cart.scheduleNum }</td>
-												<td class="text-center">${cart.dolvEmail }</td>
-												<td class="text-center">${cart.scheBufNum }</td>
-												<td class="text-center">${cart.scheduleStartdate }</td>
-												<td class="text-center">${cart.scheduleEndDate }</td>
-												<td class="text-center">${cart.scheduleStatus }</td>
-												<td class="text-right">${cart.detailPrice }</td>
-											</tr>
+											<c:forEach items="${carts2 }" var="cart2">
+												<tr>
+													<td class="text-center">${cart2.scheduleNum }</td>
+													<td class="text-center">${cart2.dolvEmail }</td>
+													<td class="text-center">${cart2.categCode }</td>
+													<td class="text-center">${cart2.detailCode }</td>
+													<td class="text-center">${cart2.scheduleStartdate }</td>
+													<td class="text-center">${cart2.scheduleEndDate }</td>
+													<td class="text-center">${cart2.scheduleStatus }</td>
+													<td class="text-right">${cart2.detailPrice }</td>
+												</tr>
+											</c:forEach>
 										</table>
 									</div>
 								</div>
@@ -156,7 +127,30 @@
 			</div>
 		</div>
 	</div>
-
-
+	<script type="text/javascript">
+		function requestPay() {
+			IMP.init('imp42439175');
+			IMP.request_pay({ // param
+				pg : "html5_inicis",
+				pay_method : "card",
+				merchant_uid : "ORD20180131-0000011",
+				name : "노르웨이 회전 의자",
+				amount : 64900,
+				buyer_email : "gildong@gmail.com",
+				buyer_name : "홍길동",
+				buyer_tel : "010-4242-4242",
+				buyer_addr : "서울특별시 강남구 신사동",
+				buyer_postcode : "01181"
+			}, function(rsp) { // callback
+				if (rsp.success) {
+					var msg = '결제가 완료되었습니다.';
+				} else {
+					var msg = '결제에 실패하였습니다.';
+				}
+				alert(msg);
+			});
+		}
+	</script>
 </body>
+
 </html>

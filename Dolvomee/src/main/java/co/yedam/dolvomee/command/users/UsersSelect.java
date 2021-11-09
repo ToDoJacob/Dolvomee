@@ -14,16 +14,13 @@ public class UsersSelect implements Command {
 	@Override
 	public String run(HttpServletRequest request, HttpServletResponse response) {
 		//회원 리스트에서 회원 조회
-		HttpSession session = request.getSession();
-		session.getAttribute("usersEmail");
 		UsersService usersDao = new UsersServiceImpl();
 		UsersVO vo = new UsersVO();
 		
-		vo.setUsersEmail((String)session.getAttribute("usersEmail"));
-		
-		System.out.println((String)session.getAttribute("usersEmail"));
-		
+		vo.setUsersEmail(request.getParameter("usersEmail"));
+				
 		vo = usersDao.selectUser(vo);
+				
 		request.setAttribute("users", vo);
 		
 		return "users/usersSelect";

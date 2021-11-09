@@ -76,7 +76,6 @@
                         </ul>
                     </c:if>
                     </li>
-
                 </ul>
               <a class="fas fa-shopping-cart" href="usersCart.do" style="color: #3cb371;"></a>
                 <span class="nav-item">

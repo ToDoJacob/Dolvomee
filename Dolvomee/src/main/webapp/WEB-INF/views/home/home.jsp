@@ -20,7 +20,7 @@
 	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
     <!-- Webpage Title -->
-    <title>Zinc Webpage Title</title>
+    <title>dolvomee</title>
 
     <!-- Styles -->
     <link href="http://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -42,6 +42,7 @@
 		<div class="row">
 			<div class="col-lg-6 col-xl-5">
 				<div class="text-container">
+
 					<div class="section-title">Welcome to dolvomee</div>
 					<h1 class="h1-large" style="font-family: 'Dongle', sans-serif; font-size: 4rem;">행복한 하루를 선물하세요</h1>
 					
