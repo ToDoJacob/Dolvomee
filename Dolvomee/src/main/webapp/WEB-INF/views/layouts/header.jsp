@@ -64,6 +64,8 @@
                             <li><a class="dropdown-item" href="usersList.do">회원 리스트</a></li>
                             <li><div class="dropdown-divider"></div></li>
                             <li><a class="dropdown-item" href="dolvomeeList.do">펫시터 리스트</a></li>
+                             <li><div class="dropdown-divider"></div></li>
+                            <li><a class="dropdown-item" href="cartList.do">주문 리스트</a></li>
                         </ul>
                     </c:if>
                     </li>

@@ -43,15 +43,11 @@
 										<div class="profile-widget-items">
 											<div class="profile-widget-item">
 												<div class="profile-widget-item-label">내역</div>
-												<div class="profile-widget-item-value">187</div>
+												<div class="profile-widget-item-value">10</div>
 											</div>
 											<div class="profile-widget-item">
-												<div class="profile-widget-item-label">후기</div>
-												<div class="profile-widget-item-value">6,8K</div>
-											</div>
-											<div class="profile-widget-item">
-												<div class="profile-widget-item-label">Following</div>
-												<div class="profile-widget-item-value">2,1K</div>
+												<div class="profile-widget-item-label">평점</div>
+												<div class="profile-widget-item-value">4.9</div>
 											</div>
 										</div>
 									</div>

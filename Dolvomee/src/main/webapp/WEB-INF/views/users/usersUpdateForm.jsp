@@ -41,7 +41,7 @@
 									<div class="card-header">
 										<h4>정보수정</h4>
 									</div>
-									<form id="frm" action="usersUpdate.do" method="post">
+									<form id="frm" action="usersUpdate.do" method="post" enctype="multipart/form-data" >
 										<div class="card-body">
 											<div class="form-group row mb-4">
 												<label
