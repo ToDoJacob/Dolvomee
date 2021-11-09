@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +8,7 @@
 <meta
 	content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
 	name="viewport">
-<title>Components &rsaquo; Chat Box &mdash; Stisla</title>
+<title>1:1 문의</title>
 
 <!-- General CSS Files -->
 <link rel="stylesheet"
@@ -30,11 +31,31 @@
 	gtag('js', new Date());
 
 	gtag('config', 'UA-94034622-3');
+	
+	
+	function liveChat(){
+	setInterval(() =>{
+// 	let dolvEmail = ${dolvEmail}
+	$.ajax(
+		url : "qna.do",
+		type : "post",
+		data : {dolvEmail : ${dolvEmail} , message : form-control. } ,
+		dataType : 'json',
+		success : function(result){
+			
+		}
+	)
+	}
+		
+	}
+	
+	
+	
 </script>
 <!-- /END GA -->
 </head>
 <body>
-	<div id="app">
+	<div id="app" style="padding-top: 100px;">
 		<div class="main-wrapper main-wrapper-1">
 			<!-- Main Content -->
 			<div class="main-content">
@@ -44,12 +65,14 @@
 							<div class="col-12 col-sm-6 col-lg-4">
 								<div class="card chat-box" id="mychatbox">
 									<div class="card-header">
-										<h4>Chat with Rizal</h4>
+										<h4>${qna.dolvName }</h4>
 									</div>
-									<div class="card-body chat-content"></div>
+								<c:forEach items="${qnas }" var="qna">
+									</c:forEach>
+									<div class="card-body chat-content">${qna.qnaContents }</div>
 									<div class="card-footer chat-form">
 										<form id="chat-form">
-											<input type="text" class="form-control"
+											<input type="text" id= class="form-control"
 												placeholder="Type a message">
 											<button class="btn btn-primary">
 												<i class="far fa-paper-plane"></i>

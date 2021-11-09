@@ -11,9 +11,9 @@ public class QnaServiceImpl implements QnaService {
 	private QnaMapper map = sqlSession.getMapper(QnaMapper.class);
 
 	@Override
-	public List<QnaVO> selectQnaList() {
+	public List<QnaVO> selectQnaList(QnaVO vo) {
 		// TODO Auto-generated method stub
-		return map.selectQnaList();
+		return map.selectQnaList(vo);
 	}
 
 	@Override

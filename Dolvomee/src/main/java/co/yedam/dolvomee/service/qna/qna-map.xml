@@ -4,9 +4,10 @@
 
 	<select id="selectQnaList"
 		resultType="co.yedam.dolvomee.service.qna.QnaVO">
-		select qnanum, usersemail, dolvemail, qnacontents, to_char(qnatime, '""YYYY"년 "fmMM"월 "DD"일" AM HH:MI') as qnatime from
-		qna where usersemail = 'users1@users.com' and dolvemail = 'dolv@dolv.com' order by qnatime;
+		select a.qnanum qnanum, a.usersemail usersemail, a.dolvemail dolvemail, a.qnacontents qnacontents, to_char(a.qnatime, '""YYYY"년 "fmMM"월 "DD"일" AM HH:MI') qnatime, b.dolvname dolvname from
+		qna a, dolvomee b where a.usersemail = 'users5@users.com' and b.dolvemail = 'dolv1@dolv.com' order by qnatime
 	</select>
+	
 
 	<insert id="insertQna">
 		insert into review values((select nvl(max(revnum)+1, 0) from review),
