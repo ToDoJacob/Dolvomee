@@ -29,6 +29,7 @@ import co.yedam.dolvomee.command.notice.NoticeForm;
 import co.yedam.dolvomee.command.notice.NoticeInsert;
 import co.yedam.dolvomee.command.notice.NoticeList;
 import co.yedam.dolvomee.command.notice.NoticeSelect;
+import co.yedam.dolvomee.command.qna.Qna;
 import co.yedam.dolvomee.command.qna.QnaList;
 import co.yedam.dolvomee.command.review.ReviewDelete;
 import co.yedam.dolvomee.command.review.ReviewEdit;
@@ -77,7 +78,8 @@ public class FrontController extends HttpServlet {
 		map.put("/reviewSelect.do", new ReviewSelect()); //리뷰 상세페이지
 		map.put("/reviewEdit.do", new ReviewEdit()); //리뷰 수정
 		map.put("/reviewDelete.do", new ReviewDelete()); //리뷰 삭제
-		map.put("/qnaList.do", new QnaList()); //1:1 문의
+		map.put("/qnaList.do", new QnaList()); //1:1 돌모미리스트
+		map.put("/qna.do", new Qna()); //1:1 문의
     
 		//선영
 		map.put("/usersLoginForm.do", new UsersLoginForm()); // 로그인 폼 호출
