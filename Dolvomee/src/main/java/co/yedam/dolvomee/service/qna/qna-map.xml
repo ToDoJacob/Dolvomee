@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.yedam.dolvomee.service.qna.QnaMapper">
+
+	<select id="selectQnaList"
+		resultType="co.yedam.dolvomee.service.qna.QnaVO">
+		select qnanum, usersemail, dolvemail, qnacontents, to_char(qnatime, '""YYYY"년 "MM"월 "DD"일"+AM HH:MI') as qnatime, from
+		qna where usersemail = #{usersEmail} and dolvemail = #{dolvEmail} order by qnatime
+	</select>
+
+	<insert id="insertQna">
+		insert into review values((select nvl(max(revnum)+1, 0) from review),
+		#{usersEmail}, 0, '?', #{usersAddr}, #{usersImage}, #{revContents},
+		sysdate, #{revLike})
+	</insert>
+
+
+	<delete id="deleteQna">
+		delete from review where revnum = #{revNum}
+	</delete>
+
+</mapper>

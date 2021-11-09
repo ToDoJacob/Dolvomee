@@ -3,16 +3,16 @@ package co.yedam.dolvomee.service.qna;
 import java.util.Date;
 
 public class QnaVO {
-	private int qNum;
+	private int qnaNum;
 	private String usersEmail;
 	private String dolvEmail;
-	private String qContents;
-	private Date qTime;
-	public int getqNum() {
-		return qNum;
+	private String qnaContents;
+	private Date qnaTime;
+	public int getqnaNum() {
+		return qnaNum;
 	}
-	public void setqNum(int qNum) {
-		this.qNum = qNum;
+	public void setqnaNum(int qNum) {
+		this.qnaNum = qNum;
 	}
 	public String getUsersEmail() {
 		return usersEmail;
@@ -26,17 +26,17 @@ public class QnaVO {
 	public void setDolvEmail(String dolvEmail) {
 		this.dolvEmail = dolvEmail;
 	}
-	public String getqContents() {
-		return qContents;
+	public String getqnaContents() {
+		return qnaContents;
 	}
-	public void setqContents(String qContents) {
-		this.qContents = qContents;
+	public void setqnaContents(String qContents) {
+		this.qnaContents = qContents;
 	}
-	public Date getqTime() {
-		return qTime;
+	public Date getqnaTime() {
+		return qnaTime;
 	}
-	public void setqTime(Date qTime) {
-		this.qTime = qTime;
+	public void setqnaTime(Date qTime) {
+		this.qnaTime = qTime;
 	}
 	
 	
