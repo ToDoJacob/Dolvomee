@@ -27,7 +27,7 @@
 		<div>
 			<!-- Main Content -->
 			<div
-				style="padding-left: 280px; padding-right: 280px; padding-top: 200px;">
+				style="padding-left: 280px; padding-right: 280px; padding-top: 200px; padding-bottom: 100px;">
 				<div class="table-responsive">
 					<table class="table table-striped">
 						<tr>

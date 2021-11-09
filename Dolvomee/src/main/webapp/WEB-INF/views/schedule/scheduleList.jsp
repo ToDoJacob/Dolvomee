@@ -45,6 +45,11 @@
 	href="assets/modules/bootstrap/css/bootstrap-datepicker.css">
 <script src="assets/modules/bootstrap/js/bootstrap-datepicker.js"></script>
 
+<!-- 폰트 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
 <script>
 	$(function() {
 		$('#datePicker').datepicker({
@@ -143,8 +148,6 @@ function scheduleAdd(){
 }
 </script>
 
-
-
 <!-- 부트스트랩 적용을 위한 레이어처리 -->
 <script async
 	src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
@@ -158,17 +161,16 @@ function scheduleAdd(){
 	gtag('config', 'UA-94034622-3');
 </script>
 <!-- 부트스트랩 적용을 위한 레이어처리 끝 -->
-
 </head>
 <body>
 	<div class="liveplese" style="height: 55px"></div>
-	<div class="main-content">
+	<div class="main-content" style="font-weight: bold;">
 		<section class="section">
-			<div class="section-body">
-				<h2 class="section-title">돌보미</h2>
-				<p class="section-lead">이렇게 많은 돌보미 분들과 함께하고 있습니다 !!</p>
+			<div class="section-body"  style="padding-left: 20%;">
+				<h2 class="section-title" style="font-family: 'Gowun Dodum', sans-serif;"><i class="fas fa-paw"></i>&nbsp;돌보미</h2>
+				<p class="section-lead" style="font-family: 'Gowun Dodum', sans-serif; font-weight: bold;">원하는 돌보미를 선택해주세요!</p>
 
-				<div class="row">
+				<div class="row" style="font-family: 'Gowun Dodum', sans-serif;">
 					<div class="col-12 col-sm-12 col-lg-7">
 						<div class="card author-box card-primary">
 							<div class="card-body">
@@ -189,18 +191,18 @@ function scheduleAdd(){
 											aliquip ex ea commodo consequat.</p>
 									</div>
 									<div class="mb-2 mt-3"></div>
-									<a href="#" class="btn btn-social-icon mr-1 btn-facebook">
-										<i class="fab fa-facebook-f"></i>
-									</a> <a href="#" class="btn btn-social-icon mr-1 btn-twitter">
-										<i class="fab fa-twitter"></i>
-									</a> <a href="#" class="btn btn-social-icon mr-1 btn-github"> <i
-										class="fab fa-github"></i>
-									</a> <a href="#" class="btn btn-social-icon mr-1 btn-instagram">
-										<i class="fab fa-instagram"></i>
-									</a>
+										<a href="#" class="btn btn-social-icon mr-1 btn-facebook">
+											<i class="fab fa-facebook-f"></i>
+										</a> <a href="#" class="btn btn-social-icon mr-1 btn-twitter">
+											<i class="fab fa-twitter"></i>
+										</a> <a href="#" class="btn btn-social-icon mr-1 btn-github"> <i
+											class="fab fa-github"></i>
+										</a> <a href="#" class="btn btn-social-icon mr-1 btn-instagram">
+											<i class="fab fa-instagram"></i>
+										</a>
 									<div class="w-100 d-sm-none"></div>
 									<div class="float-right mt-sm-0 mt-3">
-										<a href="#" class="btn">후기 보러가기 <i
+										<a href="#" class="btn" style="font-weight: bold;">후기 보러가기 <i
 											class="fas fa-chevron-right"></i></a>
 									</div>
 								</div>
@@ -208,6 +210,7 @@ function scheduleAdd(){
 						</div>
 						<div class="card card-danger">
 							<div class="card-header">
+								<i class="fas fa-paw"></i>&nbsp;
 								<h4>돌보미</h4>
 								<div class="card-header-action">
 									<a href="#" class="btn btn-danger btn-icon icon-right">View
@@ -227,10 +230,10 @@ function scheduleAdd(){
 													<img alt="image" src="#" class="img-fluid">
 													<div class="user-details">
 														<div class="user-name">${dolv.dolvName }</div>
-														<div class="text-job text-muted">돌보미 전문분야</div>
+														<div class="text-job text-muted" style="font-weight: bold;">돌보미 전문분야</div>
 														<div class="user-cta">
 															<a type="button" class="btn btn-primary"
-																onclick="displayDolvName('${dolv.dolvName}'); displayDolvIntro('${dolv.dolvIntro}'); displayDolvImage('${dolv.dolvImage}'); displayDolvLikecnt('${dolv.dolvLikecnt}'); displayDolvLiketotal('${dolv.dolvLiketotal}'); throwDolvEmail('${dolv.dolvEmail}'); ">정보보기</a>
+																onclick="displayDolvName('${dolv.dolvName}'); displayDolvIntro('${dolv.dolvIntro}'); displayDolvImage('${dolv.dolvImage}'); displayDolvLikecnt('${dolv.dolvLikecnt}'); displayDolvLiketotal('${dolv.dolvLiketotal}'); throwDolvEmail('${dolv.dolvEmail}'); " style="font-weight: bold;">정보보기</a>
 
 														</div>
 													</div>
@@ -246,47 +249,51 @@ function scheduleAdd(){
 						</div>
 					</div>
 					<div class="col-12 col-sm-12 col-lg-5">
-						<div class="card profile-widget">
+						<div class="card profile-widget" style="width: 350px; margin: 10px;">
 							<div class="profile-widget-header">
 								<div class="profile-widget-items">
 									<div class="profile-widget-item">
-										<div class="profile-widget-item-label">돌본횟수</div>
+
+										<div class="profile-widget-item-label"  style="font-weight: bold;">돌본횟수</div>
 										<div class="profile-widget-item-value" id="dolvLikecnt">187</div>
 									</div>
 									<div class="profile-widget-item">
-										<div class="profile-widget-item-label">좋아요</div>
+										<div class="profile-widget-item-label"  style="font-weight: bold;">좋아요</div>
 										<div class="profile-widget-item-value" id="dolvLiketotal">6,8K</div>
 									</div>
 								</div>
 							</div>
-							<!-- <div class="profile-widget-description pb-0" align="center"
-								style="margin: 25px;">
-								돌보미 스케쥴 달력 들어갈자리
-								<input type="text" id="datePicker" class="form-control"
-									value="2021-11-08">
-								돌보미 스케쥴 달력 들어갈자리
-							</div> -->
-							<form id="frm" name="frm" method="post">
-								<div>
+							<div class="profile-widget-description pb-0 form-group" style="margin-left: 10px;">
+								<!-- 돌보미 스케쥴 달력 들어갈자리 -->
+								<label>돌보미 스케줄</label>&nbsp;<input type="text" id="datePicker" class="form"
+									 value="2021-11-08" style="width: 200px; border: 1px solid #ced4da;">
+								<!-- 돌보미 스케쥴 달력 들어갈자리 -->
+							</div>
+							<form id="frm" name="frm" method="post" style="margin-left: 20px;">
+								<div style="margin-left: 10px;">
 									<div class="form-group" style="display: flex;">
 										<label>시작일</label> <input type="date" id="scheduleStartDate"
 											name="scheduleStartDate" class="form-control"
-											style="width: 240px; margin-left: 3.5%;"> <label>종료일</label>
+											style="width: 240px; margin-left: 3.5%;"></div>
+                  <div class="form-group" style="display: flex;">
+                  <label>종료일</label>
 										<input type="date" id="scheduleEndDate" name="scheduleEndDate"
 											class="form-control" style="width: 240px; margin-left: 3.5%;">
 									</div>
-									<div class=form-group>
-										<label style="margin-right: 127px;">반려동물 종류를 선택해주세요</label> <label>요청하실
-											서비스의 종류를 선택해주세요</label>
-									</div>
+
 									<div class="form-group" style="display: flex;">
+										<label>반려동물 선택</label>
 										<select class="form-control" id=amCode name=amCode
-											style="width: 242px; margin-left: 9.5%;">
+											style="width: 200px; margin-left: 3.5%;">
 											<option>소형견</option>
 											<option>중형견</option>
 											<option>대형견</option>
-										</select> <select class="form-control" id=acCode name=acCode
-											style="width: 242px; margin-left: 9.5%;">
+										</select>
+									</div>
+									<div class="form-group" style="display: flex;">
+										<label>서비스 선택</label>
+										 <select class="form-control" id=acCode name=acCode
+											style="width: 200px; margin-left: 7.5%;">
 											<option>산책</option>
 											<option>돌봄</option>
 											<option>미용</option>
@@ -303,14 +310,17 @@ function scheduleAdd(){
 										</div>
 									</div>
 								</div>
+								
 							</form>
+							</div>
 						</div>
-
+						
 
 					</div>
 				</div>
-			</div>
+
 		</section>
+		
 	</div>
 
 

@@ -22,6 +22,11 @@
 	href="assets/modules/jquery-selectric/selectric.css">
 <link rel="stylesheet"
 	href="assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+	
+	<!-- 지정 폰트 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gowun+Batang:wght@700&family=Jua&display=swap" rel="stylesheet">
 
 <!-- Template CSS -->
 <link rel="stylesheet" href="assets/css/style.css">
@@ -29,7 +34,7 @@
 <!-- Start GA -->
 
 </head>
-<body>
+<body style="font-family: 'Gowun Batang', serif;">
 	<div id="app">
 		<div class="main-wrapper main-wrapper-1">
 			<div class="main-content">
@@ -42,13 +47,13 @@
 									<div class="card-header">
 										<h4>정보수정</h4>
 									</div>
-									<form id="frm" action="dolvUpdate.do" method="post">
+									<form id="frm" action="dolvUpdate.do" method="post" >
 										<div class="card-body">
 											<div class="form-group row mb-4">
 												<label
 													class="col-form-label text-md-right col-12 col-md-3 col-lg-3">이름</label>
 												<div class="col-sm-12 col-md-7">
-													<input type="text" class="form-control" name="dolvName"
+													<input type="text" class="form-control" name="dolvName" 
 														value="${dolvomee.dolvName }">
 												</div>
 											</div>

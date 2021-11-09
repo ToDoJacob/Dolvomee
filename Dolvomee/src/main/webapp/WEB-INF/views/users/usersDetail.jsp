@@ -27,11 +27,11 @@
 
 </head>
 <body>
-	<div id="app">
+	<div id="app" align="center">
 		<div class="main-wrapper main-wrapper-1">
 			<!-- Main Content -->
 			<div
-				style="padding-left: 280px; padding-right: 280px; padding-top: 200px;">
+				style="padding-left: 280px; padding-right: 280px; padding-top: 200px; padding-bottom: 100px;">
 				<section class="section">
 					<div class="section-body">
 						<div>

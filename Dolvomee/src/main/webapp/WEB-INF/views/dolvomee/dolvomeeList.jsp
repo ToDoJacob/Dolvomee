@@ -13,6 +13,11 @@
 <!-- Styles -->
 <link rel="stylesheet" href="assets/css/style.css">
 
+<!-- 지정 폰트 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gowun+Batang:wght@700&family=Jua&display=swap" rel="stylesheet">
+
 <script type="text/javascript">
 	function CallDolv(n) {
 		console.log(n);
@@ -22,12 +27,12 @@
 	}
 </script>
 </head>
-<body>
+<body style="font-family: 'Gowun Batang', serif;">
 	<div>
 		<div>
 			<!-- Main Content -->
 			<div
-				style="padding-left: 280px; padding-right: 280px; padding-top: 200px;">
+				style="padding-left: 280px; padding-right: 280px; padding-top: 200px; padding-bottom: 100px;">
 				<div class="table-responsive">
 					<table class="table table-striped">
 						<tr>

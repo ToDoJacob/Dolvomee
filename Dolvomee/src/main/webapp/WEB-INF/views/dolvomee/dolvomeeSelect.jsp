@@ -14,6 +14,11 @@
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/components.css">
 
+<!-- 지정 폰트 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gowun+Batang:wght@700&family=Jua&display=swap" rel="stylesheet">
+
 <script type="text/javascript">
 	function CallEdit(str) {
 		if (str == 'E') {
@@ -26,16 +31,16 @@
 </script>
 
 </head>
-<body>
-	<div id="app">
+<body style="font-family: 'Gowun Batang', serif;">
+	<div id="app" align="center">
 		<div class="main-wrapper main-wrapper-1">
 			<!-- Main Content -->
-			<div
-				style="padding-left: 280px; padding-right: 280px; padding-top: 200px;">
+			<div 
+				style="padding-left: 280px; padding-right: 280px; padding-top: 200px; padding-bottom: 100px;">
 				<section class="section">
-					<div class="section-body">
-						<div class="row">
-							<div class="col-12 col-sm-12 col-lg-5">
+					<div class="section-body" >
+						<div>
+							<div class="col-12 col-sm-12 col-lg-5" align="center">
 								<div class="card profile-widget">
 									<div class="profile-widget-header">
 										<img alt="image" src="upload/${dolvomees.dolvImage }"
