@@ -133,12 +133,8 @@ a:hover {
 	text-decoration: none;
 }
 
-.blue {
-	color: #3cb371;
-}
-
 .bg-gray {
-	background-color: #ebe9e9;
+	background-color: #d4efd2;
 }
 
 .section-title {
@@ -534,7 +530,7 @@ select {
 	padding: 3rem 2rem;
 	border: 1px solid #5e6576;
 	border-radius: 20px;
-	background-color: red;
+	background-color: white;
 }
 
 .cards-1 .card-icon {
@@ -565,7 +561,7 @@ select {
 	line-height: 98px;
 }
 
-.cards-1 .card-body {
+.cards-1 .card-body1 {
 	padding: 0;
 }
 
@@ -573,7 +569,7 @@ select {
 	margin-bottom: 1.125rem;
 }
 
-.cards-1 .card-body p {
+.cards-1 .card-body1 p {
 	margin-bottom: 1.125rem;
 }
 
@@ -843,7 +839,7 @@ select {
 	border: none;
 }
 
-.slider-1 .card-body {
+.slider-1 .card-body1 {
 	padding: 0;
 }
 
@@ -901,7 +897,7 @@ select {
 	text-align: center;
 }
 
-.cards-2 .card-body {
+.cards-2 .card-body1 {
 	padding: 0;
 }
 
@@ -928,15 +924,15 @@ select {
 	letter-spacing: -0.2px;
 }
 
-.cards-2 .card-body .list-unstyled {
+.cards-2 .card-body1 .list-unstyled {
 	margin-bottom: 3rem;
 }
 
-.cards-2 .card-body .list-unstyled li {
+.cards-2 .card-body1 .list-unstyled li {
 	margin-bottom: 0.625rem;
 }
 
-.cards-2 .card-body .price {
+.cards-2 .card-body1 .price {
 	margin-bottom: 3rem;
 	color: #222222;
 	font-weight: 700;

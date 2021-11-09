@@ -72,7 +72,7 @@
 												<label
 													class="col-form-label text-md-right col-12 col-md-3 col-lg-3">내용</label>
 												<div class="col-sm-12 col-md-7">
-													<input type="text"  style="height: 150px" class="form-control" id="noticeContents" name="noticeContents">
+													<textarea class="form-control" id="noticeContents" name="noticeContents"></textarea>
 												</div>
 											</div>
 					                      <div align="right">
