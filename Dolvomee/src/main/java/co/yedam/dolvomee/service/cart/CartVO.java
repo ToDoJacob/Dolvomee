@@ -80,6 +80,13 @@ public class CartVO {
 	public void setDetailPrice(String detailPrice) {
 		this.detailPrice = detailPrice;
 	}
+	@Override
+	public String toString() {
+		return "CartVO [scheduleNum=" + scheduleNum + ", dolvEmail=" + dolvEmail + ", usersEmail=" + usersEmail
+				+ ", scheduleStartdate=" + scheduleStartdate + ", scheduleEndDate=" + scheduleEndDate
+				+ ", scheduleStatus=" + scheduleStatus + ", scheBufNum=" + scheBufNum + ", categCode=" + categCode
+				+ ", detailCode=" + detailCode + ", multiCon=" + multiCon + ", detailPrice=" + detailPrice + "]";
+	}
 
 	
 }
