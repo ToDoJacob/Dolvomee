@@ -80,4 +80,13 @@ public class DolvomeeVO {
 		this.dolvLikecnt = dolvLikecnt;
 	}
 	
+	@Override
+	public String toString() {
+		return "DolvomeeVO [dolvEmail=" + dolvEmail + ", dolvName=" + dolvName + ", dolvPwd=" + dolvPwd + ", dolvPhone="
+				+ dolvPhone + ", dolvAddr=" + dolvAddr + ", dolvCareer=" + dolvCareer + ", dolvImage=" + dolvImage
+				+ ", dolvIntro=" + dolvIntro + ", dolvAuthor=" + dolvAuthor + ", dolvLiketotal=" + dolvLiketotal
+				+ ", dolvLikecnt=" + dolvLikecnt + "]";
+	}
+	
+	
 }
