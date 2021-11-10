@@ -48,7 +48,9 @@
 <!-- 폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+	rel="stylesheet">
 
 <script>
 	$(function() {
@@ -88,7 +90,7 @@
 		let name = document.getElementById('selectDolvName');
 		console.log(name);
 		console.log(dolvName);
-		name.innerText = dolvName;
+		name.innerText = dolvName+" 돌보미님";
 	};
 	function displayDolvIntro(dolvIntro) {
 		let intro = document.getElementById('selectDolvIntro');
@@ -100,37 +102,37 @@
 	function displayDolvImage(dolvImage) {
 		let image = document.getElementById('selectDolvImage');
 		console.log(dolvImage);
-		image.setAttribute("src","upload/"+dolvImage);
+		image.setAttribute("src", "upload/" + dolvImage);
 		console.log(image);
 	}
 
-	function displayDolvLiketotal(dolvLiketotal){
+	function displayDolvLiketotal(dolvLiketotal) {
 		let likeTotal = document.getElementById('dolvLiketotal');
 		console.log(dolvLiketotal);
 		console.log(likeTotal);
 		likeTotal.innerText = dolvLiketotal;
 	}
-	
-	function displayDolvLikecnt(dolvLikecnt){
+
+	function displayDolvLikecnt(dolvLikecnt) {
 		let likeCnt = document.getElementById('dolvLikecnt')
 		console.log(dolvLikecnt);
 		console.log(likeCnt);
 		likeCnt.innerText = dolvLikecnt;
 	}
-	
+
 	function throwDolvEmail(dolvEmail) {
 		let demail = document.getElementById('dolvEmail')
 		console.log("----------------------- 폼 삽입");
 		console.log(dolvEmail);
 		console.log(demail);
-		demail.setAttribute('value',dolvEmail);
+		demail.setAttribute('value', dolvEmail);
 		let uemail = document.getElementById('userEmail');
 		console.log(uemail);
-}
-
+	}
 </script>
 
 <script>
+
 // frm, scheduleStartDate, scheduleEndDate, amCode, acCode, dolvEmail, userEmail
 function scheduleAdd(){
 	console.log(frm);
@@ -146,6 +148,7 @@ function scheduleAdd(){
 	console.log(frm.amCode.value);
 	alert("예약이 완료 되었습니다!");
 }
+
 </script>
 
 <!-- 부트스트랩 적용을 위한 레이어처리 -->
@@ -166,9 +169,16 @@ function scheduleAdd(){
 	<div class="liveplese" style="height: 55px"></div>
 	<div class="main-content" style="font-weight: bold;">
 		<section class="section">
+
 			<div class="section-body"  style="padding-left: 20%;">
 				<h2 class="section-title" style="font-family: 'Gowun Dodum', sans-serif;"><i class="fas fa-paw"></i>&nbsp;돌보미</h2>
 	
+
+	
+				<p class="section-lead"
+					style="font-family: 'Gowun Dodum', sans-serif; font-weight: bold;">원하는
+					돌보미를 선택해주세요!</p>
+
 
 				<div class="row" style="font-family: 'Gowun Dodum', sans-serif;">
 					<div class="col-12 col-sm-12 col-lg-7" style="padding-bottom: 100px;">
@@ -181,29 +191,33 @@ function scheduleAdd(){
 								</div>
 								<div class="author-box-details">
 									<div class="author-box-name">
-										<a id="selectDolvName">원하는 돌보미를 선택해주세요!</a>
+
+
+										<a id="selectDolvName">강형욱 돌보미님</a>
+
 									</div>
 									<div class="author-box-description">
-										<p id="selectDolvIntro">Lorem ipsum dolor sit amet,
-											consectetur adipisicing elit, sed do eiusmod tempor
-											incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-											veniam, quis nostrud exercitation ullamco laboris nisi ut
-											aliquip ex ea commodo consequat.</p>
+										<p id="selectDolvIntro">내 반려동물은 왜 이런 행동을 할까? 반려동물의 문제행동은
+											하루아침에 생긴 것이 아닙니다. 그들은 꾸준한 신호로 우리에게 말을 걸었을 것입니다. 반려동물이 보내는 신호를
+											읽고 그들의 마음을 이해하여 함께 행복하게 살 수 있도록 하는 것이 목표입니다.</p>
 									</div>
 									<div class="mb-2 mt-3"></div>
-										<a href="#" class="btn btn-social-icon mr-1 btn-facebook">
-											<i class="fab fa-facebook-f"></i>
-										</a> <a href="#" class="btn btn-social-icon mr-1 btn-twitter">
-											<i class="fab fa-twitter"></i>
-										</a> <a href="#" class="btn btn-social-icon mr-1 btn-github"> <i
-											class="fab fa-github"></i>
-										</a> <a href="#" class="btn btn-social-icon mr-1 btn-instagram">
-											<i class="fab fa-instagram"></i>
-										</a>
+									<a href="#" class="btn btn-social-icon mr-1 btn-facebook">
+										<i class="fab fa-facebook-f"></i>
+									</a> <a href="#" class="btn btn-social-icon mr-1 btn-twitter">
+										<i class="fab fa-twitter"></i>
+									</a> <a href="#" class="btn btn-social-icon mr-1 btn-github"> <i
+										class="fab fa-github"></i>
+									</a> <a href="#" class="btn btn-social-icon mr-1 btn-instagram">
+										<i class="fab fa-instagram"></i>
+									</a>
 									<div class="w-100 d-sm-none"></div>
 									<div class="float-right mt-sm-0 mt-3">
+
 										<a href="reviewList.do" class="btn" style="font-weight: bold;">후기 보러가기 <i
 											class="fas fa-chevron-right"></i></a>
+
+
 									</div>
 								</div>
 							</div>
@@ -227,15 +241,15 @@ function scheduleAdd(){
 											<div class="user-item-flat" style="display: inline-block"
 												align="center">
 												<div class="user-item">
-													<img alt="image" src="upload/${dolv.dolvImage}" class="img-fluid">
+													<img alt="image" src="upload/${dolv.dolvImage}"
+														class="img-fluid">
 													<div class="user-details">
-														<div class="user-name">${dolv.dolvName }</div>
+
+														<div class="user-name">${dolv.dolvName } 돌보미님</div>
 														<div class="user-cta">
 															<a type="button" class="btn-solid-sm"
-																onclick="displayDolvName('${dolv.dolvName}'); displayDolvIntro('${dolv.dolvIntro}'); 
-																displayDolvImage('${dolv.dolvImage}'); displayDolvLikecnt('${dolv.dolvLikecnt}'); 
-																displayDolvLiketotal('${dolv.dolvLiketotal}'); throwDolvEmail('${dolv.dolvEmail}');"
-																>정보 보기</a>
+																onclick="displayDolvName('${dolv.dolvName}'); displayDolvIntro('${dolv.dolvIntro}'); displayDolvImage('${dolv.dolvImage}'); displayDolvLikecnt('${dolv.dolvLikecnt}'); displayDolvLiketotal('${dolv.dolvLiketotal}'); throwDolvEmail('${dolv.dolvEmail}'); "
+																style="font-weight: bold;">정보 보기</a>
 														</div>
 													</div>
 												</div>
@@ -250,31 +264,39 @@ function scheduleAdd(){
 						</div>
 					</div>
 					<div class="col-12 col-sm-12 col-lg-5">
-						<div class="card profile-widget" style="width: 350px; margin: 10px;">
+						<div class="card profile-widget"
+							style="width: 350px; margin: 10px;">
 							<div class="profile-widget-header">
 								<div class="profile-widget-items">
 									<div class="profile-widget-item">
+
 
 										<div class="profile-widget-item-label"  style="font-weight: bold; font-size: 0.9rem;">돌본횟수</div>
 										<div class="profile-widget-item-value" id="dolvLikecnt">187</div>
 									</div>
 									<div class="profile-widget-item">
 										<div class="profile-widget-item-label"  style="font-weight: bold; font-size: 0.9rem;">좋아요</div>
+
 										<div class="profile-widget-item-value" id="dolvLiketotal">6,8K</div>
 									</div>
 								</div>
 							</div>
-							<div class="profile-widget-description pb-0 form-group" style="margin-left: 10px;">
+							<div class="profile-widget-description pb-0 form-group"
+								style="margin-left: 10px;">
 								<!-- 돌보미 스케쥴 달력 들어갈자리 -->
+
 								<label style="font-size: 0.9rem;">돌보미 스케줄</label>&nbsp;&nbsp;<input type="text" id="datePicker" class="form"
 									 value="2021-11-08" style="width: 180px; border: 1px solid #ced4da;">
+
 								<!-- 돌보미 스케쥴 달력 들어갈자리 -->
 							</div>
-							<form id="frm" name="frm" method="post" style="margin-left: 20px;">
+							<form id="frm" name="frm" method="post"
+								style="margin-left: 20px;">
 								<div style="margin-left: 10px;">
 									<div class="form-group" style="display: flex;">
 										<label style="font-size: 0.9rem;">시작일</label> <input type="date" id="scheduleStartDate"
 											name="scheduleStartDate" class="form-control"
+
 											style="width: 230px; margin-left: 3.5%; font-weight: bold;"></div>
                  			   <div class="form-group" style="display: flex;">
             			       <label style="font-size: 0.9rem;">종료일</label>
@@ -286,15 +308,18 @@ function scheduleAdd(){
 										<label style="font-size: 0.9rem;">반려동물 선택</label>
 										<select class="form-control" id=amCode name=amCode
 											style="width: 190px; margin-left: 3.5%; font-weight: bold;">
+
 											<option>소형견</option>
 											<option>중형견</option>
 											<option>대형견</option>
 										</select>
 									</div>
 									<div class="form-group" style="display: flex;">
+
 										<label style="font-size: 0.9rem;">서비스 선택</label>
 										 <select class="form-control" id=acCode name=acCode
 											style="width: 190px; margin-left: 7.5%; font-weight: bold;">
+
 											<option>산책</option>
 											<option>돌봄</option>
 											<option>미용</option>
@@ -303,25 +328,26 @@ function scheduleAdd(){
 									</div>
 									<div>
 										<input type="hidden" id="dolvEmail" name="dolvEmail" value="">
-										<input type="hidden" id="userEmail" name="userEmail" value="'${usersEmail }'">
+										<input type="hidden" id="userEmail" name="userEmail"
+											value="'${usersEmail }'">
 										<div align="center">
-											<button class="btn btn-primary" type="button" onclick="scheduleAdd()">예약
-												신청하기</button>
+											<button class="btn btn-primary" type="button"
+												onclick="scheduleAdd()">예약 신청하기</button>
 											<div class="addblank" style="height: 15px"></div>
 										</div>
 									</div>
 								</div>
-								
-							</form>
-							</div>
-						</div>
-						
 
+							</form>
+						</div>
 					</div>
+
+
 				</div>
+			</div>
 
 		</section>
-		
+
 	</div>
 
 

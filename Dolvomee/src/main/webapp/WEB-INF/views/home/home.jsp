@@ -144,12 +144,12 @@
                                     <div class="card">
                                         <img class="quotes" src="images/quotes.svg" alt="alternative">
                                         <div class="card-body1">
-                                            <p class="testimonial-text">Nam sit amet eleifend justo. Aliquam sit amet lacinia enim, eget facilisis ex. Ut pretium cursus eleifend. Integer feugiat malesuada quam vel basil venis proca jilo</p>
+                                            <p class="testimonial-text">내 반려견에게 맞는 방식을 찾아 드리고 우리 아이와 함께 살아가는 부분에 있어 서로 양보해야할 부분은 양보하면서 함께 살아갈 수 있게 도와드리겠습니다.</p>
                                             <div class="details">
-                                                <img class="testimonial-image" src="images/testimonial-3.jpg" alt="alternative">
+                                                <img class="testimonial-image" src="upload/dolv2이미지.jpg" alt="alternative">
                                                 <div class="text">
-                                                    <div class="testimonial-author">Mary Longhorn</div>
-                                                    <div class="occupation">Manager - Firstdev</div>
+                                                    <div class="testimonial-author">김동관 돌보미선생님</div>
+                                                    <div class="occupation">브리더 3년차</div>
                                                 </div> <!-- end of text -->
                                             </div> <!-- end of testimonial-details -->
                                         </div>
@@ -159,12 +159,12 @@
                                     <div class="card">
                                         <img class="quotes" src="images/quotes.svg" alt="alternative">
                                         <div class="card-body1">
-                                            <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur ing elit. Nulla id nisl tempus risus facilisis efficr ut tincidunt vitae enim non vehicula. Phases vitae metus in felis gravida ultrices zimbo</p>
+                                            <p class="testimonial-text">과학적이고 체계적인 원리를 통해 접근하며, 보호자님들과 강아지들이 함께 행복한 삶을 살 수 있는 솔루션을 제공해 드리겠습니다.</p>
                                             <div class="details">
-                                                <img class="testimonial-image" src="images/testimonial-4.jpg" alt="alternative">
+                                                <img class="testimonial-image" src="upload/dolv3이미지.jpg" alt="alternative">
                                                 <div class="text">
-                                                    <div class="testimonial-author">Ronny Drummer</div>
-                                                    <div class="occupation">Designer - Sawdust</div>
+                                                    <div class="testimonial-author">정은진 돌보미선생님</div>
+                                                    <div class="occupation">브리더 7년차</div>
                                                 </div> <!-- end of text -->
                                             </div> <!-- end of testimonial-details -->
                                         </div>
@@ -176,12 +176,12 @@
                                     <div class="card">
                                         <img class="quotes" src="images/quotes.svg" alt="alternative">
                                         <div class="card-body1">
-                                            <p class="testimonial-text">Fusce tincidunt dui nec diam varius venenatis. Nullam tristique rutrum odio, ut tincidunt erat dictum in. Etiam et aliquet mi, et vehicula elit fusce porta ullamcorper</p>
+                                            <p class="testimonial-text">교육을 통해 보호자님의 반려견과 함께 살아가는 기쁨을 만들 것이며, 서로의 유대를 강화시켜 줄 것입니다.</p>
                                             <div class="details">
-                                                <img class="testimonial-image" src="images/testimonial-1.jpg" alt="alternative">
+                                                <img class="testimonial-image" src="upload/dolv4이미지.jpg" alt="alternative">
                                                 <div class="text">
-                                                    <div class="testimonial-author">Samantha Bloom</div>
-                                                    <div class="occupation">Team Leader - Syncnow</div>
+                                                    <div class="testimonial-author">최선영 돌보미선생님</div>
+                                                    <div class="occupation">브리더 10년차</div>
                                                 </div> <!-- end of text -->
                                             </div> <!-- end of testimonial-details -->
                                         </div>
@@ -194,12 +194,12 @@
                                     <div class="card">
                                         <img class="quotes" src="images/quotes.svg" alt="alternative">
                                         <div class="card-body1">
-                                            <p class="testimonial-text">Mauris ut mattis nisl. Nunc ultrices nisi eget nisl pulvinar iaculis vitae ac nulla. Nullam fringilla varius blandit. Nam sit amet eleifend justo blogo rovan de chichis kokos venir dab</p>
+                                            <p class="testimonial-text">다양한 훈련 경험을 바탕으로 보호자님께 올바른 관계를 형성 할 수 있도록 도와드리겠습니다.</p>
                                             <div class="details">
-                                                <img class="testimonial-image" src="images/testimonial-2.jpg" alt="alternative">
+                                                <img class="testimonial-image" src="upload/dolv5이미지.jpg" alt="alternative">
                                                 <div class="text">
-                                                    <div class="testimonial-author">Mike Page</div>
-                                                    <div class="occupation">Developer - Chainlink</div>
+                                                    <div class="testimonial-author">박종현 돌보미선생님</div>
+                                                    <div class="occupation">브리더 17년차</div>
                                                 </div> <!-- end of text -->
                                             </div> <!-- end of testimonial-details -->
                                         </div>
@@ -209,19 +209,19 @@
 
                                 <!-- Slide -->
                             <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="0" style="width: 478px; margin-right: 70px;">
-                                    <div class="card">
+                                       <div class="card">
                                         <img class="quotes" src="images/quotes.svg" alt="alternative">
                                         <div class="card-body1">
-                                            <p class="testimonial-text">Fusce tincidunt dui nec diam varius venenatis. Nullam tristique rutrum odio, ut tincidunt erat dictum in. Etiam et aliquet mi, et vehicula elit fusce porta ullamcorper</p>
+                                            <p class="testimonial-text">내 반려견에게 맞는 방식을 찾아 드리고 우리 아이와 함께 살아가는 부분에 있어 서로 양보해야할 부분은 양보하면서 함께 살아갈 수 있게 도와드리겠습니다.</p>
                                             <div class="details">
-                                                <img class="testimonial-image" src="images/testimonial-1.jpg" alt="alternative">
+                                                <img class="testimonial-image" src="upload/dolv2이미지.jpg" alt="alternative">
                                                 <div class="text">
-                                                    <div class="testimonial-author">Samantha Bloom</div>
-                                                    <div class="occupation">Team Leader - Syncnow</div>
+                                                    <div class="testimonial-author">김동관 돌보미선생님</div>
+                                                    <div class="occupation">브리더 3년차</div>
                                                 </div> <!-- end of text -->
                                             </div> <!-- end of testimonial-details -->
                                         </div>
-                                    </div> 
+                                    </div>
                                 </div> <!-- end of swiper-slide -->
                                 <!-- end of slide -->
 
@@ -246,7 +246,7 @@
                                     <div class="card">
                                         <img class="quotes" src="images/quotes.svg" alt="alternative">
                                         <div class="card-body1">
-                                            <p class="testimonial-text">Nam sit amet eleifend justo. Aliquam sit amet lacinia enim, eget facilisis ex. Ut pretium cursus eleifend. Integer feugiat malesuada quam vel basil venis proca jilo</p>
+                                            <p class="testimonial-text">교육을 통해 보호자님의 반려견과 함께 살아가는 기쁨을 만들 것이며, 서로의 유대를 강화시켜 줄 것입니다.22222</p>
                                             <div class="details">
                                                 <img class="testimonial-image" src="images/testimonial-3.jpg" alt="alternative">
                                                 <div class="text">
@@ -261,7 +261,7 @@
                                     <div class="card">
                                         <img class="quotes" src="images/quotes.svg" alt="alternative">
                                         <div class="card-body1">
-                                            <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur ing elit. Nulla id nisl tempus risus facilisis efficr ut tincidunt vitae enim non vehicula. Phases vitae metus in felis gravida ultrices zimbo</p>
+                                            <p class="testimonial-text">교육을 통해 보호자님의 반려견과 함께 살아가는 기쁨을 만들 것이며, 서로의 유대를 강화시켜 줄 것입니다.33333</p>
                                             <div class="details">
                                                 <img class="testimonial-image" src="images/testimonial-4.jpg" alt="alternative">
                                                 <div class="text">
@@ -278,7 +278,7 @@
                                     <div class="card">
                                         <img class="quotes" src="images/quotes.svg" alt="alternative">
                                         <div class="card-body1">
-                                            <p class="testimonial-text">Fusce tincidunt dui nec diam varius venenatis. Nullam tristique rutrum odio, ut tincidunt erat dictum in. Etiam et aliquet mi, et vehicula elit fusce porta ullamcorper</p>
+                                            <p class="testimonial-text">교육을 통해 보호자님의 반려견과 함께 살아가는 기쁨을 만들 것이며, 서로의 유대를 강화시켜 줄 것입니다.4444444</p>
                                             <div class="details">
                                                 <img class="testimonial-image" src="images/testimonial-1.jpg" alt="alternative">
                                                 <div class="text">
@@ -296,12 +296,12 @@
                                     <div class="card">
                                         <img class="quotes" src="images/quotes.svg" alt="alternative">
                                         <div class="card-body1">
-                                            <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur ing elit. Nulla id nisl tempus risus facilisis efficr ut tincidunt vitae enim non vehicula. Phases vitae metus in felis gravida ultrices zimbo</p>
+                                            <p class="testimonial-text">과학적이고 체계적인 원리를 통해 접근하며, 보호자님들과 강아지들이 함께 행복한 삶을 살 수 있는 솔루션을 제공해 드리겠습니다.</p>
                                             <div class="details">
-                                                <img class="testimonial-image" src="images/testimonial-4.jpg" alt="alternative">
+                                                <img class="testimonial-image" src="upload/dolv3이미지.jpg" alt="alternative">
                                                 <div class="text">
-                                                    <div class="testimonial-author">Ronny Drummer</div>
-                                                    <div class="occupation">Designer - Sawdust</div>
+                                                    <div class="testimonial-author">정은진 돌보미선생님</div>
+                                                    <div class="occupation">브리더 7년차</div>
                                                 </div> <!-- end of text -->
                                             </div> <!-- end of testimonial-details -->
                                         </div>
@@ -311,15 +311,15 @@
 
                                 <!-- Slide -->
                                 <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="2" style="width: 478px; margin-right: 70px;">
-                                    <div class="card">
+                                     <div class="card">
                                         <img class="quotes" src="images/quotes.svg" alt="alternative">
                                         <div class="card-body1">
-                                            <p class="testimonial-text">Nam sit amet eleifend justo. Aliquam sit amet lacinia enim, eget facilisis ex. Ut pretium cursus eleifend. Integer feugiat malesuada quam vel basil venis proca jilo</p>
+                                            <p class="testimonial-text">교육을 통해 보호자님의 반려견과 함께 살아가는 기쁨을 만들 것이며, 서로의 유대를 강화시켜 줄 것입니다.</p>
                                             <div class="details">
-                                                <img class="testimonial-image" src="images/testimonial-3.jpg" alt="alternative">
+                                                <img class="testimonial-image" src="upload/dolv4이미지.jpg" alt="alternative">
                                                 <div class="text">
-                                                    <div class="testimonial-author">Mary Longhorn</div>
-                                                    <div class="occupation">Manager - Firstdev</div>
+                                                    <div class="testimonial-author">최선영 돌보미선생님</div>
+                                                    <div class="occupation">브리더 10년차</div>
                                                 </div> <!-- end of text -->
                                             </div> <!-- end of testimonial-details -->
                                         </div>
