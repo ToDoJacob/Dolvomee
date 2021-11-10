@@ -100,7 +100,7 @@
 	function displayDolvImage(dolvImage) {
 		let image = document.getElementById('selectDolvImage');
 		console.log(dolvImage);
-		image.setAttribute("src",dolvImage);
+		image.setAttribute("src","upload/"+dolvImage);
 		console.log(image);
 	}
 
@@ -175,7 +175,7 @@ function scheduleAdd(){
 						<div class="card author-box card-primary">
 							<div class="card-body">
 								<div class="author-box-left">
-									<img id="selectDolvImage" alt="image" src="#"
+									<img id="selectDolvImage" alt="image" src="upload/이미지.jpg"
 										class="rounded-circle author-box-picture">
 									<div class="clearfix"></div>
 								</div>
@@ -227,7 +227,7 @@ function scheduleAdd(){
 											<div class="user-item-flat" style="display: inline-block"
 												align="center">
 												<div class="user-item">
-													<img alt="image" src="#" class="img-fluid">
+													<img alt="image" src="upload/${dolv.dolvImage}" class="img-fluid">
 													<div class="user-details">
 														<div class="user-name">${dolv.dolvName }</div>
 														<div class="text-job text-muted" style="font-weight: bold;">돌보미 전문분야</div>
