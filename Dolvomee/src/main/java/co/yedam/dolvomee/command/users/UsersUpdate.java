@@ -55,7 +55,7 @@ public class UsersUpdate implements Command {
 			String viewPage = null;
 
 			if (n != 0) {
-				viewPage = "usersSelect.do";
+				viewPage = "usersList.do";
 			} else {
 				viewPage = "home/home";
 			}

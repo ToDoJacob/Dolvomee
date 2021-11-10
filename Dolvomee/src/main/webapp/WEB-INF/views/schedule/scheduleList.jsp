@@ -144,7 +144,7 @@ function scheduleAdd(){
 	console.log(frm.scheduleStartDate.value);
 	console.log(frm.scheduleEndDate.value);
 	console.log(frm.amCode.value);
-	
+	alert("예약이 완료 되었습니다!");
 }
 </script>
 
@@ -168,10 +168,10 @@ function scheduleAdd(){
 		<section class="section">
 			<div class="section-body"  style="padding-left: 20%;">
 				<h2 class="section-title" style="font-family: 'Gowun Dodum', sans-serif;"><i class="fas fa-paw"></i>&nbsp;돌보미</h2>
-				<p class="section-lead" style="font-family: 'Gowun Dodum', sans-serif; font-weight: bold;">원하는 돌보미를 선택해주세요!</p>
+	
 
 				<div class="row" style="font-family: 'Gowun Dodum', sans-serif;">
-					<div class="col-12 col-sm-12 col-lg-7">
+					<div class="col-12 col-sm-12 col-lg-7" style="padding-bottom: 100px;">
 						<div class="card author-box card-primary">
 							<div class="card-body">
 								<div class="author-box-left">
@@ -181,7 +181,7 @@ function scheduleAdd(){
 								</div>
 								<div class="author-box-details">
 									<div class="author-box-name">
-										<a id="selectDolvName">돌보미 이름</a>
+										<a id="selectDolvName">원하는 돌보미를 선택해주세요!</a>
 									</div>
 									<div class="author-box-description">
 										<p id="selectDolvIntro">Lorem ipsum dolor sit amet,
@@ -202,21 +202,21 @@ function scheduleAdd(){
 										</a>
 									<div class="w-100 d-sm-none"></div>
 									<div class="float-right mt-sm-0 mt-3">
-										<a href="#" class="btn" style="font-weight: bold;">후기 보러가기 <i
+										<a href="reviewList.do" class="btn" style="font-weight: bold;">후기 보러가기 <i
 											class="fas fa-chevron-right"></i></a>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="card card-danger">
+						<div class="card card-danger" style="border-top: 2px solid #3cb371">
 							<div class="card-header">
 								<i class="fas fa-paw"></i>&nbsp;
 								<h4>돌보미</h4>
-								<div class="card-header-action">
-									<a href="#" class="btn btn-danger btn-icon icon-right">View
+								<!-- <div class="card-header-action">
+									<a href="#" class="btn-solid-sm">View
 										All <i class="fas fa-chevron-right"></i>
 									</a>
-								</div>
+								</div> -->
 							</div>
 							<div class="card-body">
 								<div class="owl-carousel owl-theme" id="users-carousel">
@@ -230,11 +230,12 @@ function scheduleAdd(){
 													<img alt="image" src="upload/${dolv.dolvImage}" class="img-fluid">
 													<div class="user-details">
 														<div class="user-name">${dolv.dolvName }</div>
-														<div class="text-job text-muted" style="font-weight: bold;">돌보미 전문분야</div>
 														<div class="user-cta">
-															<a type="button" class="btn btn-primary"
-																onclick="displayDolvName('${dolv.dolvName}'); displayDolvIntro('${dolv.dolvIntro}'); displayDolvImage('${dolv.dolvImage}'); displayDolvLikecnt('${dolv.dolvLikecnt}'); displayDolvLiketotal('${dolv.dolvLiketotal}'); throwDolvEmail('${dolv.dolvEmail}'); " style="font-weight: bold;">정보보기</a>
-
+															<a type="button" class="btn-solid-sm"
+																onclick="displayDolvName('${dolv.dolvName}'); displayDolvIntro('${dolv.dolvIntro}'); 
+																displayDolvImage('${dolv.dolvImage}'); displayDolvLikecnt('${dolv.dolvLikecnt}'); 
+																displayDolvLiketotal('${dolv.dolvLiketotal}'); throwDolvEmail('${dolv.dolvEmail}');"
+																>정보 보기</a>
 														</div>
 													</div>
 												</div>
@@ -254,46 +255,46 @@ function scheduleAdd(){
 								<div class="profile-widget-items">
 									<div class="profile-widget-item">
 
-										<div class="profile-widget-item-label"  style="font-weight: bold;">돌본횟수</div>
+										<div class="profile-widget-item-label"  style="font-weight: bold; font-size: 0.9rem;">돌본횟수</div>
 										<div class="profile-widget-item-value" id="dolvLikecnt">187</div>
 									</div>
 									<div class="profile-widget-item">
-										<div class="profile-widget-item-label"  style="font-weight: bold;">좋아요</div>
+										<div class="profile-widget-item-label"  style="font-weight: bold; font-size: 0.9rem;">좋아요</div>
 										<div class="profile-widget-item-value" id="dolvLiketotal">6,8K</div>
 									</div>
 								</div>
 							</div>
 							<div class="profile-widget-description pb-0 form-group" style="margin-left: 10px;">
 								<!-- 돌보미 스케쥴 달력 들어갈자리 -->
-								<label>돌보미 스케줄</label>&nbsp;<input type="text" id="datePicker" class="form"
-									 value="2021-11-08" style="width: 200px; border: 1px solid #ced4da;">
+								<label style="font-size: 0.9rem;">돌보미 스케줄</label>&nbsp;&nbsp;<input type="text" id="datePicker" class="form"
+									 value="2021-11-08" style="width: 180px; border: 1px solid #ced4da;">
 								<!-- 돌보미 스케쥴 달력 들어갈자리 -->
 							</div>
 							<form id="frm" name="frm" method="post" style="margin-left: 20px;">
 								<div style="margin-left: 10px;">
 									<div class="form-group" style="display: flex;">
-										<label>시작일</label> <input type="date" id="scheduleStartDate"
+										<label style="font-size: 0.9rem;">시작일</label> <input type="date" id="scheduleStartDate"
 											name="scheduleStartDate" class="form-control"
-											style="width: 240px; margin-left: 3.5%;"></div>
-                  <div class="form-group" style="display: flex;">
-                  <label>종료일</label>
+											style="width: 230px; margin-left: 3.5%; font-weight: bold;"></div>
+                 			   <div class="form-group" style="display: flex;">
+            			       <label style="font-size: 0.9rem;">종료일</label>
 										<input type="date" id="scheduleEndDate" name="scheduleEndDate"
-											class="form-control" style="width: 240px; margin-left: 3.5%;">
+											class="form-control" style="width: 230px; margin-left: 3.5%; font-weight: bold;">
 									</div>
 
 									<div class="form-group" style="display: flex;">
-										<label>반려동물 선택</label>
+										<label style="font-size: 0.9rem;">반려동물 선택</label>
 										<select class="form-control" id=amCode name=amCode
-											style="width: 200px; margin-left: 3.5%;">
+											style="width: 190px; margin-left: 3.5%; font-weight: bold;">
 											<option>소형견</option>
 											<option>중형견</option>
 											<option>대형견</option>
 										</select>
 									</div>
 									<div class="form-group" style="display: flex;">
-										<label>서비스 선택</label>
+										<label style="font-size: 0.9rem;">서비스 선택</label>
 										 <select class="form-control" id=acCode name=acCode
-											style="width: 200px; margin-left: 7.5%;">
+											style="width: 190px; margin-left: 7.5%; font-weight: bold;">
 											<option>산책</option>
 											<option>돌봄</option>
 											<option>미용</option>

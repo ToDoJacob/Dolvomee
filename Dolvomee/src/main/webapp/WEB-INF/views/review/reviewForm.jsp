@@ -96,10 +96,10 @@
 								<i class="fas fa-star" onclick="ratingEdit(${item})" style="cursor: pointer;"></i>
 							</c:forTokens>
 							</div>
-						</div>
+						</div><br>
 					</tr>
 					<tr>
-						<td colspan="5"><textarea rows="8" cols="80" name="contents"></textarea>
+						<td colspan="5"><textarea style="border: 1px solid #ced4da;" rows="10" cols="80" name="contents"></textarea>
 						</td>
 					</tr>
 				</table>
@@ -112,8 +112,8 @@
 		</div>
 		<br>
 		<div class="buttons" style="padding-bottom:80px;">
-			<button class="btn-solid-sm" type="button" onclick="location.href='reviewList.do'">뒤로가기</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<button class="btn-solid-sm" type="button" onclick="insertReview()">글작성</button>
+			<button class="btn-solid-sm" type="button" onclick="location.href='reviewList.do'"><i class="fas fa-times"></i> 뒤로가기</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<button class="btn-solid-sm" type="button" onclick="insertReview()"><i class="fas fa-paw"></i> 글작성</button>
 		</div>
 		<br>
 	</div>

@@ -62,10 +62,10 @@
                     </ul>
                 </div> <!-- end of col -->
                 <div class="col-lg-3">
-                    <p class="p-small statement">Copyright © <a href="#">Your name</a></p>
+                    <p class="p-small statement">Copyright © <a href="#">Dolvomee</a></p>
                 </div> <!-- end of col -->
                 <div class="col-lg-3">
-                    <p class="p-small statement">Distributed By: <a href="https://themewagon.com/" target="_blank">ThemeWagon</a></p>
+                    <p class="p-small statement">Distributed By: <a href="https://themewagon.com/" target="_blank">9337</a></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->

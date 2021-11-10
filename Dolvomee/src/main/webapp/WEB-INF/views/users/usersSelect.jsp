@@ -64,8 +64,8 @@
 									<div align="right"
 										style="padding-bottom: 20px; padding-right: 30px;">
 										<span class="nav-item"> <a class="btn-solid-sm"
-											onclick="CallEdit('E')">수정</a> <a
-											class="btn-solid-sm" onclick="CallEdit('D')">삭제</a>
+											onclick="CallEdit('E')"><i class="fas fa-paw"></i> 수정</a> <a
+											class="btn-solid-sm" onclick="CallEdit('D')"><i class="fas fa-times"></i> 삭제</a>
 										</span>
 									</div>
 									<div>

@@ -37,7 +37,9 @@
 		<div class="table-responsive">
 			<div align="right">
 				<span class="nav-item">
+				<c:if test="${usersAuthor == 'admin'}">
 					<button class="btn-solid-sm" type="button" onclick="location.href='noticeForm.do'">글쓰기</button>
+				</c:if>
 				</span>
 			</div>
 			<br>

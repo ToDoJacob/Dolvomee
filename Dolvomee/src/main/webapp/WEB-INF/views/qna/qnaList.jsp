@@ -50,7 +50,7 @@
 				<section class="section">
 					<div class="section-body">
 						<div class="row align-items-center justify-content-center">
-							<div class="col-12 col-sm-6 col-lg-4">
+							<div class="col-12 col-sm-6 col-lg-4" style="padding-bottom: 100px">
 								<div class="card">
 									<div class="card-header">
 										<h4 align="center">문의하고 싶은 돌보미를 선택해 주세요.</h4>
