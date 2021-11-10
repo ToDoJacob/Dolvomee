@@ -69,7 +69,7 @@
 					<div class="card" align="left">
 						<div class="card-body" onmouseover="this.style.background='#CBF5CB'" onmouseleave="this.style.background='white'" style="cursor: pointer;" onclick="CallReview(${review.revNum})">
 							<div class="media">
-								<img style="max-width: 60px; max-height: 60px; border-color: #3CB371; border-radius: 50%; margin-right:1rem!important" src="images/puppy.jpg" alt="사진 없음">
+								<img style="max-width: 60px; max-height: 60px; border-color: #3CB371; border-radius: 50%; margin-right:1rem!important" src="upload/${review.usersImage }" alt="사진 없음">
 								<div class="media-body">
 									<h4 class="mt-0">${review.usersAddr }</h4>
 									<div class="review">

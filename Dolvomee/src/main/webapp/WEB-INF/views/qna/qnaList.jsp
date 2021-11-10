@@ -60,7 +60,7 @@
 											<c:forEach items="${dolvomees }" var="dolvomee">
 												<li class="media" onmouseover="this.style.background='#CBF5CB'" onmouseleave="this.style.background='white'" style="cursor: pointer;" 
 												onclick="CallQna('${dolvomee.dolvEmail }')">
-														<img alt="image" class="mr-3 rounded-circle" width="50" src="assets/img/avatar/avatar-1.png" alt="사진 없음">
+														<img alt="image" class="mr-3 rounded-circle" width="50" src="upload/${dolvomee.dolvImage }" alt="사진 없음">
 													<div class="media-body">
 														<div class="mt-0 mb-1 font-weight-bold">${dolvomee.dolvName }</div>
 													</div>

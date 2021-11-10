@@ -107,7 +107,7 @@
 				<table>
 					<tr>
 						<div class="review">
-							<div><img style="max-width: 60px; max-height: 60px; border-color: #3CB371; border-radius: 50%;" src="upload/${users.usersEmail }" alt="사진 없음"></div>
+							<div><img style="max-width: 60px; max-height: 60px; border-color: #3CB371; border-radius: 50%;" src="upload/${users.usersImage }" alt="사진 없음"></div>
 							<div class="rating" id="rating" data-rate="${review.revLike }">
 							<c:forTokens var="item" items="1,2,3,4,5" delims=",">
 								<i class="fas fa-star" onclick="ratingEdit(${item})" style="cursor: pointer;"></i>
