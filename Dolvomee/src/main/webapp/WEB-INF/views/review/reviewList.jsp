@@ -57,14 +57,14 @@
 <body>
 	<div class="main-content">
 		<!-- 		<div class="row"> -->
-		<div align="center" style="padding-top:100px;">
+		<div align="center" style="padding-top:100px; padding-bottom: 100px;">
 			<div class="col-12 col-md-6 col-lg-6">
 				<div>
 					<h1 style="padding-bottom:20px;">이용 후기</h1>
 				</div>
 				<div align="right" style="margin-bottom:10px;">
-					<button class="btn-solid-sm" type="button" onclick="location.href='reviewForm.do'">후기작성</button>
-				</div>
+					<button class="btn-solid-sm" type="button" onclick="location.href='reviewForm.do'"><i class="fas fa-paw"></i> 후기작성</button>
+				</div><br>
 				<c:forEach items="${reviews }" var="review">
 					<div class="card" align="left">
 						<div class="card-body" onmouseover="this.style.background='#CBF5CB'" onmouseleave="this.style.background='white'" style="cursor: pointer;" onclick="CallReview(${review.revNum})">

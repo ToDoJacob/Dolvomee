@@ -65,6 +65,7 @@
 							<div class="col-12 col-sm-6 col-lg-4">
 								<div class="card chat-box" id="mychatbox">
 									<div class="card-header">
+									<h2 class="section-title" style="font-family: 'Gowun Dodum', sans-serif;"><i class="fas fa-paw"></i>&nbsp;${qna.dolvName }</h2>
 										<h4>${qna.dolvName }</h4>
 									</div>
 								<c:forEach items="${qnas }" var="qna">

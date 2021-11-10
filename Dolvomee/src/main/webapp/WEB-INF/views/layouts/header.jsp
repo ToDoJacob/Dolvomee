@@ -26,7 +26,7 @@
 <script type="text/javascript">
 	
 </script>
-<body data-bs-spy="scroll" data-bs-target="#navbarExample" style="font-family: 'Gowun Batang', serif;">
+<body data-bs-spy="scroll" data-bs-target="#navbarExample" >
     
     <!-- Navigation -->
     <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-light" aria-label="Main navigation">
@@ -43,7 +43,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault" style="font-family: 'Gowun Batang', serif; font-size: 1rem; font-weight: bold;">
                 <ul class="navbar-nav ms-auto navbar-nav-scroll">
 
                     <li class="nav-item">
@@ -77,7 +77,9 @@
                     </c:if>
                     </li>
                 </ul>
+                 <c:if test="${not empty usersEmail || not empty dolvEmail}">
               <a class="fas fa-shopping-cart" href="usersCart.do" style="color: #3cb371;"></a>
+                </c:if>
                 <span class="nav-item">
                  	 <a class="btn-solid-sm" href="dolvRegisterForm.do">펫시터 지원</a>
                     <c:if test="${empty usersEmail && empty dolvEmail}">

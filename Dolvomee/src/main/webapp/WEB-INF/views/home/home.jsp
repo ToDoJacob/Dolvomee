@@ -48,7 +48,7 @@
 					
 					<p class="p-large" style="font-family: 'Gowun Batang', serif;">여행, 출장, 늦은 퇴근에도 걱정마세요!<br>
 						가족같은 펫시터가 내 아이와 함께합니다.</p>
-					<a class="btn-solid-lg" href="scheduleList.do">내 주변 펫시터 찾기</a>
+					<a class="btn-solid-lg" href="scheduleList.do">내 주변 펫시터 찾기 <i class="fas fa-paw"></i></a>
 				</div>
 				<!-- end of text-container -->
 			</div>
@@ -83,7 +83,7 @@
                             <ul class="list-unstyled li-space-lg"><br>
                                 <li class="d-flex">
                                     <i class="fas fa-paw"></i>
-                                    <div class="flex-grow-1" style="font-family: 'Gowun Batang', serif;">목줄과 하네스가 연결된 이중산책줄을 통한 안전한 산책!</div>
+                                    <div class="flex-grow-1" style="font-family: 'Gowun Batang', serif; font-size: 1.1rem; font-weight: bold;">목줄과 하네스가 연결된 이중산책줄을 통한 안전한 산책!</div>
                                 </li>
                             </ul>
                         </div>
@@ -100,7 +100,7 @@
                             <ul class="list-unstyled li-space-lg"><br>
                                 <li class="d-flex">
                                     <i class="fas fa-paw"></i>
-                                    <div class="flex-grow-1" style="font-family: 'Gowun Batang', serif;">전용 샴푸와 마사지를 통한 목욕!</div>
+                                    <div class="flex-grow-1" style="font-family: 'Gowun Batang', serif; font-size: 1.1rem; font-weight: bold;">전용 샴푸와 마사지를 통한 목욕!</div>
                                 </li>
                             </ul>
                         </div>
@@ -117,7 +117,7 @@
                             <ul class="list-unstyled li-space-lg"><br>
                                 <li class="d-flex">
                                     <i class="fas fa-paw"></i>
-                                    <div class="flex-grow-1" style="font-family: 'Gowun Batang', serif;">전문 미용사의 숙련된 미용!</div>
+                                    <div class="flex-grow-1" style="font-family: 'Gowun Batang', serif; font-size: 1.1rem; font-weight: bold;">전문 미용사의 숙련된 미용!</div>
                                 </li>
                             </ul>
                         </div>
