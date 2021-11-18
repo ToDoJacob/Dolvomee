@@ -60,7 +60,7 @@
 		<div align="center" style="padding-top:100px; padding-bottom: 100px;">
 			<div class="col-12 col-md-6 col-lg-6">
 				<div>
-					<h1 style="padding-bottom:20px;">이용 후기</h1>
+					<div><h1 style="color: #6C757D">이용 후기</h1></div>
 				</div>
 				<div align="right" style="margin-bottom:10px;">
 					<button class="btn-solid-sm" type="button" onclick="location.href='reviewForm.do'"><i class="fas fa-paw"></i> 후기작성</button>

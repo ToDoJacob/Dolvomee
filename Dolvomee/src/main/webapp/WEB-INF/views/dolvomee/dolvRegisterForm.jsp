@@ -42,7 +42,7 @@
 </script>
 <!-- /END GA -->
 </head>
-<body style="font-family: 'Gowun Batang', serif;">
+<body>
 <div id="app">
     <section class="section">
       <div class="container mt-5">
@@ -69,7 +69,7 @@
 	                  </div>
 		                  
 	                  <div class="form-group col-6">
-	                    <label for="frist_name">Name</label>
+	                    <label for="frist_name">이름</label>
 	                    <input id="frist_name" type="text" class="form-control" name="dolvName">
 	                  </div>
                   </div>
@@ -85,30 +85,30 @@
                       </div>
                     </div>
                     <div class="form-group col-6">
-                      <label for="password2" class="d-block">Password Confirmation</label>
+                      <label for="password2" class="d-block">Password 확인</label>
                       <input id="password2" type="password" class="form-control" name="password-confirm">
                     </div>
                   </div>
                   
                   <div class="row">
 	                  <div class="form-group col-6">
-	                    <label for="phone">Phone</label>
+	                    <label for="phone">전화번호</label>
 	                    <input id="phone" type="text" class="form-control" name="dolvPhone">
 	                  </div>
 		                  
 	                  <div class="form-group col-6">
-	                    <label for="address">Address</label>
+	                    <label for="address">주소</label>
 	                    <input id="address" type="text" class="form-control" name="dolvAddr">
 	                  </div>
                   </div>
                   
                   <div class="form-group">
-                    <label for="career">Career</label>
+                    <label for="career">경력</label>
                     <input id="career" type="text" class="form-control" name="dolvCareer">
                   </div>
                   
                   <div class="form-group">
-                    <label for="intro">Intro</label>
+                    <label for="intro">소개</label>
                     <input id="intro" type="text" class="form-control" name="dolvIntro">
                   </div>
                   
