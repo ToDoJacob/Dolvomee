@@ -22,7 +22,7 @@
 <script>
   function CheckPassword() {
 		var password = frm.usersPwd.value;
-		var repeatPassword = frm.password2.value;
+		var repeatPassword = frm.password.value;
 		
 		if(password != "" && password == repeatPassword) {
 			frm.submit();
@@ -64,7 +64,7 @@
 	                  </div>  
 	                  
 	                  <div class="form-group col-6">
-	                    <label for="frist_name">Name</label>
+	                    <label for="frist_name">이름</label>
 	                    <input id="frist_name" type="text" class="form-control" name="usersName">
 	                  </div>
 	                  
@@ -81,29 +81,29 @@
                       </div>
                     </div>
                     <div class="form-group col-6">
-                      <label for="password2" class="d-block">Password Confirmation</label>
-                      <input id="password2" type="password" class="form-control" name="password2">
+                      <label for="password2" class="d-block">Password 확인</label>
+                      <input id="password" type="password" class="form-control" name="password">
                     </div>
                   </div>
                   
                   <div class="row">
 	                  <div class="form-group col-6">
-	                    <label for="phone">Phone</label>
+	                    <label for="phone">전화번호</label>
 	                    <input id="phone" type="text" class="form-control" name="usersPhone">
 	                  </div>
 		                  
 	                  <div class="form-group col-6">
-	                    <label for="address">Address</label>
+	                    <label for="address">주소</label>
 	                    <input id="address" type="text" class="form-control" name="usersAddr">
 	                  </div>
                   </div>
                   
                   <div class="form-group">
-                  	<input type="hidden" class="form-control form-control-user" id="author" name="usersAuthor" value="user">
+                  	<input type="hidden" class="form-control form-control-user" id="author" name="usersAuthor" value="users">
                   </div>
 
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="CheckPassword();">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="CheckPassword()">
                       회원가입
                     </button>
                   </div>

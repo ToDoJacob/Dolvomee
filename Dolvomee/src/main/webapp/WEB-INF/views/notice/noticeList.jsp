@@ -34,6 +34,7 @@
 </head>
 <body>
 	<div style="padding-left: 280px; padding-right: 280px; padding-top: 200px; padding-bottom: 200px;">
+	<div><h1 style="color: #6C757D">공지사항</h1></div>
 		<div class="table-responsive">
 			<div align="right">
 				<span class="nav-item">
