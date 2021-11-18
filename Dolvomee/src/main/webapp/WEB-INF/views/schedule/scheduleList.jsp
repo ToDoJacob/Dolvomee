@@ -126,28 +126,56 @@
 		console.log(dolvEmail);
 		console.log(demail);
 		demail.setAttribute('value', dolvEmail);
-		let uemail = document.getElementById('userEmail');
+		let uemail = document.getElementById('usersEmail');
 		console.log(uemail);
 	}
 </script>
 
 <script>
 
-// frm, scheduleStartDate, scheduleEndDate, amCode, acCode, dolvEmail, userEmail
+// frm, scheduleStartDate, scheduleEndDate, amCode, acCode, dolvEmail, usersEmail
 function scheduleAdd(){
+
+	if(!frm.dolvEmail.value==""){
+		frm.setAttribute("action","scheduleAdd.do")
+		if(!frm.usersEmail.value==""){
+			alert("예약이 완료되었습니다 장바구니 페이지에서 결제를 진행합니다")
+			frm.submit();
+		} else {
+			alert("로그인 후 이용바랍니다");
+			return false;
+		}
+	} else {
+		alert("예약 신청할 돌보미님을 선택해해주세요");
+		return false;
+	}
+
+
+
+
+
+
 	console.log(frm);
 	console.log(frm.scheduleStartDate);
 	console.log(frm.scheduleEndDate);
 	console.log(frm.amCode);
-	console.log(frm.acCode);
+	//console.log(document.getElementById("acCode");
+	//console.log()
+	//console.log(frm.acCode);
 	console.log(frm.dolvEmail);
-	console.log(frm.userEmail);
+	console.log(frm.usersEmail);
 	console.log("---------------------------")
 	console.log(frm.scheduleStartDate.value);
 	console.log(frm.scheduleEndDate.value);
 	console.log(frm.amCode.value);
-	alert("예약이 완료 되었습니다!");
+	console.log(frm.acCode.value);
+	console.log(frm.dolvEmail.value);
+	console.log(frm.usersEmail.value);
+
+
+	
 }
+
 
 </script>
 
@@ -327,9 +355,9 @@ function scheduleAdd(){
 										</select>
 									</div>
 									<div>
-										<input type="hidden" id="dolvEmail" name="dolvEmail" value="">
-										<input type="hidden" id="userEmail" name="userEmail"
-											value="'${usersEmail }'">
+										<input type="hidden" id="dolvEmail" name="dolvEmail" value="${dolv.dolvEmail }">
+										<input type="hidden" id="usersEmail" name="usersEmail"
+											value="${usersEmail }">
 										<div align="center">
 											<button class="btn btn-primary" type="button"
 												onclick="scheduleAdd()">예약 신청하기</button>

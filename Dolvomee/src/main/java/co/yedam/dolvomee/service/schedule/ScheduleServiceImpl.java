@@ -22,7 +22,7 @@ public class ScheduleServiceImpl implements ScheduleService {
 		// TODO Auto-generated method stub
 		return map.selectSchedule(vo);
 	}
-
+	
 	@Override
 	public int insertSchedule(ScheduleVO vo) {
 		// TODO Auto-generated method stub
@@ -40,5 +40,6 @@ public class ScheduleServiceImpl implements ScheduleService {
 		// TODO Auto-generated method stub
 		return map.updateSchedule(vo);
 	}
+
 
 }

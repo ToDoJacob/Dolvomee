@@ -11,7 +11,7 @@
 </select>	
 
 <insert id="insertScheduleBuf">
-	insert into schedulebuf values(schebufnum.nextval,#{scheduleNum},#{categCode},#{detailCode},'',#{detailPrice})
+	insert into schedulebuf values((select NVL(MAX(schebufnum),0)+1 from schedulebuf),(select NVL(MAX(schebufnum),0)+1 from schedulebuf),#{categCode},#{detailCode},'',0)
 </insert>
 	
 <delete id="deleteScheduleBuf">

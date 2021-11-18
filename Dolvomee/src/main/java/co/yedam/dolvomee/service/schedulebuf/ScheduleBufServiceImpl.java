@@ -19,12 +19,6 @@ public class ScheduleBufServiceImpl implements ScheduleBufService {
 	}
 
 	@Override
-	public ScheduleBufVO selectScheduleBuf(ScheduleBufVO vo) {
-		// TODO Auto-generated method stub
-		return map.selectScheduleBuf(vo);
-	}
-
-	@Override
 	public int insertScheduleBuf(ScheduleBufVO vo) {
 		// TODO Auto-generated method stub
 		return map.insertScheduleBuf(vo);

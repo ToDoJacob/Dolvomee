@@ -7,7 +7,9 @@
 	</select>
 
 	<select id="selectCart" resultType="co.yedam.dolvomee.service.cart.CartVO">
-		select schedule.*, schedulebuf.* from schedule INNER JOIN schedulebuf on schedule.schedulenum = schedulebuf.schedulenum WHERE schedule.usersemail = #{usersEmail} AND schedule.schedulestatus = '결제대기'
+		select schedule.*, schedulebuf.* from schedule INNER JOIN schedulebuf on schedule.schedulenum = schedulebuf.schedulenum 
+		WHERE schedule.usersemail = #{usersEmail} 
+		AND schedule.schedulestatus = '결제대기'
 	</select>
 
 	<select id="selectCart2" resultType="co.yedam.dolvomee.service.cart.CartVO">

@@ -6,8 +6,8 @@ public class ScheduleVO {
 	private int scheduleNum;
 	private String dolvEmail;
 	private String usersEmail;	
-	private Date scheduleStartSate;
-	private Date scheduleEndDate;
+	private String scheduleStartDate;
+	private String scheduleEndDate;
 	private String shceduleStatus;
 	
 	public int getScheduleNum() {
@@ -28,16 +28,16 @@ public class ScheduleVO {
 	public void setUsersEmail(String usersEmail) {
 		this.usersEmail = usersEmail;
 	}
-	public Date getScheduleStartSate() {
-		return scheduleStartSate;
+	public String getScheduleStartDate() {
+		return scheduleStartDate;
 	}
-	public void setScheduleStartSate(Date scheduleStartSate) {
-		this.scheduleStartSate = scheduleStartSate;
+	public void setScheduleStartSate(String scheduleStartDate) {
+		this.scheduleStartDate = scheduleStartDate;
 	}
-	public Date getScheduleEndDate() {
+	public String getScheduleEndDate() {
 		return scheduleEndDate;
 	}
-	public void setScheduleEndDate(Date scheduleEndDate) {
+	public void setScheduleEndDate(String scheduleEndDate) {
 		this.scheduleEndDate = scheduleEndDate;
 	}
 	public String getShceduleStatus() {
@@ -50,7 +50,7 @@ public class ScheduleVO {
 	@Override
 	public String toString() {
 		return "ScheduleVO [scheduleNum=" + scheduleNum + ", dolvEmail=" + dolvEmail + ", usersEmail=" + usersEmail
-				+ ", scheduleStartSate=" + scheduleStartSate + ", scheduleEndDate=" + scheduleEndDate
+				+ ", scheduleStartSate=" + scheduleStartDate + ", scheduleEndDate=" + scheduleEndDate
 				+ ", shceduleStatus=" + shceduleStatus + "]";
 	}
 	

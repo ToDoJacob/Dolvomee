@@ -11,7 +11,7 @@
 </select>
 
 <insert id="insertSchedule">
-	insert into schedule values(schedulenum.nextval,#{dolvEmail},#{userEmail},#{scheduleStartDate},#{scheduleEndDate},#{scheduleStatus})
+	insert into schedule values((select NVL(MAX(schedulenum)+1,0) from schedule),#{dolvEmail},#{usersEmail},#{scheduleStartDate},#{scheduleEndDate},'결제대기')
 </insert>
 
 <delete id="deleteSchedule">
